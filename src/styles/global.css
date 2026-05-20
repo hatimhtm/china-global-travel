@@ -41,6 +41,17 @@
     scroll-behavior: smooth;
   }
 
+  /* Global focus-visible — amber ring matches the brand accent.
+     Excludes inputs/textareas which manage focus via border colour. */
+  :where(a, button, [role="button"], [tabindex]):focus-visible {
+    outline: 2px solid var(--color-amber-deep);
+    outline-offset: 3px;
+  }
+  /* The skip-link sees an even stronger ring when it surfaces */
+  a.sr-only:focus-visible {
+    outline-color: var(--color-amber);
+  }
+
   body {
     background-color: var(--color-bone);
     color: var(--color-ink);
@@ -302,17 +313,18 @@
   }
 
   /*
-    Reveal — VISIBLE BY DEFAULT. The animation only fires when <html> has the
-    `js-ready` class (set inline-script in the head). If JS fails / animations
-    are blocked / a screenshot fires mid-paint, hero copy stays visible — no
-    bone-on-bone disappearance, no broken first-impression on slow networks.
+    Reveal — ALWAYS VISIBLE. The animation only slides the element up; it never
+    drops opacity below 1. This guarantees hero copy is legible at every moment
+    of the page lifecycle: pre-paint, mid-animation, post-animation, and on any
+    screenshot/SSR/old-browser/JS-blocked render. The "rise" effect is purely a
+    transform delta — no opacity gate that can fail to clear.
   */
   .reveal {
     opacity: 1;
     transform: none;
   }
   html.js-ready .reveal {
-    animation: cp-rise 1.2s var(--ease-out-quint) both;
+    animation: cp-slide-up 1.2s var(--ease-out-quint);
   }
   .reveal-2 { animation-delay: 0.12s; }
   .reveal-3 { animation-delay: 0.24s; }
@@ -320,9 +332,11 @@
 
   /* Hero section solid backdrop — content sections marked .hero-dark get an ink
      base color so light text always has contrast even if the background image
-     or video fails to paint. Critical for slow-network and image-CDN-outage cases. */
+     or video fails to paint. `isolate` traps the negative z-index of hero-media
+     inside the section's stacking context so the dark backdrop actually shows. */
   .hero-dark {
     background-color: var(--color-ink);
+    isolation: isolate;
   }
   .hero-media {
     background-color: var(--color-ink);
@@ -439,6 +453,14 @@
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes cp-slide-up {
+  from {
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
     transform: translate3d(0, 0, 0);
   }
 }

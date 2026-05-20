@@ -27,11 +27,11 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
 
 <BaseLayout locale={locale} pathKey={`destinations/${slug}/`} title={d.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative min-h-[100svh] flex items-end overflow-hidden">
+  <section class="relative hero-dark min-h-[100svh] flex items-end overflow-hidden">
     {heroVid ? (
       <HeroVideo poster={heroVid.poster} sources={heroVid.sources} mobileSources={heroVid.mobileSources} overlay={0.5} ariaLabel={d.title} />
     ) : (
-      <div class="absolute inset-0 -z-10">
+      <div class="hero-media absolute inset-0 -z-10">
         <img
           src={heroImage}
           srcset={`${heroImage.replace(/&w=\d+/, '&w=720')} 720w, ${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage} 2400w`}

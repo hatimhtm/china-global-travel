@@ -86,8 +86,8 @@ const fontsByLocale: Record<Locale, string> = {
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="stylesheet" href={fontsByLocale[locale]} />
 
-    {/* Favicons */}
-    <link rel="icon" type="image/svg+xml" href={`${BASE}/favicon.svg`} />
+    {/* Favicons — BASE already ends with /, so don't add another */}
+    <link rel="icon" type="image/svg+xml" href={`${BASE.replace(/\/$/, '')}/favicon.svg`} />
 
     <ClientRouter fallback="swap" />
 
@@ -102,7 +102,7 @@ const fontsByLocale: Record<Locale, string> = {
 
     <Header locale={locale} dict={dict} heroDark={heroDark} />
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <slot />
     </main>
 

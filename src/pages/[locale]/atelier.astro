@@ -13,8 +13,8 @@ const t = dict.atelier;
 
 <BaseLayout locale={locale} pathKey="atelier/" title={t.hero.heading} heroDark={true}>
   {/* HERO */}
-  <section class="relative min-h-[90svh] flex items-end overflow-hidden">
-    <div class="absolute inset-0 -z-10">
+  <section class="relative hero-dark min-h-[90svh] flex items-end overflow-hidden">
+    <div class="hero-media absolute inset-0 -z-10">
       <img
         src={photos.atelierHero}
         srcset={`${photos.atelierHero.replace(/&w=\d+/, '&w=720')} 720w, ${photos.atelierHero.replace(/&w=\d+/, '&w=1200')} 1200w, ${photos.atelierHero} 2400w`}
