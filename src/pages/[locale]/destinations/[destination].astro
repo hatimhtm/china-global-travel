@@ -27,7 +27,7 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
 
 <BaseLayout locale={locale} pathKey={`destinations/${slug}/`} title={d.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative hero-dark min-h-[78svh] sm:min-h-[88svh] md:min-h-[100svh] flex items-end overflow-hidden">
+  <section class="relative hero-dark min-h-[clamp(560px,86svh,960px)] flex items-end overflow-hidden">
     {heroVid ? (
       <HeroVideo poster={heroVid.poster} sources={heroVid.sources} mobileSources={heroVid.mobileSources} overlay={0.5} ariaLabel={d.title} />
     ) : (

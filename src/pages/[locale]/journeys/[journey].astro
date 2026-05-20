@@ -27,7 +27,7 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
 
 <BaseLayout locale={locale} pathKey={`journeys/${slug}/`} title={j.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative hero-dark min-h-[78svh] sm:min-h-[88svh] md:min-h-[100svh] flex items-end overflow-hidden">
+  <section class="relative hero-dark min-h-[clamp(560px,86svh,960px)] flex items-end overflow-hidden">
     <div class="hero-media absolute inset-0 -z-10">
       <picture class="absolute inset-0 w-full h-full block">
         <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1200)} 1x, ${unsplashPortrait(heroImage, 1400, 1800)} 2x`} />
