@@ -35,9 +35,9 @@
   "home": {
     "hero": {
       "eyebrow": "Voyages sur mesure · Jiangxi, Chine",
-      "heading": "Une Chine qui voyage à l’allure de la brume.",
-      "sub": "Porcelaine tournée à la main. Temples plus anciens que la langue. Une province que la plupart des cartes oublient. Chaque itinéraire tracé à huis clos.",
-      "cta": "Commencer un voyage",
+      "heading": "Le Jiangxi, posément.",
+      "sub": "Porcelaine tournée à la main. Temples plus anciens que la langue. Une province oubliée des cartes — et les voyages que nous traçons, dans la discrétion, pour l’atteindre.",
+      "cta": "Engager la conversation",
       "scroll": "Faire défiler"
     },
     "bridge": {
@@ -61,10 +61,22 @@
       "eyebrow": "Ce que vous y trouverez",
       "heading": "Un héritage, rendu tangible.",
       "items": [
-        { "title": "Artisanat & céramique", "body": "Une lignée ininterrompue de mille ans dans la capitale de la porcelaine. Des ateliers qui ne s’ouvrent que sur recommandation — et seulement à nous." },
-        { "title": "Pèlerinage en montagne", "body": "Cinq sommets sacrés. Des moines avant l’aube, la brume en milieu de matinée, le silence froid d’une pierre plus ancienne que les dynasties." },
-        { "title": "Thé & tradition", "body": "Le Lushan Yunwu, cueilli à la ligne des nuages en mai. Cérémonies dans des pavillons qui ont servi empereurs et paysans sans distinction." },
-        { "title": "Paysage & photographie", "body": "L’or du colza fin mars. La mer de nuages en octobre. Nous connaissons l’heure où la lumière arrive, et celle où il faut repartir." }
+        {
+          "title": "Artisanat & céramique",
+          "body": "Une lignée ininterrompue de mille ans dans la capitale de la porcelaine. Des ateliers qui ne s’ouvrent que sur recommandation — et seulement à nous."
+        },
+        {
+          "title": "Pèlerinage en montagne",
+          "body": "Cinq sommets sacrés. Des moines avant l’aube, la brume en milieu de matinée, le silence froid d’une pierre plus ancienne que les dynasties."
+        },
+        {
+          "title": "Thé & tradition",
+          "body": "Le Lushan Yunwu, cueilli à la ligne des nuages en mai. Cérémonies dans des pavillons qui ont servi empereurs et paysans sans distinction."
+        },
+        {
+          "title": "Paysage & photographie",
+          "body": "L’or du colza fin mars. La mer de nuages en octobre. Nous connaissons l’heure où la lumière arrive, et celle où il faut repartir."
+        }
       ]
     },
     "atelierTeaser": {
@@ -110,11 +122,31 @@
           "Cérémonie du thé Lushan Yunwu, servie sur la montagne"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Accueil à l’aéroport de Changbei. Installation dans un hôtel discret au-dessus de la rivière Gan. En fin d’après-midi, le pavillon Tengwang, tour littéraire reconstruite vingt-huit fois en treize siècles. Dîner de spécialités du Jiangxi, en compagnie de votre concepteur." },
-          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Route sans hâte vers le nord-est à travers les collines de thé. Arrivée au village de Likeng pour le déjeuner. L’après-midi reste libre : flâner entre les ponts de pierre, les ruelles aux murs blancs et les salles ancestrales. Dîner à la table du village." },
-          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Matinée à Huangling, le village aux champs suspendus. Déjeuner au pied des fours. Après-midi dans un atelier en activité, auprès d’un maître porcelainier de la sixième génération — tour, émail, signature. Vous repartirez avec une pièce façonnée de vos mains." },
-          { "day": "Jour 4", "title": "De Jingdezhen au Lushan", "body": "Long déjeuner sur l’avenue artistique de Taoxichuan, puis montée vers le Lushan. Le temple Donglin au crépuscule, les lanternes de la cour allumées une à une. L’air se raréfie ; la vallée s’efface. Un théier de Yunwu dans la chambre avant le sommeil." },
-          { "day": "Jour 5", "title": "Du Lushan à Nanchang, départ", "body": "Cérémonie du thé à l’aube sur la montagne. Descente lente à travers les nuages. Déjeuner à Nanchang. Vol de continuation." }
+          {
+            "day": "Jour 1",
+            "title": "Arrivée à Nanchang",
+            "body": "Accueil à l’aéroport de Changbei. Installation dans un hôtel discret au-dessus de la rivière Gan. En fin d’après-midi, le pavillon Tengwang, tour littéraire reconstruite vingt-huit fois en treize siècles. Dîner de spécialités du Jiangxi, en compagnie de votre concepteur."
+          },
+          {
+            "day": "Jour 2",
+            "title": "De Nanchang à Wuyuan",
+            "body": "Route sans hâte vers le nord-est à travers les collines de thé. Arrivée au village de Likeng pour le déjeuner. L’après-midi reste libre : flâner entre les ponts de pierre, les ruelles aux murs blancs et les salles ancestrales. Dîner à la table du village."
+          },
+          {
+            "day": "Jour 3",
+            "title": "De Wuyuan à Jingdezhen",
+            "body": "Matinée à Huangling, le village aux champs suspendus. Déjeuner au pied des fours. Après-midi dans un atelier en activité, auprès d’un maître porcelainier de la sixième génération — tour, émail, signature. Vous repartirez avec une pièce façonnée de vos mains."
+          },
+          {
+            "day": "Jour 4",
+            "title": "De Jingdezhen au Lushan",
+            "body": "Long déjeuner sur l’avenue artistique de Taoxichuan, puis montée vers le Lushan. Le temple Donglin au crépuscule, les lanternes de la cour allumées une à une. L’air se raréfie ; la vallée s’efface. Un théier de Yunwu dans la chambre avant le sommeil."
+          },
+          {
+            "day": "Jour 5",
+            "title": "Du Lushan à Nanchang, départ",
+            "body": "Cérémonie du thé à l’aube sur la montagne. Descente lente à travers les nuages. Déjeuner à Nanchang. Vol de continuation."
+          }
         ]
       },
       {
@@ -133,14 +165,46 @@
           "Le pic de la Déesse orientale au lever du soleil"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang à l’heure dorée. Dîner au-dessus de la rivière." },
-          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Likeng pour le déjeuner. Après-midi dans les ruelles des villages Hui." },
-          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Huangling à l’aube. Séance privée en atelier l’après-midi. Nuit en atelier-hôtel." },
-          { "day": "Jour 4", "title": "De Jingdezhen au Longhu", "body": "Radeau de bambou devant les sépultures rupestres. Manoir Tianshi. L’heure silencieuse d’un prêtre taoïste." },
-          { "day": "Jour 5", "title": "Du Longhu au Lushan", "body": "Temple Donglin au crépuscule. Thé sur la montagne." },
-          { "day": "Jour 6", "title": "Du Lushan au Sanqingshan", "body": "Téléphérique jusqu’au complexe des Cinq Éléments. Passerelle à flanc de falaise. Nuit en refuge de montagne." },
-          { "day": "Jour 7", "title": "Aube au Sanqingshan, retour à Nanchang", "body": "Pic de la Déesse orientale au lever du soleil. Descente lente. Après-midi au lac Poyang ou dans l’atelier d’un tisserand de soie de Nanchang." },
-          { "day": "Jour 8", "title": "Départ", "body": "Vol de continuation." }
+          {
+            "day": "Jour 1",
+            "title": "Arrivée à Nanchang",
+            "body": "Le pavillon Tengwang à l’heure dorée. Dîner au-dessus de la rivière."
+          },
+          {
+            "day": "Jour 2",
+            "title": "De Nanchang à Wuyuan",
+            "body": "Likeng pour le déjeuner. Après-midi dans les ruelles des villages Hui."
+          },
+          {
+            "day": "Jour 3",
+            "title": "De Wuyuan à Jingdezhen",
+            "body": "Huangling à l’aube. Séance privée en atelier l’après-midi. Nuit en atelier-hôtel."
+          },
+          {
+            "day": "Jour 4",
+            "title": "De Jingdezhen au Longhu",
+            "body": "Radeau de bambou devant les sépultures rupestres. Manoir Tianshi. L’heure silencieuse d’un prêtre taoïste."
+          },
+          {
+            "day": "Jour 5",
+            "title": "Du Longhu au Lushan",
+            "body": "Temple Donglin au crépuscule. Thé sur la montagne."
+          },
+          {
+            "day": "Jour 6",
+            "title": "Du Lushan au Sanqingshan",
+            "body": "Téléphérique jusqu’au complexe des Cinq Éléments. Passerelle à flanc de falaise. Nuit en refuge de montagne."
+          },
+          {
+            "day": "Jour 7",
+            "title": "Aube au Sanqingshan, retour à Nanchang",
+            "body": "Pic de la Déesse orientale au lever du soleil. Descente lente. Après-midi au lac Poyang ou dans l’atelier d’un tisserand de soie de Nanchang."
+          },
+          {
+            "day": "Jour 8",
+            "title": "Départ",
+            "body": "Vol de continuation."
+          }
         ]
       },
       {
@@ -160,16 +224,56 @@
           "Leçons privées, en option : calligraphie, thé ou philosophie bouddhiste"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang, l’exposition de la Cité de la Porcelaine, le marché de nuit au bord de la rivière." },
-          { "day": "Jour 2", "title": "Nanchang", "body": "Matinée tranquille. Après-midi auprès d’un maître calligraphe. Dîner avec un historien du Jiangxi." },
-          { "day": "Jour 3–4", "title": "Wuyuan", "body": "Deux nuits à Likeng. Champs de colza, toits de séchage, atelier de sculpture Hui." },
-          { "day": "Jour 5", "title": "Jingdezhen", "body": "Mentorat privé en atelier toute la journée. Nuit en atelier-hôtel." },
-          { "day": "Jour 6", "title": "Mont Longhu", "body": "Radeau de bambou, manoir Tianshi, l’enseignement d’un prêtre taoïste avec interprète." },
-          { "day": "Jour 7–8", "title": "Retraite au Lushan", "body": "Deux nuits au temple Donglin. Cérémonies à l’aube. Randonnées sur plusieurs sommets. Académie de la grotte du Cerf blanc. Cérémonie du thé à la ligne des nuages." },
-          { "day": "Jour 9", "title": "Sanqingshan", "body": "Complexe des temples des Cinq Éléments. Atelier d’un sculpteur sur pierre." },
-          { "day": "Jour 10", "title": "Mont Wugong", "body": "Ascension avant l’aube pour la mer de nuages. Après-midi de bain de forêt." },
-          { "day": "Jour 11", "title": "Vallée Wangxian", "body": "Soirée en suite à flanc de falaise. Dîner suspendu au-dessus de la gorge." },
-          { "day": "Jour 12", "title": "Retour à Nanchang, départ", "body": "Vol de continuation." }
+          {
+            "day": "Jour 1",
+            "title": "Arrivée à Nanchang",
+            "body": "Le pavillon Tengwang, l’exposition de la Cité de la Porcelaine, le marché de nuit au bord de la rivière."
+          },
+          {
+            "day": "Jour 2",
+            "title": "Nanchang",
+            "body": "Matinée tranquille. Après-midi auprès d’un maître calligraphe. Dîner avec un historien du Jiangxi."
+          },
+          {
+            "day": "Jour 3–4",
+            "title": "Wuyuan",
+            "body": "Deux nuits à Likeng. Champs de colza, toits de séchage, atelier de sculpture Hui."
+          },
+          {
+            "day": "Jour 5",
+            "title": "Jingdezhen",
+            "body": "Mentorat privé en atelier toute la journée. Nuit en atelier-hôtel."
+          },
+          {
+            "day": "Jour 6",
+            "title": "Mont Longhu",
+            "body": "Radeau de bambou, manoir Tianshi, l’enseignement d’un prêtre taoïste avec interprète."
+          },
+          {
+            "day": "Jour 7–8",
+            "title": "Retraite au Lushan",
+            "body": "Deux nuits au temple Donglin. Cérémonies à l’aube. Randonnées sur plusieurs sommets. Académie de la grotte du Cerf blanc. Cérémonie du thé à la ligne des nuages."
+          },
+          {
+            "day": "Jour 9",
+            "title": "Sanqingshan",
+            "body": "Complexe des temples des Cinq Éléments. Atelier d’un sculpteur sur pierre."
+          },
+          {
+            "day": "Jour 10",
+            "title": "Mont Wugong",
+            "body": "Ascension avant l’aube pour la mer de nuages. Après-midi de bain de forêt."
+          },
+          {
+            "day": "Jour 11",
+            "title": "Vallée Wangxian",
+            "body": "Soirée en suite à flanc de falaise. Dîner suspendu au-dessus de la gorge."
+          },
+          {
+            "day": "Jour 12",
+            "title": "Retour à Nanchang, départ",
+            "body": "Vol de continuation."
+          }
         ]
       }
     ]
@@ -281,11 +385,26 @@
       "eyebrow": "Principes",
       "heading": "Cinq règles discrètes.",
       "items": [
-        { "title": "Moins de voyages, de meilleurs voyages.", "body": "Nous plafonnons le calendrier. Quand il est complet, nous le disons." },
-        { "title": "Nous n’écrivons pas d’itinéraires que nous n’avons pas parcourus.", "body": "Chaque itinéraire de ce site a été parcouru par un concepteur de Cloud Pavilion au cours des dix-huit derniers mois." },
-        { "title": "Nous ne confirmons jamais automatiquement.", "body": "Chaque demande est lue par un humain, à laquelle un humain répond, et qu’un humain chiffre." },
-        { "title": "Nous ne remplissons pas.", "body": "Si un voyage gagne à se faire en sept jours plutôt qu’en huit, nous recommanderons sept. Nous ne facturons pas à la nuit." },
-        { "title": "La discrétion est un service.", "body": "Nous ne publions pas les noms de nos hôtes. Nous ne les photographions pas. Ce que vous nous confiez reste entre nous." }
+        {
+          "title": "Moins de voyages, de meilleurs voyages.",
+          "body": "Nous plafonnons le calendrier. Quand il est complet, nous le disons."
+        },
+        {
+          "title": "Nous n’écrivons pas d’itinéraires que nous n’avons pas parcourus.",
+          "body": "Chaque itinéraire de ce site a été parcouru par un concepteur de Cloud Pavilion au cours des dix-huit derniers mois."
+        },
+        {
+          "title": "Nous ne confirmons jamais automatiquement.",
+          "body": "Chaque demande est lue par un humain, à laquelle un humain répond, et qu’un humain chiffre."
+        },
+        {
+          "title": "Nous ne remplissons pas.",
+          "body": "Si un voyage gagne à se faire en sept jours plutôt qu’en huit, nous recommanderons sept. Nous ne facturons pas à la nuit."
+        },
+        {
+          "title": "La discrétion est un service.",
+          "body": "Nous ne publions pas les noms de nos hôtes. Nous ne les photographions pas. Ce que vous nous confiez reste entre nous."
+        }
       ]
     },
     "cta": {
@@ -359,41 +478,92 @@
         "id": "draw",
         "label": "Qu’est-ce qui vous attire ?",
         "options": [
-          { "value": "mountains", "label": "Montagnes & patrimoine" },
-          { "value": "craft", "label": "Artisanat & céramique" },
-          { "value": "spirit", "label": "Spiritualité & contemplation" },
-          { "value": "photography", "label": "Photographie & paysage" }
+          {
+            "value": "mountains",
+            "label": "Montagnes & patrimoine"
+          },
+          {
+            "value": "craft",
+            "label": "Artisanat & céramique"
+          },
+          {
+            "value": "spirit",
+            "label": "Spiritualité & contemplation"
+          },
+          {
+            "value": "photography",
+            "label": "Photographie & paysage"
+          }
         ]
       },
       {
         "id": "when",
         "label": "À quelle période pensez-vous ?",
         "options": [
-          { "value": "rapeseed", "label": "Saison du colza — mars / avril" },
-          { "value": "clear", "label": "Ciels clairs — septembre / novembre" },
-          { "value": "winter", "label": "Hiver silencieux — décembre / février" },
-          { "value": "flexible", "label": "Je suis flexible" }
+          {
+            "value": "rapeseed",
+            "label": "Saison du colza — mars / avril"
+          },
+          {
+            "value": "clear",
+            "label": "Ciels clairs — septembre / novembre"
+          },
+          {
+            "value": "winter",
+            "label": "Hiver silencieux — décembre / février"
+          },
+          {
+            "value": "flexible",
+            "label": "Je suis flexible"
+          }
         ]
       },
       {
         "id": "who",
         "label": "Qui voyage ?",
         "options": [
-          { "value": "solo", "label": "Seul(e)" },
-          { "value": "couple", "label": "En couple" },
-          { "value": "family", "label": "En famille" },
-          { "value": "group", "label": "Petit groupe" }
+          {
+            "value": "solo",
+            "label": "Seul(e)"
+          },
+          {
+            "value": "couple",
+            "label": "En couple"
+          },
+          {
+            "value": "family",
+            "label": "En famille"
+          },
+          {
+            "value": "group",
+            "label": "Petit groupe"
+          }
         ]
       },
       {
         "id": "budget",
-        "label": "Enveloppe envisagée, par personne.",
+        "label": "Quel ordre de budget avez-vous en tête, par personne ?",
         "options": [
-          { "value": "2-3", "label": "2 000 – 3 000 €" },
-          { "value": "3-5", "label": "3 000 – 5 000 €" },
-          { "value": "5-8", "label": "5 000 – 8 000 €" },
-          { "value": "8+", "label": "8 000 € et au-delà" },
-          { "value": "open", "label": "Ouvert à vos suggestions" }
+          {
+            "value": "2-3",
+            "label": "2 000 – 3 000 €"
+          },
+          {
+            "value": "3-5",
+            "label": "3 000 – 5 000 €"
+          },
+          {
+            "value": "5-8",
+            "label": "5 000 – 8 000 €"
+          },
+          {
+            "value": "8+",
+            "label": "8 000 € et au-delà"
+          },
+          {
+            "value": "open",
+            "label": "Ouvert à vos suggestions"
+          }
         ]
       }
     ],

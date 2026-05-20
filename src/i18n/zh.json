@@ -35,9 +35,9 @@
   "home": {
     "hero": {
       "eyebrow": "定制之旅 · 中国 江西",
-      "heading": "中国最静谧的省份。静思而行。",
-      "sub": "云雾山峦、千年窑火，与一千年的从容。每一程，皆于私密中擘画。",
-      "cta": "开启一段旅程",
+      "heading": "江西，从容以思。",
+      "sub": "云雾下的山脉。先于语言的庙宇。地图遗忘的一方静境——而我们，于私密之中，为您绘下抵达之径。",
+      "cta": "开启一段对谈",
       "scroll": "继续浏览"
     },
     "bridge": {
@@ -542,7 +542,7 @@
       },
       {
         "id": "budget",
-        "label": "每人投入区间。",
+        "label": "您心目中的预算？（每位）",
         "options": [
           {
             "value": "2-3",
@@ -597,10 +597,10 @@
     }
   },
   "common": {
-    "viewJourney": "查看此程",
-    "viewDestination": "查看此地",
+    "viewJourney": "细读行旅",
+    "viewDestination": "细访此地",
     "learnMore": "了解更多",
-    "readEssay": "阅读全文",
+    "readEssay": "翻开札记",
     "inquireNow": "联络",
     "back": "返回",
     "next": "下一步",

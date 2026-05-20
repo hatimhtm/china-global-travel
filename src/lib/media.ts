@@ -47,39 +47,39 @@ export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: {
 };
 
 export const photos = {
-  // Destinations — chosen for mist, scale, and a contemplative palette
-  wuyuan: 'https://images.unsplash.com/photo-1521150932951-303a95503ed3?auto=format&fit=crop&w=2400&q=75',
-  lushan: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=2400&q=75',
-  jingdezhen: 'https://images.unsplash.com/photo-1565193298434-a9c8c8c10ffd?auto=format&fit=crop&w=2400&q=75',
-  longhu: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=75',
-  sanqingshan: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=2400&q=75',
-  wugong: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=75',
-  poyang: 'https://images.unsplash.com/photo-1500301111609-42f1aa6df72a?auto=format&fit=crop&w=2400&q=75',
-  tengwang: 'https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=2400&q=75',
+  // Destinations — every URL curl-verified 200 + visually confirmed on-subject (Asian/Chinese, no Western stock)
+  wuyuan: 'https://images.unsplash.com/photo-1773649967967-bfd301b989db?auto=format&fit=crop&w=2400&q=75',          // rural village with traditional tiled roofs and trees
+  lushan: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2400&q=75',          // temples on lush green mountain above clouds
+  jingdezhen: 'https://images.unsplash.com/photo-1723779235394-2e406c604269?auto=format&fit=crop&w=2400&q=75',      // blue-and-white Chinese porcelain vase
+  longhu: 'https://images.unsplash.com/photo-1568454158284-8b858a0c914e?auto=format&fit=crop&w=2400&q=75',          // dark silhouetted peaks with layered clouds
+  sanqingshan: 'https://images.unsplash.com/photo-1568454158153-6bf6cfda9070?auto=format&fit=crop&w=2400&q=75',     // expansive mountain ridge in thick fog (was sneakers — fixed)
+  wugong: 'https://images.unsplash.com/photo-1632977186603-90fbe59a1a86?auto=format&fit=crop&w=2400&q=75',          // mountain range with atmospheric mist
+  poyang: 'https://images.unsplash.com/photo-1591116446368-2078ad1c0fea?auto=format&fit=crop&w=2400&q=75',          // B&W peaks under cloudy sky (water/wetland mood)
+  tengwang: 'https://images.unsplash.com/photo-1770838128195-bc4c1b5fd467?auto=format&fit=crop&w=2400&q=75',        // traditional temple in mountain landscape
 
   // Journey hero images
-  essential: 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2400&q=75',
-  inDepth: 'https://images.unsplash.com/photo-1551405780-03882d5a2ba7?auto=format&fit=crop&w=2400&q=75',
-  heritage: 'https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=2400&q=75',
+  essential: 'https://images.unsplash.com/photo-1690177075988-7d03698728d6?auto=format&fit=crop&w=2400&q=75',        // Chinese-village buildings on a green hillside
+  inDepth: 'https://images.unsplash.com/photo-1777177966980-ab507fc291ad?auto=format&fit=crop&w=2400&q=75',          // traditional temple nestled among trees
+  heritage: 'https://images.unsplash.com/photo-1563417076952-54936e3bb25c?auto=format&fit=crop&w=2400&q=75',         // rocky peak enveloped by fog — pilgrimage feel
 
   // Experience strips
-  craft: 'https://images.unsplash.com/photo-1565193298434-a9c8c8c10ffd?auto=format&fit=crop&w=1600&q=70',
-  pilgrimage: 'https://images.unsplash.com/photo-1496564203457-11bb12075d90?auto=format&fit=crop&w=1600&q=70',
-  tea: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1600&q=70',
-  landscape: 'https://images.unsplash.com/photo-1542359649-31e03cd4d909?auto=format&fit=crop&w=1600&q=70',
+  craft: 'https://images.unsplash.com/photo-1723779234748-76108418fea1?auto=format&fit=crop&w=1600&q=70',            // fish-painted Chinese porcelain (was 404 — fixed)
+  pilgrimage: 'https://images.unsplash.com/photo-1770838128195-bc4c1b5fd467?auto=format&fit=crop&w=1600&q=70',       // temple in green mountain landscape
+  tea: 'https://images.unsplash.com/photo-1689067468083-2e5f44e43f40?auto=format&fit=crop&w=1600&q=70',              // three bowls of tea on wooden table (was iced tea — fixed)
+  landscape: 'https://images.unsplash.com/photo-1563417077095-39ec4a411d92?auto=format&fit=crop&w=1600&q=70',        // granite formation emerging from cloud cover
 
-  // Atelier
-  atelierHero: 'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=2400&q=70',
-  atelierStudio: 'https://images.unsplash.com/photo-1452194130670-c64b00d6b8a4?auto=format&fit=crop&w=1600&q=70',
+  // Atelier — curated for the studio's still-life mood
+  atelierHero: 'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=2400&q=70',      // refined ikebana / floral still life
+  atelierStudio: 'https://images.unsplash.com/photo-1538723364222-ea30b1683033?auto=format&fit=crop&w=1600&q=70',    // ceremonial pour — quiet practice (was 404 — fixed)
 
   // Journal
-  journalClay: 'https://images.unsplash.com/photo-1565193298434-a9c8c8c10ffd?auto=format&fit=crop&w=2000&q=70',
-  journalLushan: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=2000&q=70',
-  journalRapeseed: 'https://images.unsplash.com/photo-1521150932951-303a95503ed3?auto=format&fit=crop&w=2000&q=70',
+  journalClay: 'https://images.unsplash.com/photo-1723779235394-2e406c604269?auto=format&fit=crop&w=2000&q=70',      // blue-and-white porcelain (was 404 — fixed)
+  journalLushan: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2000&q=70',    // mountain temple above clouds
+  journalRapeseed: 'https://images.unsplash.com/photo-1778350514106-871089fd2d15?auto=format&fit=crop&w=2000&q=70',  // vast yellow rapeseed field under blue sky
 
   // Bridge / cultural images
-  bridge: 'https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?auto=format&fit=crop&w=2400&q=70',
-  inquire: 'https://images.unsplash.com/photo-1517677129300-07b130802f46?auto=format&fit=crop&w=2400&q=70',
+  bridge: 'https://images.unsplash.com/photo-1627491362358-6d437e65a3bc?auto=format&fit=crop&w=2400&q=70',           // ceremonial bowls — craft bridge
+  inquire: 'https://images.unsplash.com/photo-1632977186603-90fbe59a1a86?auto=format&fit=crop&w=2400&q=70',          // mist mountain landscape
 };
 
 // Mapping from slugs to photos

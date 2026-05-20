@@ -42,7 +42,7 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
     <div class="container-cp relative pb-20 md:pb-32 pt-28 text-[color:var(--color-bone)]">
-      <p class="eyebrow !text-[color:var(--color-amber)] reveal">{j.duration} · {j.priceFrom}</p>
+      <p class="eyebrow !text-[color:var(--color-amber)] reveal">{j.duration}</p>
       <h1 class="display-xxl mt-5 md:mt-6 max-w-4xl reveal reveal-2">{j.title}</h1>
       <p class="lede lede-wide mt-6 md:mt-7 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{j.tagline}</p>
     </div>
@@ -106,10 +106,10 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
       <div class="scroll-fade">
         <p class="eyebrow !text-[color:var(--color-amber)]">{dict.common.included}</p>
         <ul class="mt-6 space-y-3 text-base md:text-lg opacity-90">
-          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">{dict.common.priceFrom} {j.priceFrom.replace(/^from\s*/i, '').replace(/^from\s/i, '')}</li>
           <li class="border-b border-[color:var(--color-bone)]/15 pb-3">{dict.common.duration} · {j.duration}</li>
           <li class="border-b border-[color:var(--color-bone)]/15 pb-3">Private guide, transport, hand-picked accommodation, every entrance</li>
           <li class="border-b border-[color:var(--color-bone)]/15 pb-3">Visa-pathway facilitation</li>
+          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">Bespoke to the day — designed in private</li>
         </ul>
       </div>
       <div class="scroll-fade flex flex-col justify-center" style="animation-delay:0.08s">
