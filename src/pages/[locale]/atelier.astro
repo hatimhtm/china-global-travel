@@ -16,7 +16,7 @@ const t = dict.atelier;
   <section class="relative hero-dark min-h-[72svh] sm:min-h-[82svh] md:min-h-[90svh] flex items-end overflow-hidden">
     <div class="hero-media absolute inset-0 -z-10">
       <picture class="absolute inset-0 w-full h-full block">
-        <source media="(max-width: 768px)" srcset={`${unsplashPortrait(photos.atelierHero, 900, 1400)} 1x, ${unsplashPortrait(photos.atelierHero, 1400, 2200)} 2x`} />
+        <source media="(max-width: 768px)" srcset={`${unsplashPortrait(photos.atelierHero, 900, 1200)} 1x, ${unsplashPortrait(photos.atelierHero, 1400, 1800)} 2x`} />
         <img
           src={photos.atelierHero}
           srcset={`${photos.atelierHero.replace(/&w=\d+/, '&w=1200')} 1200w, ${photos.atelierHero.replace(/&w=\d+/, '&w=1800')} 1800w, ${photos.atelierHero} 2400w`}

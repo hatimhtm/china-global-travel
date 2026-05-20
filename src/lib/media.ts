@@ -4,10 +4,11 @@
  * object-cover to throw away ~70% of the photo. Portrait variants (around 9:16
  * to 9:19 ratio) preserve the subject on a phone screen.
  */
-export function unsplashPortrait(url: string, w = 900, h = 1400): string {
+export function unsplashPortrait(url: string, w = 900, h = 1200): string {
   const base = url.split('?')[0];
-  // crop=entropy uses Unsplash's smart-crop (highest-entropy region) instead of
-  // center-cropping — keeps the subject visible when the original is landscape.
+  // crop=entropy uses Unsplash's smart-crop (highest-entropy region) so the
+  // subject survives a portrait crop on phone screens. 3:4 ratio (was 9:14)
+  // preserves more of the original photo — less aggressive zoom.
   return `${base}?auto=format&fit=crop&crop=entropy&w=${w}&h=${h}&q=72`;
 }
 
@@ -44,22 +45,49 @@ export const heroVideo = {
  * falls back to its static photo. Sources point at confirmed-reachable Pexels CDN URLs.
  */
 export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: { src: string; type?: string }[]; sources: { src: string; type?: string }[] }> = {
+  wuyuan: {
+    poster: 'https://images.unsplash.com/photo-1773649967967-bfd301b989db?auto=format&fit=crop&w=2400&q=75',
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/2330708/2330708-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/2330708/2330708-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+    ],
+  },
   lushan: {
     poster: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2400&q=75',
     mobileSources: [
-      { src: 'https://videos.pexels.com/video-files/1093662/1093662-sd_640_360_30fps.mp4', type: 'video/mp4' },
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
     ],
     sources: [
       { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
     ],
   },
+  jingdezhen: {
+    poster: 'https://images.unsplash.com/photo-1723779235394-2e406c604269?auto=format&fit=crop&w=2400&q=75',
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1093656/1093656-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1093656/1093656-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+  },
+  "longhu-mountain": {
+    poster: 'https://images.unsplash.com/photo-1568454158284-8b858a0c914e?auto=format&fit=crop&w=2400&q=75',
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1409899/1409899-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1409899/1409899-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
+    ],
+  },
   sanqingshan: {
     poster: 'https://images.unsplash.com/photo-1568454158153-6bf6cfda9070?auto=format&fit=crop&w=2400&q=75',
     mobileSources: [
-      { src: 'https://videos.pexels.com/video-files/1448735/1448735-sd_640_360_24fps.mp4', type: 'video/mp4' },
+      { src: 'https://videos.pexels.com/video-files/1448735/1448735-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
     ],
     sources: [
-      { src: 'https://videos.pexels.com/video-files/1448735/1448735-uhd_2732_1440_24fps.mp4', type: 'video/mp4' },
+      { src: 'https://videos.pexels.com/video-files/1448735/1448735-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
     ],
   },
 };
