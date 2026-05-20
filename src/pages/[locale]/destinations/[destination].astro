@@ -29,7 +29,7 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
   {/* HERO */}
   <section class="relative min-h-[100svh] flex items-end overflow-hidden">
     {heroVid ? (
-      <HeroVideo poster={heroVid.poster} sources={heroVid.sources} overlay={0.5} ariaLabel={d.title} />
+      <HeroVideo poster={heroVid.poster} sources={heroVid.sources} mobileSources={heroVid.mobileSources} overlay={0.5} ariaLabel={d.title} />
     ) : (
       <div class="absolute inset-0 -z-10">
         <img

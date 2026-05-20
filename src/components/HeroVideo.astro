@@ -14,24 +14,24 @@
 interface Props {
   poster: string;
   sources: { src: string; type?: string }[];
+  /** Optional mobile-only video sources (≤768px) — should be ≤2MB for cellular */
+  mobileSources?: { src: string; type?: string }[];
   /** 0..1 — strength of the bottom darken (default 0.45). Applied to .hero-veil custom prop. */
   overlay?: number;
   ariaLabel?: string;
 }
-const { poster, sources, overlay = 0.45, ariaLabel } = Astro.props;
+const { poster, sources, mobileSources, overlay = 0.45, ariaLabel } = Astro.props;
 // A lightweight mobile poster: Unsplash served at 900w jpg ≈ 80–120KB, which is
-// 10–15× lighter than the 2400w hero poster. We swap via <picture> on the <img>
-// inside the video element by using two posters via responsive `imagesrcset` on
-// a preload hint. The <video poster> attribute still references the desktop URL
-// as a fallback for older browsers.
-const mobilePoster = poster.replace(/[?&]w=\d+/, '').includes('unsplash.com')
+// 10–15× lighter than the 2400w hero poster.
+const mobilePoster = poster.includes('unsplash.com')
   ? poster.replace(/([?&])w=\d+/, '$1w=900').replace(/([?&])q=\d+/, '$1q=70')
   : poster;
 ---
 
 <div class="hero-media absolute inset-0 -z-10" aria-hidden={ariaLabel ? undefined : 'true'} aria-label={ariaLabel}>
-  {/* Mobile gets the small poster as an <img> behind the video so that a
-      slow-to-load video never flashes the desktop-weight image. */}
+  {/* Mobile gets the small poster as an <img> behind the video so a slow-to-load
+      video never flashes the desktop-weight image. Solid ink behind both ensures
+      light header/hero text always has contrast even on outright load failure. */}
   <picture class="absolute inset-0 w-full h-full block">
     <source media="(max-width: 768px)" srcset={mobilePoster} />
     <img src={poster} alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
@@ -42,11 +42,12 @@ const mobilePoster = poster.replace(/[?&]w=\d+/, '').includes('unsplash.com')
     muted
     loop
     playsinline
-    preload="metadata"
-    poster={poster}
+    preload="none"
+    poster={mobilePoster}
     data-hero-video
   >
-    {sources.map((s) => <source src={s.src} type={s.type ?? 'video/mp4'} />)}
+    {(mobileSources ?? []).map((s) => <source media="(max-width: 768px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
+    {sources.map((s) => <source media="(min-width: 769px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
   </video>
   <div class="hero-veil absolute inset-0" style={`--hero-overlay:${overlay}`}></div>
 </div>
@@ -59,11 +60,23 @@ const mobilePoster = poster.replace(/[?&]w=\d+/, '').includes('unsplash.com')
     if (!v) return;
     if ((v as any).dataset.heroInited === 'true') return;
     (v as any).dataset.heroInited = 'true';
+    // Defer-load the video — preload="none" means we have to call .load() to
+    // actually fetch it. We wait until the page is idle so the poster wins the
+    // critical-paint race, then hand off to the loop.
+    const start = () => {
+      try { v.load(); } catch {}
+      v.play().catch(() => {/* autoplay blocked / data-saver — poster stays */});
+    };
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(start, { timeout: 1500 });
+    } else {
+      setTimeout(start, 800);
+    }
     if (!('IntersectionObserver' in window)) return;
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (e.isIntersecting) {
-          v.play().catch(() => {/* autoplay blocked is fine */});
+          v.play().catch(() => {/* fine */});
         } else {
           v.pause();
         }

@@ -301,13 +301,32 @@
     animation: cp-scroll-cue 2.6s var(--ease-out-quint) infinite;
   }
 
-  /* Reveal — pure CSS, animation-fill-mode: both, no JS hide gating */
+  /*
+    Reveal — VISIBLE BY DEFAULT. The animation only fires when <html> has the
+    `js-ready` class (set inline-script in the head). If JS fails / animations
+    are blocked / a screenshot fires mid-paint, hero copy stays visible — no
+    bone-on-bone disappearance, no broken first-impression on slow networks.
+  */
   .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  html.js-ready .reveal {
     animation: cp-rise 1.2s var(--ease-out-quint) both;
   }
   .reveal-2 { animation-delay: 0.12s; }
   .reveal-3 { animation-delay: 0.24s; }
   .reveal-4 { animation-delay: 0.36s; }
+
+  /* Hero section solid backdrop — content sections marked .hero-dark get an ink
+     base color so light text always has contrast even if the background image
+     or video fails to paint. Critical for slow-network and image-CDN-outage cases. */
+  .hero-dark {
+    background-color: var(--color-ink);
+  }
+  .hero-media {
+    background-color: var(--color-ink);
+  }
 
   /*
     Scroll-driven reveals.
@@ -557,6 +576,11 @@ html[dir="rtl"] .ms-rtl-flip { transform: scaleX(-1); }
   .eyebrow::before {
     width: 1.1rem;
     margin-inline-end: 0.5rem;
+  }
+  /* Bump eyebrow above readability floor on mobile — 11.2px is too tight at arm's length. */
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
   }
 
   /* The grain overlay can flicker on iOS when combined with the kenburns

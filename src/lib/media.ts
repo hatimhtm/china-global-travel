@@ -10,8 +10,12 @@
 
 export const heroVideo = {
   poster: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=75',
+  // Mobile sources (≤768px) — small SD clips for cellular networks
+  mobileSources: [
+    { src: 'https://videos.pexels.com/video-files/1851190/1851190-sd_640_360_25fps.mp4', type: 'video/mp4' },
+  ],
+  // Desktop sources (>768px) — 1080p first, 1440p upgrade
   sources: [
-    // Drone — aerial mist mountains (Pexels CC0). 1080p first for fast-start; 1440p as upgrade.
     { src: 'https://videos.pexels.com/video-files/1851190/1851190-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
     { src: 'https://videos.pexels.com/video-files/2491284/2491284-uhd_2732_1440_24fps.mp4', type: 'video/mp4' },
   ],
@@ -21,15 +25,21 @@ export const heroVideo = {
  * Per-destination drone hero videos. If a slug isn't listed, the destination page
  * falls back to its static photo. Sources point at confirmed-reachable Pexels CDN URLs.
  */
-export const heroVideoBySlug: Record<string, { poster: string; sources: { src: string; type?: string }[] }> = {
+export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: { src: string; type?: string }[]; sources: { src: string; type?: string }[] }> = {
   lushan: {
     poster: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=2400&q=75',
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-sd_640_360_30fps.mp4', type: 'video/mp4' },
+    ],
     sources: [
       { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
     ],
   },
   sanqingshan: {
     poster: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=2400&q=75',
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1448735/1448735-sd_640_360_24fps.mp4', type: 'video/mp4' },
+    ],
     sources: [
       { src: 'https://videos.pexels.com/video-files/1448735/1448735-uhd_2732_1440_24fps.mp4', type: 'video/mp4' },
     ],
