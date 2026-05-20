@@ -71,15 +71,40 @@ const fontsByLocale: Record<Locale, string> = {
     ))}
     <link rel="alternate" hreflang="x-default" href={`${baseUrl}/en/${pathKey}`} />
 
-    {/* Open Graph */}
+    {/* Open Graph + Twitter — mist-mountain hero as default share image */}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={dict.brand.name} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&h=630&q=75" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={dict.brand.tagline} />
     <meta property="og:locale" content={locale === 'zh' ? 'zh_CN' : locale === 'ar' ? 'ar_MA' : locale === 'fr' ? 'fr_FR' : 'en_US'} />
     {locales.filter((l) => l !== locale).map((l) => (
       <meta property="og:locale:alternate" content={l === 'zh' ? 'zh_CN' : l === 'ar' ? 'ar_MA' : l === 'fr' ? 'fr_FR' : 'en_US'} />
     ))}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&h=630&q=75" />
+
+    {/* JSON-LD — TravelAgency schema for the studio root */}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": dict.brand.name,
+      "description": dict.meta.description,
+      "url": canonical,
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Jiangxi", "containedInPlace": { "@type": "Country", "name": "China" } }
+      ],
+      "knowsLanguage": ["en", "fr", "ar", "zh-Hans"],
+      "contactPoint": [
+        { "@type": "ContactPoint", "contactType": "customer service", "email": dict.inquire.alt.emailAddress, "telephone": dict.inquire.alt.whatsappNumber, "availableLanguage": ["English", "French", "Arabic", "Chinese"] }
+      ]
+    })} />
 
     {/* Fonts — Bunny Fonts, locale-aware */}
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
