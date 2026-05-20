@@ -35,8 +35,8 @@
   "home": {
     "hero": {
       "eyebrow": "Bespoke journeys · Jiangxi, China",
-      "heading": "China's quietest province. Considered.",
-      "sub": "Mist mountains, ancient kilns, and a thousand years of slow. Each journey designed in private.",
+      "heading": "The China that travels at the speed of mist.",
+      "sub": "Porcelain turned by hand. Temples older than language. A province most maps forget. Each journey drawn in private.",
       "cta": "Begin a journey",
       "scroll": "Scroll"
     },
@@ -47,8 +47,8 @@
     },
     "journeys": {
       "eyebrow": "Three movements",
-      "heading": "Three ways to journey.",
-      "sub": "Each itinerary is a starting point. Every detail is yours to shape.",
+      "heading": "Five days. Eight days. Twelve.",
+      "sub": "Each itinerary is a starting point — a way of thinking, not a product. Every detail yours to shape.",
       "cta": "See all journeys"
     },
     "destinations": {
@@ -61,10 +61,10 @@
       "eyebrow": "What you will find",
       "heading": "An inheritance, made tangible.",
       "items": [
-        { "title": "Craft & Ceramics", "body": "A thousand-year unbroken lineage at the porcelain capital. Studios open their doors only to us." },
-        { "title": "Mountain Pilgrimage", "body": "Five sacred peaks. Monks, mist, and the cold quiet of stone older than dynasty." },
-        { "title": "Tea & Tradition", "body": "Lushan Yunwu, harvested at the cloud line. Ceremonies in pavilions that have served emperors and farmers alike." },
-        { "title": "Landscape & Photography", "body": "Rapeseed gold in March, the cloud sea in October. We know the hour the light arrives." }
+        { "title": "Craft & Ceramics", "body": "A thousand-year unbroken lineage at the porcelain capital. The studios that open only by introduction — and only to us." },
+        { "title": "Mountain Pilgrimage", "body": "Five sacred peaks. Monks before dawn, mist by mid-morning, and the cold quiet of stone older than dynasty." },
+        { "title": "Tea & Tradition", "body": "Lushan Yunwu, picked at the cloud line in May. Ceremonies in pavilions that have poured for emperors and farmers without distinction." },
+        { "title": "Landscape & Photography", "body": "Rapeseed gold in late March. The cloud sea in October. We know the hour the light arrives, and the hour to leave." }
       ]
     },
     "atelierTeaser": {
@@ -81,7 +81,7 @@
     "inquireCta": {
       "eyebrow": "Speak with a designer",
       "heading": "Every journey begins with a conversation.",
-      "sub": "We respond within one working day. WhatsApp, email, or our quiet inquiry form — your choice.",
+      "sub": "One working day to a reply. WhatsApp, email, or the quiet inquiry form — whichever suits the hour.",
       "cta": "Begin the conversation"
     }
   },
@@ -113,7 +113,7 @@
           { "day": "Day 1", "title": "Arrive Nanchang", "body": "Met at Changbei airport. Settle into a quiet hotel above the Gan river. Late afternoon at Tengwang Pavilion, the literary tower rebuilt twenty-eight times across thirteen centuries. Dinner of Jiangxi specialties, hosted by your designer." },
           { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Slow drive north-east through tea hills. Arrival in Likeng village by lunch. The afternoon is unscheduled — wander between stone bridges, white-walled lanes, ancestral halls. Dinner at a village table." },
           { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Morning in Huangling, the hanging-field village. Lunch at the foot of the kilns. Afternoon in a working studio with a sixth-generation porcelain master — wheel, glaze, mark. You will leave with a piece you shaped yourself." },
-          { "day": "Day 4", "title": "Jingdezhen to Lushan", "body": "A long lunch at Taoxichuan Art Avenue, then the climb to Lushan. Donglin Temple at dusk. The mountain air is colder than the valley. Tea before bed." },
+          { "day": "Day 4", "title": "Jingdezhen to Lushan", "body": "A long lunch at Taoxichuan Art Avenue, then the climb to Lushan. Donglin Temple at dusk — the courtyard lanterns lit one by one. The mountain air thins; the valley falls away. A pot of Yunwu in the room before sleep." },
           { "day": "Day 5", "title": "Lushan to Nanchang, departure", "body": "Dawn tea ceremony on the mountain. Slow descent through cloud. Lunch in Nanchang. Onward flight." }
         ]
       },
@@ -123,23 +123,23 @@
         "duration": "8 days",
         "priceFrom": "from €3,500 per person",
         "tagline": "The signature — temples, mist, and Taoist sacred peaks.",
-        "summary": "Eight days through four UNESCO landscapes. Adds the Taoist heart of China — Longhu's red cliffs and bamboo rafts, Sanqingshan's granite gods — to the literary, ceramic, and Buddhist threads of the Essential.",
+        "summary": "Eight days across four UNESCO landscapes. The Taoist heart of China — Longhu's red cliffs, Sanqingshan's granite gods — woven into the literary, ceramic and Buddhist threads of the Essential.",
         "intro": "Eight days lets us trace four threads — literary, ceramic, Buddhist, Taoist — without rushing any one of them. The Taoist heart of Jiangxi reveals itself slowly: bamboo on a red-cliff river, a priest's morning chant, the stone goddess watching from her peak.",
         "highlights": [
-          "Four UNESCO sites in a single journey",
-          "Bamboo-raft float beneath Longhu Mountain's hanging coffins",
-          "Overnight in a working ceramic studio-hotel",
-          "Guided meditation at Donglin Temple, founded in 386 CE",
-          "The Oriental Goddess Peak at sunrise"
+          "Four UNESCO landscapes, traced in a single arc",
+          "Bamboo raft beneath Longhu's hanging coffins — placed in the cliffs two thousand years ago by means no scholar has explained",
+          "A night above the kilns in a working ceramic studio-hotel",
+          "Donglin Temple's morning chant — the bell sounds three times before five",
+          "Oriental Goddess Peak at sunrise, before the cable cars open"
         ],
         "days": [
           { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion at golden hour. Dinner above the river." },
           { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Likeng by lunch. Afternoon walks through Hui-village lanes." },
           { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Huangling at dawn. Private studio session by afternoon. Studio-hotel overnight." },
-          { "day": "Day 4", "title": "Jingdezhen to Longhu", "body": "Bamboo raft past the cliff burials. Tianshi Mansion. A Taoist priest's quiet hour." },
-          { "day": "Day 5", "title": "Longhu to Lushan", "body": "Donglin Temple by dusk. Tea on the mountain." },
-          { "day": "Day 6", "title": "Lushan to Sanqingshan", "body": "Cable-car to the Five Elements complex. Cliff-face boardwalk. Mountain lodge by night." },
-          { "day": "Day 7", "title": "Sanqingshan dawn, return Nanchang", "body": "Oriental Goddess Peak at sunrise. Slow descent. Afternoon at Poyang Lake or a Nanchang silk-weaver's studio." },
+          { "day": "Day 4", "title": "Jingdezhen to Longhu", "body": "Bamboo raft past the cliff burials of the Guyue. Tianshi Mansion, where the Celestial Masters have presided since the second century. A quiet hour with a resident priest." },
+          { "day": "Day 5", "title": "Longhu to Lushan", "body": "Drive north as the red cliffs give way to tea hills. Donglin Temple by dusk; lanterns in the courtyard. Yunwu poured on the mountain." },
+          { "day": "Day 6", "title": "Lushan to Sanqingshan", "body": "Cable car to the Five Elements complex. Cliff-face boardwalk above a sea of cloud. A mountain lodge — no signal, woodsmoke at dusk." },
+          { "day": "Day 7", "title": "Sanqingshan dawn, return Nanchang", "body": "Oriental Goddess Peak at sunrise — the stone pillar that has watched the valley longer than recorded history. Slow descent. Afternoon at Poyang Lake or with a Nanchang silk-weaver." },
           { "day": "Day 8", "title": "Departure", "body": "Onward flight." }
         ]
       },
@@ -152,12 +152,12 @@
         "summary": "Twelve days. Five UNESCO sites. Buddhist monks, Taoist priests, porcelain masters, tea farmers — and the unhurried hours in between. A journey for those who travel to listen.",
         "intro": "Twelve days is the journey we would design for ourselves. Five UNESCO sites, two multi-night retreats, a Wugong dawn above the cloud sea, and a capstone evening at a cliff-edge hotel suspended in a sacred gorge. Every hour considered. None of them rushed.",
         "highlights": [
-          "Five UNESCO sites — Lushan, Longhu, Sanqingshan, Jingdezhen, Wuyuan",
-          "Private mentorship at a Jingdezhen artist's studio",
-          "Two-night Buddhist meditation retreat at Donglin Temple",
-          "Wugong Mountain dawn — when the peaks rise above the cloud sea",
-          "Capstone night at Wangxian Valley's cliff-edge suites",
-          "Optional private lessons in calligraphy, tea, or Buddhist philosophy"
+          "Five UNESCO landscapes — Lushan, Longhu, Sanqingshan, Jingdezhen, Wuyuan",
+          "Private mentorship at a sixth-generation porcelain studio",
+          "Two nights inside Donglin Temple — dawn chant, vegetarian table, monk-led walks",
+          "Wugong Mountain pre-dawn — when the first peaks break the cloud sea",
+          "A final evening at Wangxian Valley, in a suite carved into the cliff face",
+          "Optional hours with a calligrapher, a tea master, or a Buddhist scholar"
         ],
         "days": [
           { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion, the City of Porcelain exhibition, the night market by the river." },
@@ -166,9 +166,9 @@
           { "day": "Day 5", "title": "Jingdezhen", "body": "Full-day private studio mentorship. Studio-hotel overnight." },
           { "day": "Day 6", "title": "Longhu Mountain", "body": "Bamboo raft, Tianshi Mansion, a Taoist priest's teaching with translator." },
           { "day": "Day 7–8", "title": "Lushan retreat", "body": "Two nights at Donglin Temple. Dawn ceremonies. Multi-peak hiking. White Deer Cave Academy. Tea ceremony at the cloud line." },
-          { "day": "Day 9", "title": "Sanqingshan", "body": "Five Elements temple complex. Stone-carving artisan workshop." },
-          { "day": "Day 10", "title": "Wugong Mountain", "body": "Pre-dawn ascent for the cloud sea. Forest-bathing afternoon." },
-          { "day": "Day 11", "title": "Wangxian Valley", "body": "Cliff-suite evening. Dinner suspended above the gorge." },
+          { "day": "Day 9", "title": "Sanqingshan", "body": "Five Elements temple complex at first light. Afternoon with a stone-carver whose father carved the same mountain." },
+          { "day": "Day 10", "title": "Wugong Mountain", "body": "Pre-dawn ascent. The peaks rise from the cloud sea one by one. Afternoon in the bamboo, walking slowly and saying little." },
+          { "day": "Day 11", "title": "Wangxian Valley", "body": "A suite cut into the cliff face. Dinner served on a terrace that hangs over the gorge — the lights of the valley a thousand feet below." },
           { "day": "Day 12", "title": "Return Nanchang, departure", "body": "Onward flight." }
         ]
       }
@@ -191,10 +191,10 @@
         "intro": "Wuyuan is a county of villages, not a town. To arrive here is to leave the highway grid and enter a slower geometry — rivers cross paths, stone bridges arc, white walls reflect the colour of the season. In spring it is gold; in autumn, the rooftops turn red with drying chillies and corn. The Hui-style architecture, lifted from sixteenth-century Anhui merchant fortunes, has been preserved here more completely than anywhere else in China.",
         "best": "Late March to early April for rapeseed; October to November for autumn rooftop colour",
         "experiences": [
-          "Walk Likeng's stone bridges; let the village find you",
-          "Private dinner inside an ancestral hall, hosted by a village elder",
-          "Hui carving workshop with a sixth-generation master",
-          "Dawn calligraphy by the river"
+          "Walk Likeng's stone bridges before breakfast, when the village is still its own",
+          "Dinner inside an ancestral hall, set by a village elder",
+          "An afternoon at the bench with a sixth-generation Hui woodcarver",
+          "Calligraphy at dawn, on a table set by the river"
         ]
       },
       {
@@ -205,10 +205,10 @@
         "intro": "Lushan is not a mountain so much as a library. Every peak holds a temple, every temple a manuscript, every manuscript a thousand years of consideration. The Song-dynasty landscape painters lived here. The neo-Confucian school of White Deer Cave Academy was founded here. The first Pure Land Buddhist monastery in China was built here in 386. Even today, the morning chant of Donglin Temple begins at five, and the bell carries down the valley.",
         "best": "May for tea harvest; September to November for clear mornings and cloud seas",
         "experiences": [
-          "Tea ceremony in a Tang-era hermit's pavilion",
-          "Donglin Temple meditation at dawn",
-          "White Deer Cave Academy — the cradle of neo-Confucian thought",
-          "Hike between the Three Peaks at sunset"
+          "Yunwu poured in a Tang-era hermit's pavilion, at the hour the mist arrives",
+          "Donglin's morning chant — the hall is colder than the night air; sit at the back",
+          "An hour at White Deer Cave Academy, where Zhu Xi taught the neo-Confucian school",
+          "The Three Peaks ridge at last light, when the valley empties of voices"
         ]
       },
       {
@@ -219,10 +219,10 @@
         "intro": "Jingdezhen is the porcelain capital of the world by a margin so wide that no rival even competes for the title. For a thousand unbroken years, the city has fired clay. Its blue-and-white travelled the Maritime Silk Road; its imperial wares set the standard for global porcelain. Today the masters live in Sanbao, work in Taoxichuan, teach in private studios that open only by introduction. Cloud Pavilion is one of those introductions.",
         "best": "October to April for cooler studio days; spring for international ceramic fairs",
         "experiences": [
-          "Private studio session with a contemporary master",
-          "The Ancient Kiln Folk Customs Museum — a working museum",
-          "Taoxichuan Art Avenue at twilight",
-          "Bring home a piece you shaped yourself"
+          "A session at the wheel with a contemporary master — clay, glaze, mark",
+          "The Ancient Kiln complex, where dragon kilns still fire on the old schedule",
+          "Taoxichuan at twilight, when the studios open and the alleys fill",
+          "A piece you shaped yourself, fired and shipped to your door"
         ]
       },
       {
@@ -233,10 +233,10 @@
         "intro": "Longhu — Dragon-Tiger Mountain — is one of Taoism's four sacred peaks and, by most accounts, its first. The Tianshi Mansion at its foot has housed the Celestial Masters since the second century. The Luxi river that winds between its red Danxia cliffs carries bamboo rafts past a stranger geography still: the hanging coffins of the ancient Guyue people, placed in cliff caves two thousand years ago by means no scholar has yet fully explained.",
         "best": "April to June and September to November for mild weather and the clearest river days",
         "experiences": [
-          "Bamboo-raft float past the cliff burials",
-          "Tianshi Mansion — the headquarters of Zhengyi Taoism",
-          "Quiet conversation with a resident Taoist priest, with translator",
-          "Sunrise from the Sky Walk"
+          "Bamboo raft down the Luxi, past the hanging coffins of the Guyue",
+          "Tianshi Mansion — eighteen centuries of unbroken Celestial Master lineage",
+          "A quiet hour with a resident priest, translated word for word",
+          "The Sky Walk at sunrise, before the cliff face warms to red"
         ]
       },
       {
@@ -247,10 +247,10 @@
         "intro": "Sanqingshan is named for the Three Pure Ones of Taoist cosmology, and the mountain itself appears to have been carved with the theology in mind. Forty-eight granite peaks rise above a sea of cloud. The Oriental Goddess, a 128-metre stone pillar, sits in the lotus position at the summit. The Taoist temple complex — 238 documented cultural sites — was laid out 1,600 years ago. Walking the cliff-face boardwalks at dawn, before the cable cars open, is one of the quieter experiences in modern China.",
         "best": "April to June for wildflowers; September to November for cloud seas",
         "experiences": [
-          "Sunrise at the Oriental Goddess Peak",
-          "Cable-car ascent to the Five Elements Taoist temple complex",
-          "Cliff-face boardwalk hike with private guide",
-          "Stargazing from the mountain lodge"
+          "Sunrise at the Oriental Goddess — a 128-metre pillar in lotus position above the cloud",
+          "The Five Elements complex, walked between temples laid out 1,600 years ago",
+          "Cliff-face boardwalks before the cable cars open, with a private guide",
+          "A mountain lodge with no signal, and stars the cities have forgotten"
         ]
       }
     ]
@@ -264,8 +264,8 @@
     "philosophy": {
       "eyebrow": "What we believe",
       "heading": "Travel is a sequence of decisions about attention.",
-      "body1": "It is not a product. It is what to see, what to skip, where to stay long, where to leave early. We are paid to make those decisions well, on your behalf.",
-      "body2": "We do not run tours. We do not maintain a list of departures. Every journey is drawn from a single conversation, and shaped over weeks of preparation. By the time you land in Nanchang, every door is open, every host expecting you, every hour considered."
+      "body1": "What to see. What to skip. Where to stay a third night. Where to leave at noon. We are paid to make those decisions well, on your behalf — and to disappear once they are made.",
+      "body2": "We do not run tours. We do not keep a list of departures. Every journey is drawn from one conversation and shaped over weeks. By the time you land in Nanchang, every door is open, every host expecting you, every hour considered."
     },
     "partnership": {
       "eyebrow": "Partnership",

@@ -4,8 +4,8 @@
   "label": "French",
   "labelNative": "Français",
   "meta": {
-    "title": "Cloud Pavilion — Voyages mesurés à travers le Jiangxi",
-    "description": "Voyages sur mesure dans le paysage le plus délibéré de Chine. Montagnes de brume, fours millénaires et mille ans de lenteur.",
+    "title": "Cloud Pavilion — Voyages d’auteur à travers le Jiangxi",
+    "description": "Voyages sur mesure dans la province la plus posée de Chine. Montagnes de brume, fours millénaires et mille ans de lenteur.",
     "ogImage": "/og-image.jpg"
   },
   "brand": {
@@ -15,74 +15,74 @@
   "nav": {
     "journeys": "Voyages",
     "destinations": "Destinations",
-    "atelier": "L'Atelier",
+    "atelier": "L’Atelier",
     "journal": "Journal",
     "inquire": "Nous écrire",
     "menu": "Menu",
     "close": "Fermer"
   },
   "footer": {
-    "tagline": "Voyages sur mesure, dessinés dans la confidence.",
+    "tagline": "Voyages sur mesure, conçus à huis clos.",
     "addressLine1": "Cloud Pavilion",
     "addressLine2": "Casablanca · Nanchang",
     "rights": "© 2026 Cloud Pavilion. Tous droits réservés.",
-    "credits": "Une pratique discrète.",
+    "credits": "Une maison discrète.",
     "contactHeading": "Contact",
     "exploreHeading": "Explorer",
     "languageHeading": "Langue",
-    "newsletter": "Nous ne publions pas de lettre d'information. Parlez plutôt à un concepteur."
+    "newsletter": "Nous ne publions pas de lettre d’information. Échangez plutôt avec un concepteur."
   },
   "home": {
     "hero": {
       "eyebrow": "Voyages sur mesure · Jiangxi, Chine",
-      "heading": "La province la plus silencieuse de Chine. Pensée avec mesure.",
-      "sub": "Montagnes de brume, fours anciens et mille ans de lenteur. Chaque voyage dessiné dans la confidence.",
+      "heading": "Une Chine qui voyage à l’allure de la brume.",
+      "sub": "Porcelaine tournée à la main. Temples plus anciens que la langue. Une province que la plupart des cartes oublient. Chaque itinéraire tracé à huis clos.",
       "cta": "Commencer un voyage",
       "scroll": "Faire défiler"
     },
     "bridge": {
       "eyebrow": "Une autre Chine",
-      "heading": "De Fès à Jingdezhen — mille ans d'artisanat mesuré.",
-      "body": "Voyager ici n'est pas une liste. C'est la cadence de la porcelaine tournée à la main, l'ascension vers un temple plus ancien que la langue, le thé servi sur un balcon au-dessus des nuages. Nous suivons des lignées qui ressemblent discrètement aux vôtres — l'héritage de l'artisanat, la géographie de la contemplation, l'arc patient du commerce."
+      "heading": "De Fès à Jingdezhen — mille ans d’artisanat posé.",
+      "body": "Voyager ici n’a rien d’une liste. C’est la cadence de la porcelaine tournée à la main, la montée vers un temple plus ancien que la langue, le thé servi sur un balcon au-dessus des nuages. Nous suivons des lignées qui font discrètement écho aux vôtres : l’héritage de la main, la géographie de la contemplation, le long arc du commerce."
     },
     "journeys": {
       "eyebrow": "Trois mouvements",
       "heading": "Trois manières de voyager.",
-      "sub": "Chaque itinéraire est un point de départ. Chaque détail vous appartient.",
+      "sub": "Chaque itinéraire est un point de départ. Chaque détail se dessine avec vous.",
       "cta": "Voir tous les voyages"
     },
     "destinations": {
       "eyebrow": "Où vous irez",
       "heading": "Cinq régions. Un même héritage.",
-      "sub": "Chaque région est un récit. Nous les tissons dans l'ordre qui convient le mieux à vos heures.",
+      "sub": "Chaque région est un récit. Nous les tissons dans l’ordre qui convient le mieux à vos heures.",
       "cta": "Voir toutes les destinations"
     },
     "experiences": {
       "eyebrow": "Ce que vous y trouverez",
       "heading": "Un héritage, rendu tangible.",
       "items": [
-        { "title": "Artisanat & céramique", "body": "Une lignée ininterrompue de mille ans dans la capitale de la porcelaine. Les ateliers n'ouvrent leurs portes qu'à nous." },
-        { "title": "Pèlerinage en montagne", "body": "Cinq sommets sacrés. Des moines, la brume et le silence froid d'une pierre plus ancienne que les dynasties." },
-        { "title": "Thé & tradition", "body": "Le Lushan Yunwu, récolté à la ligne des nuages. Cérémonies dans des pavillons qui ont servi empereurs et paysans." },
-        { "title": "Paysage & photographie", "body": "L'or du colza en mars, la mer de nuages en octobre. Nous connaissons l'heure où la lumière arrive." }
+        { "title": "Artisanat & céramique", "body": "Une lignée ininterrompue de mille ans dans la capitale de la porcelaine. Des ateliers qui ne s’ouvrent que sur recommandation — et seulement à nous." },
+        { "title": "Pèlerinage en montagne", "body": "Cinq sommets sacrés. Des moines avant l’aube, la brume en milieu de matinée, le silence froid d’une pierre plus ancienne que les dynasties." },
+        { "title": "Thé & tradition", "body": "Le Lushan Yunwu, cueilli à la ligne des nuages en mai. Cérémonies dans des pavillons qui ont servi empereurs et paysans sans distinction." },
+        { "title": "Paysage & photographie", "body": "L’or du colza fin mars. La mer de nuages en octobre. Nous connaissons l’heure où la lumière arrive, et celle où il faut repartir." }
       ]
     },
     "atelierTeaser": {
-      "eyebrow": "L'Atelier",
-      "heading": "Dessiné dans la confidence. Voyagé en confiance.",
-      "body": "Cloud Pavilion est une petite pratique. Nos concepteurs passent plus de temps à écouter qu'à présenter — votre voyage arrive avec le poids mesuré de mois de préparation, et la légèreté d'une chose bien faite.",
-      "cta": "À l'intérieur de l'Atelier"
+      "eyebrow": "L’Atelier",
+      "heading": "Conçus à huis clos. Vécus en toute confiance.",
+      "body": "Cloud Pavilion est une petite maison. Nos concepteurs passent plus de temps à écouter qu’à présenter — votre voyage vous parvient avec le poids posé de plusieurs mois de préparation, et la légèreté d’une chose bien faite.",
+      "cta": "À l’intérieur de l’Atelier"
     },
     "journalTeaser": {
       "eyebrow": "Journal",
-      "heading": "Notes de terrain d'une province silencieuse.",
+      "heading": "Notes de terrain d’une province silencieuse.",
       "cta": "Lire le Journal"
     },
     "inquireCta": {
-      "eyebrow": "Parler à un concepteur",
+      "eyebrow": "Échanger avec un concepteur",
       "heading": "Chaque voyage commence par une conversation.",
-      "sub": "Nous répondons dans la journée ouvrée. WhatsApp, courriel ou notre discret formulaire — à votre convenance.",
-      "cta": "Commencer la conversation"
+      "sub": "Nous répondons sous un jour ouvré. WhatsApp, courriel ou notre formulaire discret — à votre convenance.",
+      "cta": "Engager la conversation"
     }
   },
   "journeys": {
@@ -90,9 +90,9 @@
       "hero": {
         "eyebrow": "Les voyages",
         "heading": "Trois mouvements à travers le Jiangxi.",
-        "sub": "Cinq jours, huit jours, douze jours. Chacun un point de départ — chaque détail vous appartient."
+        "sub": "Cinq jours, huit jours, douze jours. Chacun un point de départ — chaque détail se dessine avec vous."
       },
-      "intro": "Voici nos trois itinéraires de référence. Chacun peut être prolongé, enrichi ou redessiné. Ce sont des canevas de pensée, non des produits. Votre voyage définitif sera tracé autour de vos propres questions."
+      "intro": "Voici nos trois itinéraires de référence. Chacun peut être prolongé, étoffé ou repris autrement. Ce sont des canevas de pensée, non des produits. Votre voyage définitif se tracera autour de vos propres questions."
     },
     "items": [
       {
@@ -100,21 +100,21 @@
         "title": "Jiangxi essentiel",
         "duration": "5 jours",
         "priceFrom": "à partir de 2 200 € par personne",
-        "tagline": "L'essence — montagnes de brume et villages anciens.",
-        "summary": "Une première introduction à la province. Le pavillon littéraire de Nanchang, les vallées de colza de Wuyuan, les ateliers de porcelaine de Jingdezhen, les matinées de thé et de brume du Lushan. Rythmé pour ceux qui veulent le cœur du Jiangxi sans en sacrifier le silence.",
-        "intro": "Cinq jours est un nombre choisi. Assez long pour entrer dans la cadence du Jiangxi, assez bref pour partir avec l'envie d'une autre semaine. Nous avons composé Essentiel comme un arc mesuré — d'abord le pavillon au cœur des dynasties, puis l'ouest vers les vallées villageoises, le nord vers la ville de la porcelaine, et enfin la montée vers le calme nuageux du Lushan.",
+        "tagline": "L’essence — montagnes de brume et villages anciens.",
+        "summary": "Une première approche de la province. Le pavillon littéraire de Nanchang, les vallées de colza de Wuyuan, les ateliers de porcelaine de Jingdezhen, les matins de thé et de brume du Lushan. Une cadence pensée pour qui veut le cœur du Jiangxi sans en sacrifier le silence.",
+        "intro": "Cinq jours est un nombre choisi. Assez long pour entrer dans la cadence du Jiangxi, assez bref pour repartir avec l’envie d’une autre semaine. Nous avons composé Essentiel comme un arc posé : d’abord le pavillon au cœur des dynasties, puis l’ouest vers les vallées villageoises, le nord vers la ville de la porcelaine, et enfin la montée vers le calme nuageux du Lushan.",
         "highlights": [
           "Coucher de soleil au pavillon Tengwang — où un poète Tang réécrivit la littérature chinoise",
-          "Deux nuits dans la cour d'une demeure Hui vieille de 600 ans",
+          "Deux nuits dans la cour d’une demeure Hui vieille de six cents ans",
           "Atelier de céramique privé avec un maître de Jingdezhen",
           "Cérémonie du thé Lushan Yunwu, servie sur la montagne"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Accueil à l'aéroport de Changbei. Installation dans un hôtel discret surplombant la rivière Gan. En fin d'après-midi, visite du pavillon Tengwang, la tour littéraire reconstruite vingt-huit fois en treize siècles. Dîner de spécialités du Jiangxi, accueilli par votre concepteur." },
-          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Trajet sans hâte vers le nord-est à travers les collines de thé. Arrivée au village de Likeng pour le déjeuner. L'après-midi est libre — flânez entre les ponts de pierre, les ruelles aux murs blancs et les salles ancestrales. Dîner à la table du village." },
-          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Matinée à Huangling, le village aux champs suspendus. Déjeuner au pied des fours. Après-midi dans un atelier en activité avec un maître porcelainier de la sixième génération — tour, émail, marque. Vous repartirez avec une pièce que vous aurez modelée vous-même." },
-          { "day": "Jour 4", "title": "De Jingdezhen au Lushan", "body": "Long déjeuner sur l'avenue artistique de Taoxichuan, puis montée vers le Lushan. Le temple Donglin au crépuscule. L'air de la montagne est plus froid que celui de la vallée. Thé avant le coucher." },
-          { "day": "Jour 5", "title": "Du Lushan à Nanchang, départ", "body": "Cérémonie du thé à l'aube sur la montagne. Descente lente à travers les nuages. Déjeuner à Nanchang. Vol de continuation." }
+          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Accueil à l’aéroport de Changbei. Installation dans un hôtel discret au-dessus de la rivière Gan. En fin d’après-midi, le pavillon Tengwang, tour littéraire reconstruite vingt-huit fois en treize siècles. Dîner de spécialités du Jiangxi, en compagnie de votre concepteur." },
+          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Route sans hâte vers le nord-est à travers les collines de thé. Arrivée au village de Likeng pour le déjeuner. L’après-midi reste libre : flâner entre les ponts de pierre, les ruelles aux murs blancs et les salles ancestrales. Dîner à la table du village." },
+          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Matinée à Huangling, le village aux champs suspendus. Déjeuner au pied des fours. Après-midi dans un atelier en activité, auprès d’un maître porcelainier de la sixième génération — tour, émail, signature. Vous repartirez avec une pièce façonnée de vos mains." },
+          { "day": "Jour 4", "title": "De Jingdezhen au Lushan", "body": "Long déjeuner sur l’avenue artistique de Taoxichuan, puis montée vers le Lushan. Le temple Donglin au crépuscule, les lanternes de la cour allumées une à une. L’air se raréfie ; la vallée s’efface. Un théier de Yunwu dans la chambre avant le sommeil." },
+          { "day": "Jour 5", "title": "Du Lushan à Nanchang, départ", "body": "Cérémonie du thé à l’aube sur la montagne. Descente lente à travers les nuages. Déjeuner à Nanchang. Vol de continuation." }
         ]
       },
       {
@@ -122,24 +122,24 @@
         "title": "Jiangxi en profondeur",
         "duration": "8 jours",
         "priceFrom": "à partir de 3 500 € par personne",
-        "tagline": "La signature — temples, brume et sommets taoïstes sacrés.",
-        "summary": "Huit jours à travers quatre paysages classés à l'UNESCO. Ajoute le cœur taoïste de la Chine — les falaises rouges du Longhu et les radeaux de bambou, les divinités de granit du Sanqingshan — aux fils littéraires, céramiques et bouddhistes de l'Essentiel.",
-        "intro": "Huit jours nous permettent de suivre quatre fils — littéraire, céramique, bouddhiste, taoïste — sans en presser aucun. Le cœur taoïste du Jiangxi se révèle lentement : un radeau de bambou sur une rivière aux falaises rouges, le chant matinal d'un prêtre, la déesse de pierre veillant depuis son sommet.",
+        "tagline": "La signature — temples, brume et sommets sacrés du taoïsme.",
+        "summary": "Huit jours à travers quatre paysages inscrits à l’UNESCO. Au littéraire, au céramique et au bouddhiste de l’Essentiel s’ajoute le cœur taoïste de la Chine — les falaises rouges du Longhu et ses radeaux de bambou, les divinités de granit du Sanqingshan.",
+        "intro": "Huit jours nous laissent suivre quatre fils — littéraire, céramique, bouddhiste, taoïste — sans en bousculer aucun. Le cœur taoïste du Jiangxi se révèle lentement : un radeau de bambou sur une rivière aux falaises rouges, le chant matinal d’un prêtre, la déesse de pierre qui veille depuis son sommet.",
         "highlights": [
-          "Quatre sites UNESCO en un seul voyage",
+          "Quatre sites UNESCO en un même voyage",
           "Descente en radeau de bambou sous les cercueils suspendus du mont Longhu",
           "Nuit dans un atelier-hôtel de céramique en activité",
           "Méditation guidée au temple Donglin, fondé en 386",
           "Le pic de la Déesse orientale au lever du soleil"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang à l'heure dorée. Dîner au-dessus de la rivière." },
-          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Likeng pour le déjeuner. Promenades dans les ruelles des villages Hui en après-midi." },
-          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Huangling à l'aube. Séance privée en atelier l'après-midi. Nuit en atelier-hôtel." },
-          { "day": "Jour 4", "title": "De Jingdezhen au Longhu", "body": "Radeau de bambou devant les sépultures rupestres. Manoir Tianshi. L'heure silencieuse d'un prêtre taoïste." },
+          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang à l’heure dorée. Dîner au-dessus de la rivière." },
+          { "day": "Jour 2", "title": "De Nanchang à Wuyuan", "body": "Likeng pour le déjeuner. Après-midi dans les ruelles des villages Hui." },
+          { "day": "Jour 3", "title": "De Wuyuan à Jingdezhen", "body": "Huangling à l’aube. Séance privée en atelier l’après-midi. Nuit en atelier-hôtel." },
+          { "day": "Jour 4", "title": "De Jingdezhen au Longhu", "body": "Radeau de bambou devant les sépultures rupestres. Manoir Tianshi. L’heure silencieuse d’un prêtre taoïste." },
           { "day": "Jour 5", "title": "Du Longhu au Lushan", "body": "Temple Donglin au crépuscule. Thé sur la montagne." },
-          { "day": "Jour 6", "title": "Du Lushan au Sanqingshan", "body": "Téléphérique jusqu'au complexe des Cinq Éléments. Passerelle à flanc de falaise. Nuit en refuge de montagne." },
-          { "day": "Jour 7", "title": "Aube au Sanqingshan, retour à Nanchang", "body": "Pic de la Déesse orientale au lever du soleil. Descente lente. Après-midi au lac Poyang ou dans l'atelier d'un tisserand de soie de Nanchang." },
+          { "day": "Jour 6", "title": "Du Lushan au Sanqingshan", "body": "Téléphérique jusqu’au complexe des Cinq Éléments. Passerelle à flanc de falaise. Nuit en refuge de montagne." },
+          { "day": "Jour 7", "title": "Aube au Sanqingshan, retour à Nanchang", "body": "Pic de la Déesse orientale au lever du soleil. Descente lente. Après-midi au lac Poyang ou dans l’atelier d’un tisserand de soie de Nanchang." },
           { "day": "Jour 8", "title": "Départ", "body": "Vol de continuation." }
         ]
       },
@@ -149,25 +149,25 @@
         "duration": "12 jours",
         "priceFrom": "à partir de 5 200 € par personne",
         "tagline": "Le pèlerinage — 1 500 ans de Jiangxi sacré.",
-        "summary": "Douze jours. Cinq sites UNESCO. Moines bouddhistes, prêtres taoïstes, maîtres porcelainiers, planteurs de thé — et les heures sans hâte qui les relient. Un voyage pour ceux qui voyagent pour écouter.",
-        "intro": "Douze jours est le voyage que nous dessinerions pour nous-mêmes. Cinq sites UNESCO, deux retraites de plusieurs nuits, une aube au Wugong au-dessus de la mer de nuages, et une soirée d'apothéose dans un hôtel suspendu au bord d'une falaise, dans une gorge sacrée. Chaque heure pensée. Aucune précipitée.",
+        "summary": "Douze jours. Cinq sites UNESCO. Moines bouddhistes, prêtres taoïstes, maîtres porcelainiers, paysans du thé — et les heures sans hâte qui les relient. Un voyage pour qui voyage pour écouter.",
+        "intro": "Douze jours, c’est le voyage que nous dessinerions pour nous-mêmes. Cinq sites UNESCO, deux retraites de plusieurs nuits, une aube au Wugong au-dessus de la mer de nuages, et une soirée finale dans un hôtel suspendu au bord d’une falaise, au creux d’une gorge sacrée. Chaque heure pensée. Aucune précipitée.",
         "highlights": [
           "Cinq sites UNESCO — Lushan, Longhu, Sanqingshan, Jingdezhen, Wuyuan",
-          "Mentorat privé dans l'atelier d'un artiste de Jingdezhen",
+          "Mentorat privé dans l’atelier d’un artiste de Jingdezhen",
           "Retraite de méditation bouddhiste de deux nuits au temple Donglin",
-          "L'aube du mont Wugong — quand les sommets émergent de la mer de nuages",
-          "Soirée d'apothéose dans les suites au bord des falaises de la vallée Wangxian",
-          "Leçons privées optionnelles de calligraphie, de thé ou de philosophie bouddhiste"
+          "L’aube du mont Wugong — quand les sommets émergent de la mer de nuages",
+          "Soirée finale en suite au bord des falaises de la vallée Wangxian",
+          "Leçons privées, en option : calligraphie, thé ou philosophie bouddhiste"
         ],
         "days": [
-          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang, l'exposition de la Cité de la Porcelaine, le marché de nuit au bord de la rivière." },
-          { "day": "Jour 2", "title": "Nanchang", "body": "Matinée tranquille. Après-midi avec un maître calligraphe. Dîner avec un historien du Jiangxi." },
+          { "day": "Jour 1", "title": "Arrivée à Nanchang", "body": "Le pavillon Tengwang, l’exposition de la Cité de la Porcelaine, le marché de nuit au bord de la rivière." },
+          { "day": "Jour 2", "title": "Nanchang", "body": "Matinée tranquille. Après-midi auprès d’un maître calligraphe. Dîner avec un historien du Jiangxi." },
           { "day": "Jour 3–4", "title": "Wuyuan", "body": "Deux nuits à Likeng. Champs de colza, toits de séchage, atelier de sculpture Hui." },
           { "day": "Jour 5", "title": "Jingdezhen", "body": "Mentorat privé en atelier toute la journée. Nuit en atelier-hôtel." },
-          { "day": "Jour 6", "title": "Mont Longhu", "body": "Radeau de bambou, manoir Tianshi, l'enseignement d'un prêtre taoïste avec interprète." },
-          { "day": "Jour 7–8", "title": "Retraite au Lushan", "body": "Deux nuits au temple Donglin. Cérémonies à l'aube. Randonnées sur plusieurs sommets. Académie de la grotte du Cerf blanc. Cérémonie du thé à la ligne des nuages." },
-          { "day": "Jour 9", "title": "Sanqingshan", "body": "Complexe des temples des Cinq Éléments. Atelier d'un artisan de la pierre." },
-          { "day": "Jour 10", "title": "Mont Wugong", "body": "Ascension avant l'aube pour la mer de nuages. Après-midi de bain de forêt." },
+          { "day": "Jour 6", "title": "Mont Longhu", "body": "Radeau de bambou, manoir Tianshi, l’enseignement d’un prêtre taoïste avec interprète." },
+          { "day": "Jour 7–8", "title": "Retraite au Lushan", "body": "Deux nuits au temple Donglin. Cérémonies à l’aube. Randonnées sur plusieurs sommets. Académie de la grotte du Cerf blanc. Cérémonie du thé à la ligne des nuages." },
+          { "day": "Jour 9", "title": "Sanqingshan", "body": "Complexe des temples des Cinq Éléments. Atelier d’un sculpteur sur pierre." },
+          { "day": "Jour 10", "title": "Mont Wugong", "body": "Ascension avant l’aube pour la mer de nuages. Après-midi de bain de forêt." },
           { "day": "Jour 11", "title": "Vallée Wangxian", "body": "Soirée en suite à flanc de falaise. Dîner suspendu au-dessus de la gorge." },
           { "day": "Jour 12", "title": "Retour à Nanchang, départ", "body": "Vol de continuation." }
         ]
@@ -179,35 +179,35 @@
       "hero": {
         "eyebrow": "Où vous irez",
         "heading": "Cinq régions. Un même héritage.",
-        "sub": "Chaque région est un récit. Nous les tissons dans l'ordre qui convient le mieux à vos heures."
+        "sub": "Chaque région est un récit. Nous les tissons dans l’ordre qui convient le mieux à vos heures."
       }
     },
     "items": [
       {
         "slug": "wuyuan",
         "title": "Wuyuan",
-        "subtitle": "Vallées de colza encadrées de villages cinq fois centenaires.",
-        "hook": "Chaque mois de mars et d'avril, six mille hectares d'or se déploient sous les toits blanchis des demeures Hui. La vallée n'a pas changé en cinq siècles.",
-        "intro": "Wuyuan est un comté de villages, non une ville. Y arriver, c'est quitter la grille autoroutière pour entrer dans une géométrie plus lente — les rivières se croisent, les ponts de pierre s'arquent, les murs blancs reflètent la couleur de la saison. Au printemps, l'or ; à l'automne, les toits rougissent du piment et du maïs mis à sécher. L'architecture de style Hui, héritée des fortunes marchandes du XVIᵉ siècle de l'Anhui, y a été préservée plus complètement que partout ailleurs en Chine.",
-        "best": "De fin mars à début avril pour le colza ; d'octobre à novembre pour la couleur automnale des toits",
+        "subtitle": "Vallées de colza, sous l’encadrement de villages cinq fois centenaires.",
+        "hook": "Chaque mars, chaque avril, six mille hectares d’or se déploient sous les toits blanchis des demeures Hui. La vallée n’a pas changé en cinq siècles.",
+        "intro": "Wuyuan est un comté de villages, non une ville. Y arriver, c’est quitter la trame autoroutière pour une géométrie plus lente — les rivières se croisent, les ponts de pierre s’arquent, les murs blancs reflètent la couleur de la saison. Au printemps, l’or ; à l’automne, les toits rougissent du piment et du maïs mis à sécher. L’architecture de style Hui, née des fortunes marchandes de l’Anhui au XVIᵉ siècle, y a été préservée plus intacte qu’ailleurs en Chine.",
+        "best": "De fin mars à début avril pour le colza ; d’octobre à novembre pour la couleur automnale des toits",
         "experiences": [
           "Parcourir les ponts de pierre de Likeng ; laisser le village vous trouver",
-          "Dîner privé dans une salle ancestrale, accueilli par un ancien du village",
-          "Atelier de sculpture Hui avec un maître de la sixième génération",
-          "Calligraphie à l'aube au bord de la rivière"
+          "Dîner privé dans une salle ancestrale, reçu par un ancien du village",
+          "Atelier de sculpture Hui auprès d’un maître de la sixième génération",
+          "Calligraphie à l’aube au bord de la rivière"
         ]
       },
       {
         "slug": "lushan",
         "title": "Lushan",
         "subtitle": "Deux cents temples sur une même montagne.",
-        "hook": "Inscrit au patrimoine mondial de l'UNESCO depuis 1996. Les pèlerins bouddhistes gravissent cette montagne depuis 1 300 ans ; empereurs et poètes les ont suivis. La brume arrive avec la régularité d'une horloge.",
-        "intro": "Le Lushan n'est pas tant une montagne qu'une bibliothèque. Chaque pic abrite un temple, chaque temple un manuscrit, chaque manuscrit mille ans de méditation. Les peintres paysagistes des Song y vécurent. L'école néo-confucéenne de l'Académie de la grotte du Cerf blanc y fut fondée. Le premier monastère bouddhiste de la Terre pure de Chine y fut bâti en 386. Aujourd'hui encore, le chant matinal du temple Donglin commence à cinq heures, et la cloche porte jusqu'au fond de la vallée.",
+        "hook": "Patrimoine mondial de l’UNESCO depuis 1996. Les pèlerins bouddhistes gravissent cette montagne depuis 1 300 ans ; empereurs et poètes les ont suivis. La brume arrive avec la régularité d’une horloge.",
+        "intro": "Le Lushan tient moins de la montagne que de la bibliothèque. Chaque pic abrite un temple, chaque temple un manuscrit, chaque manuscrit mille ans de méditation. Les paysagistes des Song y vécurent. L’école néo-confucéenne de l’Académie de la grotte du Cerf blanc y fut fondée. Le premier monastère bouddhiste de la Terre pure en Chine y fut bâti en 386. Aujourd’hui encore, le chant matinal du temple Donglin commence à cinq heures, et la cloche porte jusqu’au fond de la vallée.",
         "best": "Mai pour la récolte du thé ; de septembre à novembre pour les matins clairs et les mers de nuages",
         "experiences": [
-          "Cérémonie du thé dans le pavillon d'un ermite de l'époque Tang",
-          "Méditation à l'aube au temple Donglin",
-          "L'Académie de la grotte du Cerf blanc — berceau de la pensée néo-confucéenne",
+          "Cérémonie du thé dans le pavillon d’un ermite de l’époque Tang",
+          "Méditation à l’aube au temple Donglin",
+          "L’Académie de la grotte du Cerf blanc — berceau de la pensée néo-confucéenne",
           "Randonnée entre les Trois Pics au coucher du soleil"
         ]
       },
@@ -216,26 +216,26 @@
         "title": "Jingdezhen",
         "subtitle": "Mille ans de porcelaine.",
         "hook": "Depuis 1004, chaque pièce cuite dans cette ville porte la marque de règne de son empereur. Les fours brûlent toujours. Les maîtres enseignent toujours.",
-        "intro": "Jingdezhen est la capitale mondiale de la porcelaine avec une avance si large qu'aucun rival ne dispute même le titre. Pendant mille années ininterrompues, la ville a cuit l'argile. Son bleu-et-blanc a voyagé sur la route maritime de la soie ; ses pièces impériales ont fixé l'étalon de la porcelaine mondiale. Aujourd'hui, les maîtres habitent à Sanbao, travaillent à Taoxichuan, enseignent dans des ateliers privés qui n'ouvrent que par recommandation. Cloud Pavilion est l'une de ces recommandations.",
-        "best": "D'octobre à avril pour des journées d'atelier plus fraîches ; le printemps pour les foires céramiques internationales",
+        "intro": "Jingdezhen est la capitale mondiale de la porcelaine, et ce avec une avance si nette qu’aucune rivale ne dispute le titre. Pendant mille années ininterrompues, la ville a cuit l’argile. Son bleu-et-blanc a voyagé sur la route maritime de la soie ; ses pièces impériales ont fixé l’étalon de la porcelaine mondiale. Aujourd’hui, les maîtres habitent à Sanbao, travaillent à Taoxichuan, enseignent dans des ateliers privés qui ne s’ouvrent que sur recommandation. Cloud Pavilion est l’une de ces recommandations.",
+        "best": "D’octobre à avril pour des journées d’atelier plus fraîches ; au printemps pour les foires céramiques internationales",
         "experiences": [
-          "Séance privée en atelier avec un maître contemporain",
+          "Séance privée en atelier auprès d’un maître contemporain",
           "Le musée folklorique du Four Ancien — un musée en activité",
-          "L'avenue artistique de Taoxichuan au crépuscule",
-          "Rapporter une pièce que vous aurez modelée vous-même"
+          "L’avenue artistique de Taoxichuan au crépuscule",
+          "Repartir avec une pièce façonnée de vos mains"
         ]
       },
       {
         "slug": "longhu-mountain",
         "title": "Mont Longhu",
         "subtitle": "Le berceau du taoïsme, sur des falaises rouges.",
-        "hook": "Il y a 1 900 ans, Zhang Daoling fonda l'école des Maîtres célestes dans ce paysage de roche rouge. Les cercueils suspendus d'un peuple plus ancien s'accrochent encore aux falaises au-dessus de la rivière.",
-        "intro": "Le Longhu — montagne du Dragon et du Tigre — est l'un des quatre pics sacrés du taoïsme et, selon la plupart des récits, le premier. Le manoir Tianshi à son pied abrite les Maîtres célestes depuis le deuxième siècle. La rivière Luxi, qui serpente entre ses falaises Danxia rouges, porte les radeaux de bambou devant une géographie plus étrange encore : les cercueils suspendus de l'ancien peuple Guyue, placés dans les grottes de falaise il y a deux mille ans par des moyens qu'aucun érudit n'a encore pleinement expliqués.",
-        "best": "D'avril à juin et de septembre à novembre pour un temps doux et les plus belles journées de rivière",
+        "hook": "Il y a 1 900 ans, Zhang Daoling fonda l’école des Maîtres célestes dans ce paysage de roche rouge. Les cercueils suspendus d’un peuple plus ancien s’accrochent encore aux falaises au-dessus de la rivière.",
+        "intro": "Le Longhu — montagne du Dragon et du Tigre — est l’un des quatre pics sacrés du taoïsme et, selon la plupart des récits, le premier. Le manoir Tianshi, à son pied, abrite les Maîtres célestes depuis le deuxième siècle. La rivière Luxi, qui serpente entre ses falaises Danxia rouges, porte les radeaux de bambou devant une géographie plus étrange encore : les cercueils suspendus de l’ancien peuple Guyue, déposés dans les grottes de falaise il y a deux mille ans, par des moyens qu’aucun érudit n’a encore pleinement élucidés.",
+        "best": "D’avril à juin et de septembre à novembre pour un temps doux et les plus belles journées de rivière",
         "experiences": [
           "Descente en radeau de bambou devant les sépultures rupestres",
           "Manoir Tianshi — le siège du taoïsme Zhengyi",
-          "Conversation discrète avec un prêtre taoïste en résidence, avec interprète",
+          "Échange discret avec un prêtre taoïste en résidence, avec interprète",
           "Lever du soleil depuis la Promenade céleste"
         ]
       },
@@ -243,54 +243,54 @@
         "slug": "sanqingshan",
         "title": "Sanqingshan",
         "subtitle": "Quarante-huit pics de granit. Une cathédrale taoïste.",
-        "hook": "Patrimoine mondial de l'UNESCO. Un milliard d'années d'érosion, sculptées en piliers et en dragons. La Déesse orientale veille sur la vallée depuis plus longtemps que l'histoire écrite.",
-        "intro": "Le Sanqingshan tient son nom des Trois Purs de la cosmologie taoïste, et la montagne elle-même semble avoir été sculptée avec cette théologie en tête. Quarante-huit pics de granit s'élèvent au-dessus d'une mer de nuages. La Déesse orientale, pilier de pierre de 128 mètres, siège en position du lotus au sommet. Le complexe de temples taoïstes — 238 sites culturels documentés — fut tracé il y a 1 600 ans. Marcher sur les passerelles à flanc de falaise à l'aube, avant l'ouverture des téléphériques, est l'une des expériences les plus silencieuses de la Chine moderne.",
-        "best": "D'avril à juin pour les fleurs sauvages ; de septembre à novembre pour les mers de nuages",
+        "hook": "Patrimoine mondial de l’UNESCO. Un milliard d’années d’érosion, sculptées en piliers et en dragons. La Déesse orientale veille sur la vallée depuis plus longtemps que l’histoire écrite.",
+        "intro": "Le Sanqingshan tient son nom des Trois Purs de la cosmologie taoïste, et la montagne elle-même paraît avoir été taillée avec cette théologie en tête. Quarante-huit pics de granit s’élèvent au-dessus d’une mer de nuages. La Déesse orientale, pilier de pierre de 128 mètres, siège en position du lotus au sommet. Le complexe de temples taoïstes — 238 sites culturels documentés — fut tracé il y a 1 600 ans. Parcourir les passerelles à flanc de falaise à l’aube, avant l’ouverture des téléphériques, compte parmi les heures les plus silencieuses de la Chine moderne.",
+        "best": "D’avril à juin pour les fleurs sauvages ; de septembre à novembre pour les mers de nuages",
         "experiences": [
           "Lever du soleil au pic de la Déesse orientale",
-          "Téléphérique jusqu'au complexe des temples taoïstes des Cinq Éléments",
-          "Randonnée sur la passerelle à flanc de falaise avec guide privé",
-          "Observation des étoiles depuis le refuge de montagne"
+          "Téléphérique jusqu’au complexe des temples taoïstes des Cinq Éléments",
+          "Randonnée sur la passerelle à flanc de falaise, avec guide privé",
+          "Veillée aux étoiles depuis le refuge de montagne"
         ]
       }
     ]
   },
   "atelier": {
     "hero": {
-      "eyebrow": "L'Atelier",
-      "heading": "Dessiné dans la confidence. Voyagé en confiance.",
-      "sub": "Cloud Pavilion est une petite pratique. Nous dessinons moins de voyages, et nous les dessinons mieux."
+      "eyebrow": "L’Atelier",
+      "heading": "Conçus à huis clos. Vécus en toute confiance.",
+      "sub": "Cloud Pavilion est une petite maison. Nous concevons moins de voyages — et nous les concevons mieux."
     },
     "philosophy": {
       "eyebrow": "Ce que nous croyons",
-      "heading": "Voyager est une suite de décisions sur l'attention.",
-      "body1": "Ce n'est pas un produit. C'est ce qu'il faut voir, ce qu'il faut laisser, où s'attarder, d'où partir tôt. Nous sommes rémunérés pour prendre bien ces décisions, en votre nom.",
-      "body2": "Nous ne dirigeons pas de circuits. Nous ne tenons pas de calendrier de départs. Chaque voyage naît d'une seule conversation et se façonne sur plusieurs semaines de préparation. Quand vous atterrissez à Nanchang, chaque porte est ouverte, chaque hôte vous attend, chaque heure a été pensée."
+      "heading": "Voyager est une suite de décisions sur l’attention.",
+      "body1": "Ce n’est pas un produit. C’est ce qu’il faut voir, ce qu’il faut laisser, où s’attarder, d’où partir tôt. Nous sommes rémunérés pour prendre bien ces décisions, en votre nom.",
+      "body2": "Nous ne menons pas de circuits. Nous ne tenons pas de calendrier de départs. Chaque voyage naît d’une seule conversation, et se façonne sur plusieurs semaines de préparation. Quand vous atterrissez à Nanchang, chaque porte est ouverte, chaque hôte vous attend, chaque heure a été pensée."
     },
     "partnership": {
       "eyebrow": "Partenariat",
       "heading": "Notre ancrage au Jiangxi.",
-      "body": "Cloud Pavilion parcourt le Jiangxi grâce à un partenariat institutionnel avec l'une des principales universités de la province — une relation qui offre à nos hôtes une procédure de visa facilitée, l'accès à des lieux culturels privés et la confiance des communautés locales, refusée aux voyagistes ordinaires."
+      "body": "Cloud Pavilion parcourt le Jiangxi par la voie d’un partenariat institutionnel avec l’une des principales universités de la province — une relation qui offre à nos hôtes une procédure de visa facilitée, l’accès à des lieux culturels privés, et la confiance des communautés locales, refusée aux voyagistes ordinaires."
     },
     "team": {
-      "eyebrow": "Le studio",
-      "heading": "Un petit groupe de personnes qui répondent au téléphone.",
-      "body": "Nous sommes concepteurs, accompagnateurs, chauffeurs, moines, céramistes et planteurs de thé — répartis entre Casablanca et Nanchang. Nous n'avons pas de service client. La personne qui dessine votre voyage est la même qui décroche quand vous appelez depuis la route."
+      "eyebrow": "L’atelier",
+      "heading": "Une petite équipe qui décroche le téléphone.",
+      "body": "Nous sommes concepteurs, hommes et femmes de terrain, chauffeurs, moines, céramistes et paysans du thé — répartis entre Casablanca et Nanchang. Nous n’avons pas de service client. La personne qui dessine votre voyage est la même qui décroche quand vous appelez depuis la route."
     },
     "principles": {
       "eyebrow": "Principes",
       "heading": "Cinq règles discrètes.",
       "items": [
         { "title": "Moins de voyages, de meilleurs voyages.", "body": "Nous plafonnons le calendrier. Quand il est complet, nous le disons." },
-        { "title": "Nous n'écrivons pas d'itinéraires que nous n'avons pas parcourus.", "body": "Chaque itinéraire de ce site a été parcouru par un concepteur de Cloud Pavilion au cours des dix-huit derniers mois." },
-        { "title": "Nous ne confirmons jamais automatiquement.", "body": "Chaque demande est lue par un humain, à laquelle un humain répond et qu'un humain chiffre." },
-        { "title": "Nous ne remplissons pas.", "body": "Si un voyage est meilleur en sept jours qu'en huit, nous recommanderons sept. Nous ne facturons pas à la nuit." },
-        { "title": "La discrétion est un service.", "body": "Nous ne publions pas les noms de nos hôtes. Nous ne les photographions pas. Ce que vous nous confiez reste chez nous." }
+        { "title": "Nous n’écrivons pas d’itinéraires que nous n’avons pas parcourus.", "body": "Chaque itinéraire de ce site a été parcouru par un concepteur de Cloud Pavilion au cours des dix-huit derniers mois." },
+        { "title": "Nous ne confirmons jamais automatiquement.", "body": "Chaque demande est lue par un humain, à laquelle un humain répond, et qu’un humain chiffre." },
+        { "title": "Nous ne remplissons pas.", "body": "Si un voyage gagne à se faire en sept jours plutôt qu’en huit, nous recommanderons sept. Nous ne facturons pas à la nuit." },
+        { "title": "La discrétion est un service.", "body": "Nous ne publions pas les noms de nos hôtes. Nous ne les photographions pas. Ce que vous nous confiez reste entre nous." }
       ]
     },
     "cta": {
       "heading": "Engagez la conversation.",
-      "body": "Dites-nous ce qui vous attire. Nous vous répondrons dans la journée ouvrée.",
+      "body": "Dites-nous ce qui vous attire. Nous vous répondrons sous un jour ouvré.",
       "button": "Nous écrire"
     }
   },
@@ -298,51 +298,51 @@
     "index": {
       "hero": {
         "eyebrow": "Le journal",
-        "heading": "Notes de terrain d'une province silencieuse.",
-        "sub": "Essais sur l'artisanat, la montagne et le commerce, écrits depuis la route."
+        "heading": "Notes de terrain d’une province silencieuse.",
+        "sub": "Essais sur l’artisanat, la montagne et le commerce, écrits depuis la route."
       }
     },
     "items": [
       {
         "slug": "the-weight-of-clay",
-        "title": "Le poids de mille ans d'argile",
-        "subtitle": "Notes d'un atelier de Jingdezhen.",
-        "date": "Avril 2026",
+        "title": "Le poids de mille ans d’argile",
+        "subtitle": "Notes d’un atelier de Jingdezhen.",
+        "date": "avril 2026",
         "readTime": "5 min de lecture",
-        "lede": "Il n'y a aucune poésie dans l'argile tant qu'on n'a pas passé une heure à manquer son centrage. Le maître regarde sans parler. Vous recommencez.",
+        "lede": "Il n’y a rien de romanesque dans l’argile, tant qu’on n’a pas passé une heure à manquer son centrage. Le maître regarde sans parler. On recommence.",
         "body": [
-          "L'atelier se trouve au bout d'une ruelle de pierre à Sanbao. Sa cour abrite un four plus ancien que les États-Unis. Le maître — potier de la sixième génération, dont la marque familiale apparaît sur les commandes impériales depuis les Ming — verse le thé en silence pendant que je lutte avec le tour.",
-          "Ce qui me frappe, finalement, c'est la patience du lieu. Jingdezhen fabrique de la porcelaine depuis mille ans. Mille ans, c'est assez de temps pour qu'une civilisation entière oublie à quel point notre propre siècle est impatient.",
-          "Quand la pièce se dresse enfin, elle est mienne — défectueuse, de guingois, incontestablement mienne. Le maître hoche la tête. Il n'a pas besoin de parler. L'argile a déjà enseigné ce qu'elle enseigne.",
-          "Nous voyageons ici parce que la leçon n'est pas dans la maison de thé ni dans la galerie du four. Elle est dans l'heure au tour."
+          "L’atelier se tient au bout d’une ruelle de pierre, à Sanbao. Dans sa cour, un four plus ancien que les États-Unis. Le maître — potier de la sixième génération, dont la marque familiale paraît sur les commandes impériales depuis les Ming — verse le thé en silence pendant que je me débats avec le tour.",
+          "Ce qui finit par me frapper, c’est la patience du lieu. Jingdezhen fait de la porcelaine depuis mille ans. Mille ans, c’est assez pour qu’une civilisation entière oublie à quel point notre propre siècle est pressé.",
+          "Quand la pièce se dresse enfin, elle est mienne — imparfaite, de guingois, indiscutablement mienne. Le maître incline la tête. Il n’a rien à dire. L’argile a déjà appris ce qu’elle apprend.",
+          "On vient ici parce que la leçon n’est ni dans la maison de thé, ni dans la galerie du four. Elle est dans l’heure passée au tour."
         ]
       },
       {
         "slug": "what-the-mountain-knows",
         "title": "Ce que la montagne sait",
         "subtitle": "Une aube au temple Donglin.",
-        "date": "Mars 2026",
+        "date": "mars 2026",
         "readTime": "4 min de lecture",
-        "lede": "Le temple Donglin fut fondé en 386. Il a vu vingt-huit dynasties s'élever et tomber. À cinq heures du matin, il vous regarde arriver.",
+        "lede": "Le temple Donglin fut fondé en 386. Il a vu vingt-huit dynasties monter et tomber. À cinq heures du matin, il vous regarde arriver.",
         "body": [
-          "Nous avons gravi le Lushan la veille au soir, dans le noir. Le taxi n'a pu nous emmener que jusqu'à un certain point. De là, le sentier pavé. De là, les marches de pierre. De là, la brume.",
-          "Le chant matinal du Donglin commence à cinq heures. La salle est plus froide que l'air de la nuit. Les moines — ils sont onze — se rassemblent sans parler. La cloche sonne trois fois. Le chant commence.",
-          "Pendant une heure, nous nous asseyons au fond. Le chant est en chinois classique. Nous ne comprenons rien. Nous comprenons tout.",
+          "Nous avions gravi le Lushan la veille au soir, dans le noir. Le taxi n’a pu nous mener que jusqu’à un certain point. Au-delà, le sentier pavé. Au-delà, les marches de pierre. Au-delà, la brume.",
+          "Le chant matinal du Donglin commence à cinq heures. La salle est plus froide que l’air de la nuit. Les moines — ils sont onze — se rassemblent sans parler. La cloche sonne trois fois. Le chant commence.",
+          "Une heure durant, nous restons assis au fond. Le chant est en chinois classique. Nous ne comprenons rien. Nous comprenons tout.",
           "Dehors, la brume se lève sur la vallée. Le premier pèlerin du jour arrive. Le Lushan reçoit ses visiteurs ainsi depuis mille trois cents ans."
         ]
       },
       {
         "slug": "the-first-week-of-gold",
-        "title": "La première semaine d'or",
+        "title": "La première semaine d’or",
         "subtitle": "Wuyuan, fin mars.",
-        "date": "Mars 2026",
+        "date": "mars 2026",
         "readTime": "4 min de lecture",
-        "lede": "Pendant une semaine chaque année, les vallées de Wuyuan deviennent d'or. Les villageois savent à trois jours près quand cela commencera.",
+        "lede": "Une semaine chaque année, les vallées de Wuyuan se font or. Les villageois savent, à trois jours près, quand cela commencera.",
         "body": [
-          "Monsieur Wang est agriculteur à Likeng depuis quarante-sept ans. Son père l'était avant lui. Son grand-père l'était avant lui. Il connaît la vallée comme un vieux lecteur connaît un poème.",
-          "Nous arrivons un mardi. Le mercredi matin, la première vallée est à moitié dorée. Le vendredi, chaque versant exposé au sud est une nappe de jaune lumineux. Les murs blancs du village reflètent la couleur comme une lanterne de papier reflète une flamme.",
-          "La photographie est partout. Des autocars arrivent, prennent des clichés, repartent. Monsieur Wang nous sert le thé et observe les visiteurs avec un intérêt mesuré. « Ils prennent une photo », dit-il, « et ils repartent. Ils ne voient jamais la deuxième semaine. »",
-          "La deuxième semaine d'or est celle où les pétales commencent à tomber, où les abeilles arrivent en nombre, et où toute la vallée sent le miel pendant dix jours. C'est la semaine que nous conseillons à nos hôtes."
+          "M. Wang est paysan à Likeng depuis quarante-sept ans. Son père l’était avant lui. Son grand-père aussi. Il connaît la vallée comme un vieux lecteur connaît un poème.",
+          "Nous arrivons un mardi. Le mercredi matin, la première vallée est à demi dorée. Le vendredi, chaque versant exposé au sud est une nappe de jaune lumineux. Les murs blancs du village renvoient la couleur comme une lanterne de papier renvoie une flamme.",
+          "La photographie est partout. Des autocars arrivent, prennent leurs clichés, repartent. M. Wang nous sert le thé et observe les visiteurs avec un intérêt sobre. « Ils prennent une photo », dit-il, « et ils repartent. Ils ne voient jamais la deuxième semaine. »",
+          "La deuxième semaine d’or, c’est celle où les pétales commencent à tomber, où les abeilles arrivent en nombre, où la vallée entière sent le miel pendant dix jours. C’est la semaine que nous recommandons à nos hôtes."
         ]
       }
     ]
@@ -351,13 +351,13 @@
     "hero": {
       "eyebrow": "Nous écrire",
       "heading": "Engagez la conversation.",
-      "sub": "Cinq questions brèves. Une réponse dans la journée ouvrée. Pas de lettre d'information."
+      "sub": "Cinq questions brèves. Une réponse sous un jour ouvré. Pas de lettre d’information."
     },
     "progress": "Étape {n} sur 5",
     "steps": [
       {
         "id": "draw",
-        "label": "Qu'est-ce qui vous attire ?",
+        "label": "Qu’est-ce qui vous attire ?",
         "options": [
           { "value": "mountains", "label": "Montagnes & patrimoine" },
           { "value": "craft", "label": "Artisanat & céramique" },
@@ -387,12 +387,12 @@
       },
       {
         "id": "budget",
-        "label": "Fourchette d'investissement, par personne.",
+        "label": "Enveloppe envisagée, par personne.",
         "options": [
           { "value": "2-3", "label": "2 000 – 3 000 €" },
           { "value": "3-5", "label": "3 000 – 5 000 €" },
           { "value": "5-8", "label": "5 000 – 8 000 €" },
-          { "value": "8+", "label": "8 000 € et plus" },
+          { "value": "8+", "label": "8 000 € et au-delà" },
           { "value": "open", "label": "Ouvert à vos suggestions" }
         ]
       }
@@ -405,17 +405,17 @@
         "whatsapp": "WhatsApp (avec indicatif pays)",
         "notes": "Quelque chose à savoir avant que nous vous répondions ?"
       },
-      "consent": "Nous n'utiliserons vos coordonnées que pour répondre à cette demande."
+      "consent": "Nous n’utiliserons vos coordonnées que pour répondre à cette demande."
     },
     "actions": {
       "next": "Suivant",
       "back": "Retour",
-      "submit": "Envoyer à l'Atelier",
+      "submit": "Envoyer à l’Atelier",
       "sending": "Envoi…"
     },
     "confirmation": {
       "heading": "Bien reçu.",
-      "body": "Votre demande est désormais sur le bureau d'un concepteur. Nous vous répondrons dans la journée ouvrée — dans votre langue. L'assistance au visa est incluse dans chaque voyage.",
+      "body": "Votre demande est désormais sur le bureau d’un concepteur. Nous vous répondrons sous un jour ouvré — dans votre langue. L’assistance au visa est comprise dans chaque voyage.",
       "next": "Retour au journal"
     },
     "alt": {
@@ -430,7 +430,7 @@
     "viewJourney": "Voir le voyage",
     "viewDestination": "Voir la destination",
     "learnMore": "En savoir plus",
-    "readEssay": "Lire l'essai",
+    "readEssay": "Lire l’essai",
     "inquireNow": "Nous écrire",
     "back": "Retour",
     "next": "Suivant",
@@ -440,18 +440,18 @@
     "duration": "Durée",
     "priceFrom": "À partir de",
     "perPerson": "par personne",
-    "included": "Ce qui est inclus",
+    "included": "Ce qui est compris",
     "languageLabel": "Langue",
     "languageSwitch": "Choisissez votre langue",
     "menuLabel": "Ouvrir le menu",
-    "whatsappPrefill": "Bonjour Cloud Pavilion — je souhaiterais m'informer sur un voyage au Jiangxi.",
+    "whatsappPrefill": "Bonjour Cloud Pavilion — je souhaiterais me renseigner sur un voyage au Jiangxi.",
     "scroll": "Faire défiler",
     "skipToContent": "Aller au contenu",
     "openInquiry": "Ouvrir la demande"
   },
   "notFound": {
     "heading": "Ce pavillon est vide.",
-    "body": "La page que vous cherchiez s'est égarée dans la brume. Recommencez depuis l'accueil, ou écrivez-nous.",
-    "cta": "Retour à l'accueil"
+    "body": "La page que vous cherchiez s’est égarée dans la brume. Reprenez depuis l’accueil, ou écrivez-nous.",
+    "cta": "Retour à l’accueil"
   }
 }
