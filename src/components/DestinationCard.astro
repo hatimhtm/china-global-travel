@@ -12,7 +12,13 @@ interface Props {
 }
 const { locale, dict, destination, image, size = 'md', index = 0 } = Astro.props;
 const href = localePath(locale, `destinations/${destination.slug}`);
-const aspect = size === 'lg' ? 'aspect-[3/4]' : size === 'sm' ? 'aspect-square' : 'aspect-[4/5]';
+// Mobile-first aspect: all cards are tall portraits (4/5) on phones for visual rhythm.
+// Desktop respects the editorial size signal.
+const aspect = size === 'lg'
+  ? 'aspect-[4/5] md:aspect-[3/4]'
+  : size === 'sm'
+    ? 'aspect-[4/5] md:aspect-square'
+    : 'aspect-[4/5]';
 const titleSize = size === 'lg' ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl';
 ---
 
@@ -22,6 +28,7 @@ const titleSize = size === 'lg' ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl
       src={image}
       alt={destination.title}
       loading="lazy"
+      decoding="async"
       class="w-full h-full object-cover"
     />
     {/* Refined two-stage gradient — top whisper, bottom soft anchor */}

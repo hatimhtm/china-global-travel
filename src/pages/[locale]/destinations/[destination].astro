@@ -27,32 +27,41 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
 
 <BaseLayout locale={locale} pathKey={`destinations/${slug}/`} title={d.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative h-[100svh] min-h-[620px] flex items-end overflow-hidden">
+  <section class="relative min-h-[100svh] flex items-end overflow-hidden">
     {heroVid ? (
       <HeroVideo poster={heroVid.poster} sources={heroVid.sources} overlay={0.5} ariaLabel={d.title} />
     ) : (
       <div class="absolute inset-0 -z-10">
-        <img src={heroImage} alt={d.title} class="w-full h-full object-cover" />
+        <img
+          src={heroImage}
+          srcset={`${heroImage.replace(/&w=\d+/, '&w=720')} 720w, ${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage} 2400w`}
+          sizes="100vw"
+          alt={d.title}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full h-full object-cover"
+        />
         <div class="hero-veil absolute inset-0" style="--hero-overlay:0.5"></div>
       </div>
     )}
-    <div class="container-cp relative pb-24 md:pb-32 text-[color:var(--color-bone)]">
+    <div class="container-cp relative pb-20 md:pb-32 pt-28 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{dict.common.viewDestination}</p>
-      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{d.title}</h1>
-      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3 max-w-2xl">{d.subtitle}</p>
+      <h1 class="display-xxl mt-4 md:mt-5 max-w-4xl reveal reveal-2">{d.title}</h1>
+      <p class="display-md mt-4 md:mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3 max-w-2xl">{d.subtitle}</p>
     </div>
   </section>
 
   {/* HOOK */}
-  <section class="py-20 md:py-28">
+  <section class="py-16 md:py-28">
     <div class="container-cp-narrow">
       <p class="lede scroll-fade">{d.hook}</p>
-      <p class="prose-cp mt-8 scroll-fade" style="animation-delay:0.08s">{d.intro}</p>
+      <p class="prose-cp mt-6 md:mt-8 scroll-fade" style="animation-delay:0.08s">{d.intro}</p>
     </div>
   </section>
 
   {/* BEST TIME + EXPERIENCES */}
-  <section class="py-20 md:py-28 bg-[color:var(--color-bone-soft)]">
+  <section class="py-16 md:py-28 bg-[color:var(--color-bone-soft)]">
     <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16">
       <div class="lg:col-span-4 scroll-fade">
         <p class="eyebrow">{dict.common.bestTime}</p>
@@ -73,7 +82,7 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
   </section>
 
   {/* INQUIRE */}
-  <section class="py-24 md:py-32 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
+  <section class="py-16 md:py-32 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
     <div class="container-cp text-center max-w-3xl mx-auto scroll-fade">
       <p class="eyebrow !text-[color:var(--color-amber)]">{dict.home.inquireCta.eyebrow}</p>
       <h2 class="display-xl mt-6">Bring {d.title} into your journey.</h2>

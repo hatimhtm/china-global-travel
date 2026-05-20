@@ -24,8 +24,8 @@ const navLinks = [
   data-hero-dark={heroDark ? 'true' : 'false'}
   transition:persist
 >
-  <div class="container-cp flex items-center justify-between py-5 md:py-6">
-    <a href={localePath(locale, '')} class="font-display text-lg md:text-xl tracking-tight inline-flex items-center gap-3" data-brand>
+  <div class="container-cp flex items-center justify-between py-4 md:py-6 min-h-[64px]">
+    <a href={localePath(locale, '')} class="font-display text-lg md:text-xl tracking-tight inline-flex items-center gap-3 py-2 -my-2" data-brand>
       <span aria-hidden="true" class="block h-px w-7 bg-current opacity-50"></span>
       <span>{dict.brand.name}</span>
     </a>
@@ -38,7 +38,11 @@ const navLinks = [
       <a href={localePath(locale, 'inquire')} class="btn magnetic">{dict.nav.inquire}</a>
     </nav>
 
-    <button class="lg:hidden text-sm uppercase tracking-[0.18em]" data-menu-open aria-label={dict.common.menuLabel}>
+    <button
+      class="lg:hidden inline-flex items-center justify-center text-sm uppercase tracking-[0.18em] min-w-[48px] min-h-[48px] -mr-3 px-3"
+      data-menu-open
+      aria-label={dict.common.menuLabel}
+    >
       <span class="font-medium">{dict.nav.menu}</span>
     </button>
   </div>
@@ -65,29 +69,46 @@ const navLinks = [
 <!-- Full-screen overlay nav (mobile + when opened on desktop) -->
 <div class="fixed inset-0 z-[60] hidden flex-col" data-menu-panel role="dialog" aria-modal="true" aria-hidden="true">
   <div class="absolute inset-0 bg-[color:var(--color-ink)]" data-menu-bg></div>
-  <div class="relative flex-1 flex flex-col justify-between text-[color:var(--color-bone)]">
-    <div class="container-cp flex items-center justify-between py-5 md:py-6">
+  <div class="relative flex-1 flex flex-col justify-between text-[color:var(--color-bone)] overflow-y-auto">
+    <div class="container-cp flex items-center justify-between py-4 md:py-6 min-h-[64px]">
       <span class="font-display text-lg tracking-tight">{dict.brand.name}</span>
-      <button class="text-sm uppercase tracking-widest" data-menu-close aria-label={dict.nav.close}>{dict.nav.close}</button>
+      <button
+        class="inline-flex items-center justify-center text-sm uppercase tracking-widest min-w-[48px] min-h-[48px] -mr-3 px-3"
+        data-menu-close
+        aria-label={dict.nav.close}
+      >
+        {dict.nav.close}
+      </button>
     </div>
 
-    <nav class="container-cp pb-16 pt-8">
-      <ul class="flex flex-col gap-5">
+    <nav class="container-cp pb-12 pt-4">
+      <ul class="flex flex-col gap-2">
         {navLinks.map((l, i) => (
           <li>
-            <a href={l.href} class="display-lg font-display text-[color:var(--color-bone)] hover:text-[color:var(--color-amber)] transition-colors duration-500" style={`animation-delay:${i * 0.07}s`}>
+            <a
+              href={l.href}
+              data-menu-link
+              class="display-lg font-display text-[color:var(--color-bone)] hover:text-[color:var(--color-amber)] transition-colors duration-500 block py-3"
+              style={`animation-delay:${i * 0.07}s`}
+            >
               {l.label}
             </a>
           </li>
         ))}
         <li>
-          <a href={localePath(locale, 'inquire')} class="display-lg font-display text-[color:var(--color-amber)]">{dict.nav.inquire}</a>
+          <a
+            href={localePath(locale, 'inquire')}
+            data-menu-link
+            class="display-lg font-display text-[color:var(--color-amber)] block py-3"
+          >
+            {dict.nav.inquire}
+          </a>
         </li>
       </ul>
     </nav>
 
-    <div class="container-cp pb-10 flex items-center justify-between text-xs uppercase tracking-widest opacity-80">
-      <span>{dict.footer.addressLine2}</span>
+    <div class="container-cp pb-10 flex items-center justify-between gap-4 text-xs uppercase tracking-widest opacity-80">
+      <span class="truncate">{dict.footer.addressLine2}</span>
       <LanguageSwitcher locale={locale} dict={dict} variant="overlay" />
     </div>
   </div>
@@ -100,21 +121,41 @@ const navLinks = [
     const panel = document.querySelector<HTMLDivElement>('[data-menu-panel]');
     const header = document.querySelector<HTMLElement>('[data-header]');
     if (!openBtn || !closeBtn || !panel) return;
+    if ((panel as any).dataset.menuInited === 'true') return;
+    (panel as any).dataset.menuInited = 'true';
 
+    let scrollY = 0;
     const open = () => {
+      scrollY = window.scrollY;
       panel.style.display = 'flex';
       panel.setAttribute('aria-hidden', 'false');
+      // Robust iOS body scroll lock — position:fixed prevents rubber-band leak.
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
       header?.style.setProperty('opacity', '0');
     };
     const close = () => {
       panel.style.display = 'none';
       panel.setAttribute('aria-hidden', 'true');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
       document.body.style.overflow = '';
+      window.scrollTo(0, scrollY);
       header?.style.removeProperty('opacity');
     };
     openBtn.addEventListener('click', open);
     closeBtn.addEventListener('click', close);
+    // Close when a nav link is tapped (the page swap handles the navigation).
+    panel.querySelectorAll<HTMLAnchorElement>('[data-menu-link]').forEach((a) => {
+      a.addEventListener('click', () => close());
+    });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
   }
 

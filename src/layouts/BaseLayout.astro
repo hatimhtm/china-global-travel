@@ -52,8 +52,11 @@ const fontsByLocale: Record<Locale, string> = {
 <html lang={htmlLang} dir={dir} class="bg-[color:var(--color-bone)]">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#1A1F1E" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>{fullTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical} />
@@ -111,6 +114,11 @@ const fontsByLocale: Record<Locale, string> = {
         if (lenis) { lenis.destroy(); lenis = null; }
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reducedMotion) return;
+        // Skip Lenis on touch / coarse-pointer devices — native iOS momentum
+        // scroll is smoother than wheel-emulating any library, and Lenis can
+        // fight body-scroll-lock on the mobile menu overlay.
+        const coarsePointer = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+        if (coarsePointer) return;
         lenis = new Lenis({
           duration: 1.2,
           easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -167,9 +175,13 @@ const fontsByLocale: Record<Locale, string> = {
       document.addEventListener('astro:after-swap', armScrollReveals);
     </script>
 
-    {/* Magnetic primary CTA — subtle, only on .magnetic elements */}
+    {/* Magnetic primary CTA — subtle, hover-capable pointers only.
+        On touch devices, mousemove is synthesised after taps and the magnetic
+        translate fires once on first tap, leaving the button offset. Skip. */}
     <script>
       function initMagnetic() {
+        // Hover-capable pointer only — mobile/tablet skip magnetic.
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
         const els = document.querySelectorAll<HTMLElement>('.magnetic');
         els.forEach((el) => {
           if (el.dataset.magneticBound === 'true') return;

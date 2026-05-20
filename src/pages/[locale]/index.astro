@@ -24,49 +24,49 @@ const t = dict.home;
       ariaLabel={t.hero.heading}
     />
 
-    <div class="container-cp relative z-10 pb-28 md:pb-36 text-[color:var(--color-bone)]">
+    <div class="container-cp relative z-10 pb-24 sm:pb-28 md:pb-36 pt-28 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{t.hero.eyebrow}</p>
-      <h1 class="display-xxl mt-6 max-w-5xl reveal reveal-2">{t.hero.heading}</h1>
-      <p class="lede mt-8 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{t.hero.sub}</p>
-      <div class="mt-12 flex flex-wrap items-center gap-6 reveal reveal-4">
-        <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">
+      <h1 class="display-xxl mt-5 md:mt-6 max-w-5xl reveal reveal-2">{t.hero.heading}</h1>
+      <p class="lede lede-wide mt-6 md:mt-8 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{t.hero.sub}</p>
+      <div class="mt-10 md:mt-12 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-5 sm:gap-6 reveal reveal-4">
+        <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic w-full sm:w-auto">
           {t.hero.cta}
           <span class="ms-rtl-flip">→</span>
         </a>
-        <a href={localePath(locale, 'journeys')} class="text-[12px] uppercase tracking-[0.22em] text-[color:var(--color-bone)] pb-1 border-b border-[color:var(--color-bone)]/40 hover:border-[color:var(--color-amber)] hover:text-[color:var(--color-amber)] transition-colors duration-500">
+        <a href={localePath(locale, 'journeys')} class="text-[12px] uppercase tracking-[0.22em] text-[color:var(--color-bone)] py-2 border-b border-[color:var(--color-bone)]/40 hover:border-[color:var(--color-amber)] hover:text-[color:var(--color-amber)] transition-colors duration-500">
           {dict.home.journeys.cta}
         </a>
       </div>
     </div>
 
-    <div class="absolute bottom-8 inset-x-0 z-10 flex flex-col items-center gap-3 text-[color:var(--color-bone)] reveal reveal-4">
+    <div class="absolute bottom-6 md:bottom-8 inset-x-0 z-10 hidden sm:flex flex-col items-center gap-3 text-[color:var(--color-bone)] reveal reveal-4">
       <span class="text-[10px] uppercase tracking-[0.4em] opacity-70">{t.hero.scroll}</span>
       <span aria-hidden="true" class="scroll-cue text-[color:var(--color-bone)]/80"></span>
     </div>
   </section>
 
   {/* CULTURAL BRIDGE */}
-  <section class="py-32 md:py-44">
-    <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-20 items-start">
+  <section class="py-20 md:py-32 lg:py-44">
+    <div class="container-cp grid lg:grid-cols-12 gap-8 md:gap-10 lg:gap-20 items-start">
       <div class="lg:col-span-5 scroll-fade">
         <p class="eyebrow">{t.bridge.eyebrow}</p>
-        <h2 class="display-xl mt-6">{t.bridge.heading}</h2>
+        <h2 class="display-xl mt-5 md:mt-6">{t.bridge.heading}</h2>
       </div>
       <div class="lg:col-span-7 lg:pt-3 scroll-fade" style="animation-delay:0.12s">
         <p class="lede">{t.bridge.body}</p>
-        <div aria-hidden="true" class="mt-10 h-px w-16 bg-[color:var(--color-amber-deep)]/60"></div>
+        <div aria-hidden="true" class="mt-8 md:mt-10 h-px w-16 bg-[color:var(--color-amber-deep)]/60"></div>
       </div>
     </div>
   </section>
 
   {/* JOURNEYS GRID */}
-  <section class="py-24 md:py-32 bg-[color:var(--color-bone-soft)]">
+  <section class="py-20 md:py-28 lg:py-32 bg-[color:var(--color-bone-soft)]">
     <div class="container-cp">
-      <div class="flex items-end justify-between gap-6 mb-16 md:mb-20 flex-wrap">
+      <div class="flex items-end justify-between gap-6 mb-12 md:mb-16 lg:mb-20 flex-wrap">
         <div class="scroll-fade max-w-2xl">
           <p class="eyebrow">{t.journeys.eyebrow}</p>
-          <h2 class="display-xl mt-6">{t.journeys.heading}</h2>
-          <p class="lede mt-6">{t.journeys.sub}</p>
+          <h2 class="display-xl mt-5 md:mt-6">{t.journeys.heading}</h2>
+          <p class="lede mt-5 md:mt-6">{t.journeys.sub}</p>
         </div>
         <a href={localePath(locale, 'journeys')} class="link-cp scroll-fade" style="animation-delay:0.1s">
           {t.journeys.cta}
@@ -74,7 +74,7 @@ const t = dict.home;
         </a>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-10 md:gap-12">
+      <div class="grid md:grid-cols-3 gap-12 md:gap-10 lg:gap-12">
         {dict.journeys.items.map((j, i) => (
           <JourneyCard locale={locale} dict={dict} journey={j} image={journeyImageBySlug[j.slug]} index={i} />
         ))}
@@ -83,13 +83,13 @@ const t = dict.home;
   </section>
 
   {/* DESTINATIONS GRID */}
-  <section class="py-32 md:py-40">
+  <section class="py-20 md:py-28 lg:py-40">
     <div class="container-cp">
-      <div class="flex items-end justify-between gap-6 mb-16 md:mb-20 flex-wrap">
+      <div class="flex items-end justify-between gap-6 mb-12 md:mb-16 lg:mb-20 flex-wrap">
         <div class="scroll-fade max-w-2xl">
           <p class="eyebrow">{t.destinations.eyebrow}</p>
-          <h2 class="display-xl mt-6">{t.destinations.heading}</h2>
-          <p class="lede mt-6">{t.destinations.sub}</p>
+          <h2 class="display-xl mt-5 md:mt-6">{t.destinations.heading}</h2>
+          <p class="lede mt-5 md:mt-6">{t.destinations.sub}</p>
         </div>
         <a href={localePath(locale, 'destinations')} class="link-cp scroll-fade" style="animation-delay:0.1s">
           {t.destinations.cta}
@@ -97,7 +97,7 @@ const t = dict.home;
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-7">
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-5 md:gap-6 lg:gap-7">
         {dict.destinations.items.map((d, i) => {
           // First two are tall feature cards, the rest are square-ish neighbours
           const span = i === 0 ? 'md:col-span-3' : i === 1 ? 'md:col-span-3' : 'md:col-span-2';
@@ -113,14 +113,14 @@ const t = dict.home;
   </section>
 
   {/* EXPERIENCE PILLARS */}
-  <section class="py-32 md:py-44 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
+  <section class="py-20 md:py-28 lg:py-44 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
     <div class="container-cp">
       <div class="max-w-3xl scroll-fade">
         <p class="eyebrow !text-[color:var(--color-amber)]">{t.experiences.eyebrow}</p>
-        <h2 class="display-xl mt-6">{t.experiences.heading}</h2>
+        <h2 class="display-xl mt-5 md:mt-6">{t.experiences.heading}</h2>
       </div>
 
-      <div class="mt-20 grid md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-12 lg:gap-x-16">
+      <div class="mt-14 md:mt-20 grid md:grid-cols-2 gap-y-12 md:gap-y-20 gap-x-12 lg:gap-x-16">
         {t.experiences.items.map((ex, i) => (
           <div class="scroll-fade group" style={`animation-delay:${i * 0.06}s`}>
             <div class="flex items-baseline gap-4 mb-5">
@@ -139,18 +139,18 @@ const t = dict.home;
   </section>
 
   {/* ATELIER TEASER */}
-  <section class="py-32 md:py-44">
-    <div class="container-cp grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+  <section class="py-20 md:py-32 lg:py-44">
+    <div class="container-cp grid lg:grid-cols-12 gap-10 md:gap-12 lg:gap-20 items-center">
       <div class="lg:col-span-6 scroll-fade">
         <div class="img-zoom aspect-[4/5] overflow-hidden">
-          <img src={photos.atelierHero} alt={t.atelierTeaser.heading} loading="lazy" class="w-full h-full object-cover" />
+          <img src={photos.atelierHero} alt={t.atelierTeaser.heading} loading="lazy" decoding="async" class="w-full h-full object-cover" />
         </div>
       </div>
       <div class="lg:col-span-6 scroll-fade" style="animation-delay:0.1s">
         <p class="eyebrow">{t.atelierTeaser.eyebrow}</p>
-        <h2 class="display-xl mt-6">{t.atelierTeaser.heading}</h2>
-        <p class="lede mt-7">{t.atelierTeaser.body}</p>
-        <a href={localePath(locale, 'atelier')} class="link-cp mt-10">
+        <h2 class="display-xl mt-5 md:mt-6">{t.atelierTeaser.heading}</h2>
+        <p class="lede mt-6 md:mt-7">{t.atelierTeaser.body}</p>
+        <a href={localePath(locale, 'atelier')} class="link-cp mt-8 md:mt-10">
           {t.atelierTeaser.cta}
           <span class="ms-rtl-flip">→</span>
         </a>
@@ -159,9 +159,9 @@ const t = dict.home;
   </section>
 
   {/* JOURNAL TEASER */}
-  <section class="py-28 md:py-36 bg-[color:var(--color-bone-soft)]">
+  <section class="py-20 md:py-28 lg:py-36 bg-[color:var(--color-bone-soft)]">
     <div class="container-cp">
-      <div class="flex items-end justify-between gap-6 mb-16 md:mb-20 flex-wrap">
+      <div class="flex items-end justify-between gap-6 mb-12 md:mb-16 lg:mb-20 flex-wrap">
         <div class="scroll-fade">
           <p class="eyebrow">{t.journalTeaser.eyebrow}</p>
           <h2 class="display-xl mt-6">{t.journalTeaser.heading}</h2>
@@ -176,12 +176,12 @@ const t = dict.home;
         {dict.journal.items.map((a, i) => (
           <a href={localePath(locale, `journal/${a.slug}`)} class="group block scroll-fade" style={`animation-delay:${i * 0.07}s`}>
             <div class="img-zoom aspect-[4/3] overflow-hidden">
-              <img src={journalImageBySlug[a.slug]} alt={a.title} loading="lazy" class="w-full h-full object-cover" />
+              <img src={journalImageBySlug[a.slug]} alt={a.title} loading="lazy" decoding="async" class="w-full h-full object-cover" />
             </div>
-            <div class="mt-6">
+            <div class="mt-5 md:mt-6">
               <p class="text-[11px] uppercase tracking-[0.2em] opacity-55">{a.date} · {a.readTime}</p>
-              <h3 class="display-md mt-4 group-hover:text-[color:var(--color-jade-deep)] transition-colors duration-500">{a.title}</h3>
-              <p class="mt-4 text-[15px] opacity-75 leading-relaxed">{a.subtitle}</p>
+              <h3 class="display-md mt-3 md:mt-4 group-hover:text-[color:var(--color-jade-deep)] transition-colors duration-500">{a.title}</h3>
+              <p class="mt-3 md:mt-4 text-[15px] opacity-75 leading-relaxed">{a.subtitle}</p>
             </div>
           </a>
         ))}
@@ -190,16 +190,16 @@ const t = dict.home;
   </section>
 
   {/* INQUIRE CTA */}
-  <section class="relative py-40 md:py-56 overflow-hidden">
+  <section class="relative py-24 md:py-40 lg:py-56 overflow-hidden">
     <div class="absolute inset-0 -z-10">
-      <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover scale-105" loading="lazy" />
+      <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover scale-105" loading="lazy" decoding="async" />
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.7"></div>
     </div>
     <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl mx-auto scroll-fade">
       <p class="eyebrow !text-[color:var(--color-amber)]">{t.inquireCta.eyebrow}</p>
-      <h2 class="display-xl mt-7">{t.inquireCta.heading}</h2>
-      <p class="lede mt-7 !text-[color:var(--color-bone)] opacity-90">{t.inquireCta.sub}</p>
-      <div class="mt-12">
+      <h2 class="display-xl mt-5 md:mt-7">{t.inquireCta.heading}</h2>
+      <p class="lede lede-wide mt-5 md:mt-7 !text-[color:var(--color-bone)] opacity-90 mx-auto">{t.inquireCta.sub}</p>
+      <div class="mt-9 md:mt-12">
         <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">
           {t.inquireCta.cta}
           <span class="ms-rtl-flip">→</span>

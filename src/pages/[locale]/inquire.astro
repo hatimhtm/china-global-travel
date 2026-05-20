@@ -15,28 +15,28 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
 
 <BaseLayout locale={locale} pathKey="inquire/" title={t.hero.heading}>
   {/* HERO */}
-  <section class="pt-44 pb-12 md:pt-60 md:pb-20">
+  <section class="pt-32 pb-10 md:pt-60 md:pb-20">
     <div class="container-cp">
       <p class="eyebrow reveal">{t.hero.eyebrow}</p>
-      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{t.hero.heading}</h1>
-      <p class="lede mt-8 max-w-2xl reveal reveal-3">{t.hero.sub}</p>
+      <h1 class="display-xxl mt-5 md:mt-6 max-w-4xl reveal reveal-2">{t.hero.heading}</h1>
+      <p class="lede mt-6 md:mt-8 max-w-2xl reveal reveal-3">{t.hero.sub}</p>
     </div>
   </section>
 
   {/* STEPPED FORM */}
-  <section class="pb-24 md:pb-32">
+  <section class="pb-20 md:pb-32">
     <div class="container-cp-narrow">
-      <form data-inquire-form class="bg-[color:var(--color-bone-soft)] p-8 md:p-12 border border-[color:var(--color-ink)]/8">
+      <form data-inquire-form class="bg-[color:var(--color-bone-soft)] p-5 sm:p-8 md:p-12 border border-[color:var(--color-ink)]/8">
         <p class="text-xs uppercase tracking-widest opacity-60" data-progress data-total={t.steps.length + 1}>{t.progress.replace('{n}', '1')}</p>
 
         {t.steps.map((step, idx) => (
-          <fieldset class="step mt-6" data-step={idx} style={idx === 0 ? '' : 'display:none'}>
-            <legend class="display-lg mb-7">{step.label}</legend>
+          <fieldset class="step mt-5 md:mt-6" data-step={idx} style={idx === 0 ? '' : 'display:none'}>
+            <legend class="display-lg mb-6 md:mb-7">{step.label}</legend>
             <div class="grid sm:grid-cols-2 gap-3">
               {step.options.map((opt) => (
-                <label class="option block cursor-pointer border border-[color:var(--color-ink)]/15 px-5 py-4 hover:border-[color:var(--color-jade-deep)] hover:bg-[color:var(--color-bone)] transition-colors has-[:checked]:bg-[color:var(--color-ink)] has-[:checked]:text-[color:var(--color-bone)] has-[:checked]:border-[color:var(--color-ink)]">
+                <label class="option block cursor-pointer border border-[color:var(--color-ink)]/15 px-5 py-4 min-h-[56px] flex items-center hover:border-[color:var(--color-jade-deep)] hover:bg-[color:var(--color-bone)] transition-colors has-[:checked]:bg-[color:var(--color-ink)] has-[:checked]:text-[color:var(--color-bone)] has-[:checked]:border-[color:var(--color-ink)]" style="touch-action: manipulation;">
                   <input type="radio" name={step.id} value={opt.value} class="sr-only" />
-                  <span class="text-sm md:text-base">{opt.label}</span>
+                  <span class="text-base">{opt.label}</span>
                 </label>
               ))}
             </div>
@@ -44,20 +44,43 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
         ))}
 
         {/* Contact step (last) */}
-        <fieldset class="step mt-6" data-step={t.steps.length} style="display:none">
-          <legend class="display-lg mb-7">{t.contact.label}</legend>
+        <fieldset class="step mt-5 md:mt-6" data-step={t.steps.length} style="display:none">
+          <legend class="display-lg mb-6 md:mb-7">{t.contact.label}</legend>
           <div class="grid sm:grid-cols-2 gap-5">
             <label class="block">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.name}</span>
-              <input type="text" name="name" required class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" />
+              <input
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+                autocapitalize="words"
+                class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
+              />
             </label>
             <label class="block">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.email}</span>
-              <input type="email" name="email" required class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" />
+              <input
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+                inputmode="email"
+                autocapitalize="off"
+                spellcheck="false"
+                class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
+              />
             </label>
             <label class="block sm:col-span-2">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.whatsapp}</span>
-              <input type="tel" name="whatsapp" class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" placeholder="+212 6 ..." />
+              <input
+                type="tel"
+                name="whatsapp"
+                autocomplete="tel"
+                inputmode="tel"
+                class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
+                placeholder="+212 6 ..."
+              />
             </label>
             <label class="block sm:col-span-2">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.notes}</span>
@@ -75,9 +98,9 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
         </div>
 
         {/* Navigation */}
-        <div class="mt-10 flex items-center justify-between gap-4" data-nav>
-          <button type="button" class="text-sm uppercase tracking-widest underline underline-offset-8 opacity-70 hover:opacity-100" data-back style="visibility:hidden">{t.actions.back}</button>
-          <button type="button" class="btn magnetic" data-next>
+        <div class="mt-8 md:mt-10 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-4" data-nav>
+          <button type="button" class="text-sm uppercase tracking-widest underline underline-offset-8 opacity-70 hover:opacity-100 py-3 self-start sm:self-auto" data-back style="visibility:hidden">{t.actions.back}</button>
+          <button type="button" class="btn magnetic w-full sm:w-auto" data-next>
             {t.actions.next}
             <span class="ms-rtl-flip">→</span>
           </button>
@@ -87,15 +110,15 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
   </section>
 
   {/* ALT CONTACT */}
-  <section class="pb-32 md:pb-40">
+  <section class="pb-24 md:pb-40">
     <div class="container-cp-narrow text-center scroll-fade">
       <p class="eyebrow">{t.alt.heading}</p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-6 items-center justify-center text-lg">
-        <a href={waLink} target="_blank" rel="noopener" class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)]">
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center text-base sm:text-lg">
+        <a href={waLink} target="_blank" rel="noopener" class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)] py-3 break-words">
           {t.alt.whatsapp} · {t.alt.whatsappNumber}
         </a>
         <span class="opacity-30 hidden sm:inline">·</span>
-        <a href={`mailto:${t.alt.emailAddress}`} class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)]">
+        <a href={`mailto:${t.alt.emailAddress}`} class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)] py-3 break-words">
           {t.alt.email} · {t.alt.emailAddress}
         </a>
       </div>

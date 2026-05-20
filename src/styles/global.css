@@ -116,41 +116,43 @@
   }
 
   /* Display scale — major-third (1.25) with tighter tracking at hero size.
-     Each step also sets opsz on Fraunces so the headlines bloom while caps stay crisp. */
+     Each step also sets opsz on Fraunces so the headlines bloom while caps stay crisp.
+     Mobile-first clamps: floor sized for iPhone SE (375px) so a 4-word hero line wraps gracefully. */
   .display-xxl {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(3rem, 7.6vw, 6.75rem);
-    line-height: 0.96;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.25rem, 7vw, 6.75rem);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
     font-variation-settings: "opsz" 144, "SOFT" 50;
     text-wrap: balance;
   }
   .display-xl {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(2.25rem, 5.2vw, 4.5rem);
-    line-height: 1.02;
-    letter-spacing: -0.022em;
+    font-size: clamp(1.875rem, 5vw, 4.5rem);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
     font-variation-settings: "opsz" 96, "SOFT" 40;
     text-wrap: balance;
   }
   .display-lg {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(1.75rem, 3.6vw, 2.875rem);
-    line-height: 1.1;
-    letter-spacing: -0.017em;
+    font-size: clamp(1.5rem, 3.6vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
     font-variation-settings: "opsz" 60, "SOFT" 35;
     text-wrap: balance;
   }
   .display-md {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(1.375rem, 2.4vw, 1.9375rem);
-    line-height: 1.18;
+    font-size: clamp(1.25rem, 2.4vw, 1.9375rem);
+    line-height: 1.2;
     letter-spacing: -0.008em;
     font-variation-settings: "opsz" 36, "SOFT" 28;
+    text-wrap: balance;
   }
 
   /* Tabular accent — used in day counters / inline numerics */
@@ -182,27 +184,32 @@
 
   .lede {
     font-family: var(--font-body);
-    font-size: clamp(1.0625rem, 1.4vw, 1.3125rem);
+    font-size: clamp(1rem, 1.4vw, 1.3125rem);
     line-height: 1.6;
     color: var(--color-ink-soft);
     text-wrap: pretty;
+    max-width: 60ch;
   }
 
   .prose-cp {
     font-family: var(--font-body);
-    font-size: 1.0625rem;
+    font-size: clamp(1rem, 1.2vw, 1.0625rem);
     line-height: 1.75;
     color: var(--color-ink-soft);
     text-wrap: pretty;
+    max-width: 68ch;
   }
   .prose-cp p + p { margin-top: 1.2em; }
 
-  /* Primary button — flat, premium, with a deliberate hover lift via translate */
+  /* Primary button — flat, premium, with a deliberate hover lift via translate.
+     Min-height 48px ensures a comfortable thumb target on mobile per WCAG 2.5.5. */
   .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.65rem;
-    padding: 1rem 1.75rem;
+    padding: 1.05rem 1.75rem;
+    min-height: 48px;
     font-family: var(--font-body);
     font-size: 0.8125rem;
     font-weight: 500;
@@ -221,6 +228,8 @@
     border-radius: 0;
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
   .btn > span.ms-rtl-flip {
     transition: transform 0.55s var(--ease-out-quint);
@@ -251,7 +260,8 @@
     border-color: var(--color-bone);
   }
 
-  /* Inline text link — used over light or dark backgrounds */
+  /* Inline text link — used over light or dark backgrounds.
+     Generous vertical padding gives a ≥44px tap height on mobile without visual change. */
   .link-cp {
     display: inline-flex;
     align-items: center;
@@ -261,9 +271,11 @@
     text-transform: uppercase;
     text-decoration: none;
     color: inherit;
-    padding-bottom: 0.4rem;
+    padding-block: 0.6rem;
     border-bottom: 1px solid currentColor;
     transition: color 0.45s var(--ease-out-quint), gap 0.45s var(--ease-out-quint);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
   .link-cp:hover { color: var(--color-jade-deep); gap: 1rem; }
 
@@ -332,7 +344,9 @@
     transform: translate3d(0, 0, 0);
   }
 
-  /* Image card — pure CSS hover-zoom */
+  /* Image card — pure CSS hover-zoom.
+     Confined to hover-capable pointers so a tap on touch devices doesn't fire
+     a sticky zoom that looks broken on mobile. */
   .img-zoom {
     overflow: hidden;
     position: relative;
@@ -342,9 +356,11 @@
     transition: transform 1.6s var(--ease-out-quint), filter 1.6s var(--ease-out-quint);
     will-change: transform;
   }
-  .img-zoom:hover img,
-  .img-zoom:hover > picture > img {
-    transform: scale(1.06);
+  @media (hover: hover) and (pointer: fine) {
+    .img-zoom:hover img,
+    .img-zoom:hover > picture > img {
+      transform: scale(1.06);
+    }
   }
 
   /* Editorial card frame — hairline border that warms on hover */
@@ -451,4 +467,127 @@ html[dir="rtl"] .ms-rtl-flip { transform: scaleX(-1); }
 }
 @keyframes cp-fade-in {
   from { opacity: 0; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   MOBILE HYPER-OPTIMIZATION
+   The block below applies only ≤ 768px and adjusts cadence, type sizing,
+   and tap surfaces for a phone-first read. Desktop is untouched.
+   ──────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Every tappable surface — minimum 44px iOS HIG target.
+     We use min-height + padding-block, not height, so content can still grow. */
+  a[href],
+  button,
+  label,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Inputs and textareas: 16px font-size is the iOS Safari threshold below
+     which the page zooms on focus. Keep at 1rem and don't let line-height
+     compress the field below 48px. */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+
+  /* Reduce the dramatic kenburns scale on mobile — saves paint cost and
+     prevents the hero from feeling like it's drifting off-screen. */
+  .hero-video {
+    animation-duration: 36s;
+  }
+
+  /* Scroll-driven reveal on mobile — shorter travel + faster timing so the
+     thumb-scrolling feels responsive, not laggy. */
+  .scroll-fade.scroll-fade-armed {
+    transform: translate3d(0, 18px, 0);
+    transition-duration: 0.75s;
+  }
+  .scroll-up-slow.scroll-fade-armed {
+    transform: translate3d(0, 36px, 0);
+    transition-duration: 0.95s;
+  }
+
+  /* Body line-length cap for comfortable mobile reading. */
+  .lede {
+    max-width: 38ch;
+  }
+  .prose-cp {
+    max-width: 38ch;
+  }
+  /* Allow callers to opt out with .lede-wide / .prose-wide when a constrained
+     parent already manages width. */
+  .lede.lede-wide,
+  .prose-cp.prose-wide {
+    max-width: none;
+  }
+
+  /* Hero-stack mobile sizing: the eyebrow + heading + sub stack on the home
+     hero needs the heading to fit two lines comfortably on iPhone SE. */
+  .display-xxl {
+    line-height: 1.02;
+  }
+
+  /* Tighten button letter-spacing on the small caps so it doesn't overflow
+     a narrow primary CTA. */
+  .btn {
+    letter-spacing: 0.11em;
+    padding-inline: 1.4rem;
+  }
+
+  /* Mobile menu nav links — display-lg can run 3rem at minimum; clamp it
+     down to a comfortable single-line size on iPhone SE. */
+  [data-menu-panel] .display-lg {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  /* Footer brand: bring the giant 5xl wordmark down so it doesn't dwarf the
+     surrounding rhythm on phones. */
+  footer .font-display.text-4xl,
+  footer .font-display.text-5xl {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    line-height: 0.98;
+  }
+
+  /* Eyebrow hairline shouldn't take significant width on small screens. */
+  .eyebrow::before {
+    width: 1.1rem;
+    margin-inline-end: 0.5rem;
+  }
+
+  /* The grain overlay can flicker on iOS when combined with the kenburns
+     transform — lower its opacity slightly to keep it whisper-soft. */
+  .grain::after {
+    opacity: 0.025;
+  }
+}
+
+/* ≤ 380px (iPhone SE & smaller) — the tight test. Pull two more notches. */
+@media (max-width: 380px) {
+  .display-xxl {
+    font-size: clamp(2rem, 9.5vw, 2.6rem);
+  }
+  .display-xl {
+    font-size: clamp(1.625rem, 7vw, 2.25rem);
+  }
+  .container-cp,
+  .container-cp-narrow {
+    padding-inline: 1.1rem;
+  }
+  .btn {
+    padding-inline: 1.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* iOS Safari address-bar safe area on the home hero CTA stack
+   so the floating WhatsApp pill never overlaps content. */
+@supports (padding: max(0px)) {
+  .fab-pulse {
+    padding-bottom: max(0.875rem, env(safe-area-inset-bottom));
+  }
 }

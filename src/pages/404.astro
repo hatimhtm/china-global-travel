@@ -9,21 +9,21 @@ const enDict = getDict('en');
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>404 · Cloud Pavilion</title>
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link href="https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500|reem-kufi:400,500|tajawal:400,500|noto-serif-sc:400,500|noto-sans-sc:400,500&display=swap" rel="stylesheet" />
 </head>
-<body class="min-h-[100svh] flex items-center justify-center px-6 grain">
+<body class="min-h-[100svh] flex items-center justify-center px-5 py-16 grain">
   <div class="container-cp-narrow text-center">
     <p class="eyebrow">404</p>
-    <h1 class="display-xxl mt-6">{enDict.notFound.heading}</h1>
-    <p class="lede mt-7 max-w-xl mx-auto">{enDict.notFound.body}</p>
-    <div class="mt-10 flex flex-wrap items-center justify-center gap-5">
+    <h1 class="display-xxl mt-5 md:mt-6">{enDict.notFound.heading}</h1>
+    <p class="lede lede-wide mt-6 md:mt-7 max-w-xl mx-auto">{enDict.notFound.body}</p>
+    <div class="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-5">
       {locales.map((l) => {
         const dict = getDict(l);
         return (
-          <a href={`${base}/${l}/`} class="text-sm uppercase tracking-widest underline underline-offset-8 hover:text-[color:var(--color-jade-deep)] transition-colors">
+          <a href={`${base}/${l}/`} class="inline-flex items-center justify-center min-h-[44px] px-3 text-sm uppercase tracking-widest underline underline-offset-8 hover:text-[color:var(--color-jade-deep)] transition-colors">
             {dict.notFound.cta} · {dict.labelNative}
           </a>
         );

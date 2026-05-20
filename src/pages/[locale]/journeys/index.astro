@@ -13,16 +13,16 @@ const t = dict.journeys;
 
 <BaseLayout locale={locale} pathKey="journeys/" title={t.index.hero.heading}>
   {/* HERO */}
-  <section class="relative pt-44 pb-20 md:pt-60 md:pb-28">
+  <section class="relative pt-32 pb-14 md:pt-60 md:pb-28">
     <div class="container-cp">
       <p class="eyebrow reveal">{t.index.hero.eyebrow}</p>
-      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
-      <p class="lede mt-8 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
+      <h1 class="display-xxl mt-5 md:mt-6 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
+      <p class="lede mt-6 md:mt-8 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
     </div>
   </section>
 
   {/* INTRO PROSE */}
-  <section class="pb-16 md:pb-24">
+  <section class="pb-12 md:pb-24">
     <div class="container-cp-narrow">
       <p class="prose-cp scroll-fade">{t.index.intro}</p>
     </div>
@@ -33,23 +33,31 @@ const t = dict.journeys;
     const reverse = i % 2 === 1;
     const num = (i + 1).toString().padStart(2, '0');
     return (
-      <section class="py-24 md:py-32">
-        <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
+      <section class="py-16 md:py-32">
+        <div class="container-cp grid lg:grid-cols-12 gap-8 md:gap-10 lg:gap-20 items-center">
           <div class={`lg:col-span-7 scroll-fade ${reverse ? 'lg:order-2' : ''}`}>
             <a href={localePath(locale, `journeys/${j.slug}`)} class="img-zoom block aspect-[5/4] overflow-hidden">
-              <img src={journeyImageBySlug[j.slug]} alt={j.title} loading="lazy" class="w-full h-full object-cover" />
+              <img
+                src={journeyImageBySlug[j.slug]}
+                srcset={`${journeyImageBySlug[j.slug].replace(/&w=\d+/, '&w=720')} 720w, ${journeyImageBySlug[j.slug].replace(/&w=\d+/, '&w=1400')} 1400w`}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                alt={j.title}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover"
+              />
             </a>
           </div>
           <div class={`lg:col-span-5 scroll-fade ${reverse ? 'lg:order-1' : ''}`} style="animation-delay:0.1s">
-            <div class="flex items-baseline gap-4 mb-5">
+            <div class="flex items-baseline gap-4 mb-4 md:mb-5">
               <span class="num-accent text-[color:var(--color-amber-deep)] text-sm tracking-[0.3em]">{num}</span>
               <span class="h-px flex-1 bg-[color:var(--color-ink)]/15"></span>
             </div>
             <p class="eyebrow">{j.duration} · {j.priceFrom}</p>
-            <h2 class="display-xl mt-5">{j.title}</h2>
-            <p class="lede mt-6">{j.tagline}</p>
-            <p class="prose-cp mt-6">{j.summary}</p>
-            <a href={localePath(locale, `journeys/${j.slug}`)} class="link-cp mt-10">
+            <h2 class="display-xl mt-4 md:mt-5">{j.title}</h2>
+            <p class="lede mt-5 md:mt-6">{j.tagline}</p>
+            <p class="prose-cp mt-5 md:mt-6">{j.summary}</p>
+            <a href={localePath(locale, `journeys/${j.slug}`)} class="link-cp mt-8 md:mt-10">
               {dict.common.viewJourney}
               <span class="ms-rtl-flip">→</span>
             </a>
@@ -60,7 +68,7 @@ const t = dict.journeys;
   })}
 
   {/* INQUIRE CTA */}
-  <section class="relative py-32 md:py-48 overflow-hidden mt-16">
+  <section class="relative py-20 md:py-48 overflow-hidden mt-8 md:mt-16">
     <div class="absolute inset-0 -z-10">
       <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.7"></div>

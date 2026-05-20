@@ -13,20 +13,29 @@ const t = dict.atelier;
 
 <BaseLayout locale={locale} pathKey="atelier/" title={t.hero.heading} heroDark={true}>
   {/* HERO */}
-  <section class="relative h-[90svh] min-h-[620px] flex items-end overflow-hidden">
+  <section class="relative min-h-[90svh] flex items-end overflow-hidden">
     <div class="absolute inset-0 -z-10">
-      <img src={photos.atelierHero} alt="" class="w-full h-full object-cover" />
+      <img
+        src={photos.atelierHero}
+        srcset={`${photos.atelierHero.replace(/&w=\d+/, '&w=720')} 720w, ${photos.atelierHero.replace(/&w=\d+/, '&w=1200')} 1200w, ${photos.atelierHero} 2400w`}
+        sizes="100vw"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full h-full object-cover"
+      />
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
-    <div class="container-cp relative pb-24 md:pb-32 text-[color:var(--color-bone)]">
+    <div class="container-cp relative pb-20 md:pb-32 pt-28 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{t.hero.eyebrow}</p>
-      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{t.hero.heading}</h1>
-      <p class="lede mt-7 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{t.hero.sub}</p>
+      <h1 class="display-xxl mt-5 md:mt-6 max-w-4xl reveal reveal-2">{t.hero.heading}</h1>
+      <p class="lede lede-wide mt-6 md:mt-7 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{t.hero.sub}</p>
     </div>
   </section>
 
   {/* PHILOSOPHY */}
-  <section class="py-24 md:py-32">
+  <section class="py-16 md:py-32">
     <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
       <div class="lg:col-span-5 scroll-fade">
         <p class="eyebrow">{t.philosophy.eyebrow}</p>
@@ -40,7 +49,7 @@ const t = dict.atelier;
   </section>
 
   {/* PARTNERSHIP (the subtle visa mention) */}
-  <section class="py-20 md:py-28 bg-[color:var(--color-bone-soft)]">
+  <section class="py-16 md:py-28 bg-[color:var(--color-bone-soft)]">
     <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
       <div class="lg:col-span-5 scroll-fade">
         <div class="img-zoom aspect-[4/5] overflow-hidden">
@@ -56,7 +65,7 @@ const t = dict.atelier;
   </section>
 
   {/* TEAM */}
-  <section class="py-24 md:py-32">
+  <section class="py-16 md:py-32">
     <div class="container-cp-narrow text-center scroll-fade">
       <p class="eyebrow">{t.team.eyebrow}</p>
       <h2 class="display-xl mt-5">{t.team.heading}</h2>
@@ -65,7 +74,7 @@ const t = dict.atelier;
   </section>
 
   {/* PRINCIPLES */}
-  <section class="py-20 md:py-28 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
+  <section class="py-16 md:py-28 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
     <div class="container-cp">
       <div class="max-w-2xl scroll-fade">
         <p class="eyebrow !text-[color:var(--color-amber)]">{t.principles.eyebrow}</p>
@@ -86,7 +95,7 @@ const t = dict.atelier;
   </section>
 
   {/* CTA */}
-  <section class="py-28 md:py-36">
+  <section class="py-20 md:py-36">
     <div class="container-cp-narrow text-center scroll-fade">
       <h2 class="display-xl">{t.cta.heading}</h2>
       <p class="lede mt-6">{t.cta.body}</p>
