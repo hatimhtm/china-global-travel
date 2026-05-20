@@ -84,10 +84,10 @@ export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: {
   sanqingshan: {
     poster: 'https://images.unsplash.com/photo-1568454158153-6bf6cfda9070?auto=format&fit=crop&w=2400&q=75',
     mobileSources: [
-      { src: 'https://videos.pexels.com/video-files/1448735/1448735-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+      { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
     ],
     sources: [
-      { src: 'https://videos.pexels.com/video-files/1448735/1448735-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+      { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
     ],
   },
 };
@@ -154,4 +154,78 @@ export const experienceImageByKey: Record<number, string> = {
   1: photos.pilgrimage,
   2: photos.tea,
   3: photos.landscape,
+};
+
+// Journey detail-page hero videos. Each journey gets an atmospheric motion loop
+// behind its destination poster — the picture-to-video reveal Hatim asked for.
+export const journeyVideoBySlug: Record<string, { poster: string; mobileSources?: { src: string; type?: string }[]; sources: { src: string; type?: string }[] }> = {
+  'essential-jiangxi': {
+    poster: photos.essential,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1409899/1409899-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1409899/1409899-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
+    ],
+  },
+  'in-depth': {
+    poster: photos.inDepth,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+  },
+  'heritage-and-mist': {
+    poster: photos.heritage,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+  },
+};
+
+// Journal essay hero videos.
+export const journalVideoBySlug: Record<string, { poster: string; mobileSources?: { src: string; type?: string }[]; sources: { src: string; type?: string }[] }> = {
+  'the-weight-of-clay': {
+    poster: photos.journalClay,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1093656/1093656-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1093656/1093656-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+  },
+  'what-the-mountain-knows': {
+    poster: photos.journalLushan,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+    ],
+  },
+  'the-first-week-of-gold': {
+    poster: photos.journalRapeseed,
+    mobileSources: [
+      { src: 'https://videos.pexels.com/video-files/2330708/2330708-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+    ],
+    sources: [
+      { src: 'https://videos.pexels.com/video-files/2330708/2330708-hd_1920_1080_24fps.mp4', type: 'video/mp4' },
+    ],
+  },
+};
+
+// Atelier page hero video.
+export const atelierHeroVideo = {
+  poster: photos.atelierHero,
+  mobileSources: [
+    { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+  ],
+  sources: [
+    { src: 'https://videos.pexels.com/video-files/2098987/2098987-hd_1920_1080_30fps.mp4', type: 'video/mp4' },
+  ],
 };

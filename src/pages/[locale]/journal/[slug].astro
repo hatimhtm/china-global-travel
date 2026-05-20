@@ -2,7 +2,8 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import { getDict, locales, localePath } from '~/i18n';
 import type { Locale } from '~/i18n';
-import { journalImageBySlug, photos, unsplashPortrait } from '~/lib/media';
+import HeroVideo from '~/components/HeroVideo.astro';
+import { journalImageBySlug, journalVideoBySlug, photos, unsplashPortrait } from '~/lib/media';
 
 export async function getStaticPaths() {
   const dict = getDict('en');
@@ -17,6 +18,7 @@ const dict = getDict(locale);
 const a = dict.journal.items.find((x) => x.slug === slug);
 if (!a) { throw new Error(`Unknown journal slug: ${slug}`); }
 const heroImage = journalImageBySlug[a.slug] ?? photos.journalClay;
+const heroVid = journalVideoBySlug[a.slug];
 
 const idx = dict.journal.items.findIndex((x) => x.slug === slug);
 const prev = idx > 0 ? dict.journal.items[idx - 1] : null;
@@ -26,7 +28,10 @@ const next = idx < dict.journal.items.length - 1 ? dict.journal.items[idx + 1] :
 <BaseLayout locale={locale} pathKey={`journal/${slug}/`} title={a.title} heroDark={true}>
   {/* HERO */}
   <section class="relative hero-dark min-h-[clamp(500px,80svh,860px)] flex items-end overflow-hidden">
-    <div class="hero-media absolute inset-0 -z-10">
+    {heroVid ? (
+      <HeroVideo poster={heroVid.poster} sources={heroVid.sources} mobileSources={heroVid.mobileSources} overlay={0.55} ariaLabel={a.title} />
+    ) : (
+      <div class="hero-media absolute inset-0 -z-10">
       <picture class="absolute inset-0 w-full h-full block">
         <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1200)} 1x, ${unsplashPortrait(heroImage, 1400, 1800)} 2x`} />
         <img
@@ -42,6 +47,7 @@ const next = idx < dict.journal.items.length - 1 ? dict.journal.items[idx + 1] :
       </picture>
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
+    )}
     <div class="container-cp relative pb-16 md:pb-28 pt-28 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{a.date} · {a.readTime}</p>
       <h1 class="display-xxl mt-5 md:mt-6 max-w-4xl reveal reveal-2">{a.title}</h1>
