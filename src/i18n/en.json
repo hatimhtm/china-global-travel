@@ -35,9 +35,9 @@
   "home": {
     "hero": {
       "eyebrow": "Bespoke journeys · Jiangxi, China",
-      "heading": "The China that travels at the speed of mist.",
-      "sub": "Porcelain turned by hand. Temples older than language. A province most maps forget. Each journey drawn in private.",
-      "cta": "Begin a journey",
+      "heading": "Jiangxi, considered.",
+      "sub": "Porcelain turned by hand. Temples older than language. A province most maps forget — and the journeys we draw, in private, to reach it.",
+      "cta": "Begin a conversation",
       "scroll": "Scroll"
     },
     "bridge": {
@@ -61,10 +61,22 @@
       "eyebrow": "What you will find",
       "heading": "An inheritance, made tangible.",
       "items": [
-        { "title": "Craft & Ceramics", "body": "A thousand-year unbroken lineage at the porcelain capital. The studios that open only by introduction — and only to us." },
-        { "title": "Mountain Pilgrimage", "body": "Five sacred peaks. Monks before dawn, mist by mid-morning, and the cold quiet of stone older than dynasty." },
-        { "title": "Tea & Tradition", "body": "Lushan Yunwu, picked at the cloud line in May. Ceremonies in pavilions that have poured for emperors and farmers without distinction." },
-        { "title": "Landscape & Photography", "body": "Rapeseed gold in late March. The cloud sea in October. We know the hour the light arrives, and the hour to leave." }
+        {
+          "title": "Craft & Ceramics",
+          "body": "A thousand-year unbroken lineage at the porcelain capital. The studios that open only by introduction — and only to us."
+        },
+        {
+          "title": "Mountain Pilgrimage",
+          "body": "Five sacred peaks. Monks before dawn, mist by mid-morning, and the cold quiet of stone older than dynasty."
+        },
+        {
+          "title": "Tea & Tradition",
+          "body": "Lushan Yunwu, picked at the cloud line in May. Ceremonies in pavilions that have poured for emperors and farmers without distinction."
+        },
+        {
+          "title": "Landscape & Photography",
+          "body": "Rapeseed gold in late March. The cloud sea in October. We know the hour the light arrives, and the hour to leave."
+        }
       ]
     },
     "atelierTeaser": {
@@ -110,11 +122,31 @@
           "Lushan Yunwu tea ceremony, served on the mountain"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Met at Changbei airport. Settle into a quiet hotel above the Gan river. Late afternoon at Tengwang Pavilion, the literary tower rebuilt twenty-eight times across thirteen centuries. Dinner of Jiangxi specialties, hosted by your designer." },
-          { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Slow drive north-east through tea hills. Arrival in Likeng village by lunch. The afternoon is unscheduled — wander between stone bridges, white-walled lanes, ancestral halls. Dinner at a village table." },
-          { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Morning in Huangling, the hanging-field village. Lunch at the foot of the kilns. Afternoon in a working studio with a sixth-generation porcelain master — wheel, glaze, mark. You will leave with a piece you shaped yourself." },
-          { "day": "Day 4", "title": "Jingdezhen to Lushan", "body": "A long lunch at Taoxichuan Art Avenue, then the climb to Lushan. Donglin Temple at dusk — the courtyard lanterns lit one by one. The mountain air thins; the valley falls away. A pot of Yunwu in the room before sleep." },
-          { "day": "Day 5", "title": "Lushan to Nanchang, departure", "body": "Dawn tea ceremony on the mountain. Slow descent through cloud. Lunch in Nanchang. Onward flight." }
+          {
+            "day": "Day 1",
+            "title": "Arrive Nanchang",
+            "body": "Met at Changbei airport. Settle into a quiet hotel above the Gan river. Late afternoon at Tengwang Pavilion, the literary tower rebuilt twenty-eight times across thirteen centuries. Dinner of Jiangxi specialties, hosted by your designer."
+          },
+          {
+            "day": "Day 2",
+            "title": "Nanchang to Wuyuan",
+            "body": "Slow drive north-east through tea hills. Arrival in Likeng village by lunch. The afternoon is unscheduled — wander between stone bridges, white-walled lanes, ancestral halls. Dinner at a village table."
+          },
+          {
+            "day": "Day 3",
+            "title": "Wuyuan to Jingdezhen",
+            "body": "Morning in Huangling, the hanging-field village. Lunch at the foot of the kilns. Afternoon in a working studio with a sixth-generation porcelain master — wheel, glaze, mark. You will leave with a piece you shaped yourself."
+          },
+          {
+            "day": "Day 4",
+            "title": "Jingdezhen to Lushan",
+            "body": "A long lunch at Taoxichuan Art Avenue, then the climb to Lushan. Donglin Temple at dusk — the courtyard lanterns lit one by one. The mountain air thins; the valley falls away. A pot of Yunwu in the room before sleep."
+          },
+          {
+            "day": "Day 5",
+            "title": "Lushan to Nanchang, departure",
+            "body": "Dawn tea ceremony on the mountain. Slow descent through cloud. Lunch in Nanchang. Onward flight."
+          }
         ]
       },
       {
@@ -133,14 +165,46 @@
           "Oriental Goddess Peak at sunrise, before the cable cars open"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion at golden hour. Dinner above the river." },
-          { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Likeng by lunch. Afternoon walks through Hui-village lanes." },
-          { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Huangling at dawn. Private studio session by afternoon. Studio-hotel overnight." },
-          { "day": "Day 4", "title": "Jingdezhen to Longhu", "body": "Bamboo raft past the cliff burials of the Guyue. Tianshi Mansion, where the Celestial Masters have presided since the second century. A quiet hour with a resident priest." },
-          { "day": "Day 5", "title": "Longhu to Lushan", "body": "Drive north as the red cliffs give way to tea hills. Donglin Temple by dusk; lanterns in the courtyard. Yunwu poured on the mountain." },
-          { "day": "Day 6", "title": "Lushan to Sanqingshan", "body": "Cable car to the Five Elements complex. Cliff-face boardwalk above a sea of cloud. A mountain lodge — no signal, woodsmoke at dusk." },
-          { "day": "Day 7", "title": "Sanqingshan dawn, return Nanchang", "body": "Oriental Goddess Peak at sunrise — the stone pillar that has watched the valley longer than recorded history. Slow descent. Afternoon at Poyang Lake or with a Nanchang silk-weaver." },
-          { "day": "Day 8", "title": "Departure", "body": "Onward flight." }
+          {
+            "day": "Day 1",
+            "title": "Arrive Nanchang",
+            "body": "Tengwang Pavilion at golden hour. Dinner above the river."
+          },
+          {
+            "day": "Day 2",
+            "title": "Nanchang to Wuyuan",
+            "body": "Likeng by lunch. Afternoon walks through Hui-village lanes."
+          },
+          {
+            "day": "Day 3",
+            "title": "Wuyuan to Jingdezhen",
+            "body": "Huangling at dawn. Private studio session by afternoon. Studio-hotel overnight."
+          },
+          {
+            "day": "Day 4",
+            "title": "Jingdezhen to Longhu",
+            "body": "Bamboo raft past the cliff burials of the Guyue. Tianshi Mansion, where the Celestial Masters have presided since the second century. A quiet hour with a resident priest."
+          },
+          {
+            "day": "Day 5",
+            "title": "Longhu to Lushan",
+            "body": "Drive north as the red cliffs give way to tea hills. Donglin Temple by dusk; lanterns in the courtyard. Yunwu poured on the mountain."
+          },
+          {
+            "day": "Day 6",
+            "title": "Lushan to Sanqingshan",
+            "body": "Cable car to the Five Elements complex. Cliff-face boardwalk above a sea of cloud. A mountain lodge — no signal, woodsmoke at dusk."
+          },
+          {
+            "day": "Day 7",
+            "title": "Sanqingshan dawn, return Nanchang",
+            "body": "Oriental Goddess Peak at sunrise — the stone pillar that has watched the valley longer than recorded history. Slow descent. Afternoon at Poyang Lake or with a Nanchang silk-weaver."
+          },
+          {
+            "day": "Day 8",
+            "title": "Departure",
+            "body": "Onward flight."
+          }
         ]
       },
       {
@@ -160,16 +224,56 @@
           "Optional hours with a calligrapher, a tea master, or a Buddhist scholar"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion, the City of Porcelain exhibition, the night market by the river." },
-          { "day": "Day 2", "title": "Nanchang", "body": "Quiet morning. Afternoon with a calligraphy master. Dinner with a Jiangxi historian." },
-          { "day": "Day 3–4", "title": "Wuyuan", "body": "Two nights in Likeng. Rapeseed fields, drying rooftops, Hui carving workshop." },
-          { "day": "Day 5", "title": "Jingdezhen", "body": "Full-day private studio mentorship. Studio-hotel overnight." },
-          { "day": "Day 6", "title": "Longhu Mountain", "body": "Bamboo raft, Tianshi Mansion, a Taoist priest's teaching with translator." },
-          { "day": "Day 7–8", "title": "Lushan retreat", "body": "Two nights at Donglin Temple. Dawn ceremonies. Multi-peak hiking. White Deer Cave Academy. Tea ceremony at the cloud line." },
-          { "day": "Day 9", "title": "Sanqingshan", "body": "Five Elements temple complex at first light. Afternoon with a stone-carver whose father carved the same mountain." },
-          { "day": "Day 10", "title": "Wugong Mountain", "body": "Pre-dawn ascent. The peaks rise from the cloud sea one by one. Afternoon in the bamboo, walking slowly and saying little." },
-          { "day": "Day 11", "title": "Wangxian Valley", "body": "A suite cut into the cliff face. Dinner served on a terrace that hangs over the gorge — the lights of the valley a thousand feet below." },
-          { "day": "Day 12", "title": "Return Nanchang, departure", "body": "Onward flight." }
+          {
+            "day": "Day 1",
+            "title": "Arrive Nanchang",
+            "body": "Tengwang Pavilion, the City of Porcelain exhibition, the night market by the river."
+          },
+          {
+            "day": "Day 2",
+            "title": "Nanchang",
+            "body": "Quiet morning. Afternoon with a calligraphy master. Dinner with a Jiangxi historian."
+          },
+          {
+            "day": "Day 3–4",
+            "title": "Wuyuan",
+            "body": "Two nights in Likeng. Rapeseed fields, drying rooftops, Hui carving workshop."
+          },
+          {
+            "day": "Day 5",
+            "title": "Jingdezhen",
+            "body": "Full-day private studio mentorship. Studio-hotel overnight."
+          },
+          {
+            "day": "Day 6",
+            "title": "Longhu Mountain",
+            "body": "Bamboo raft, Tianshi Mansion, a Taoist priest's teaching with translator."
+          },
+          {
+            "day": "Day 7–8",
+            "title": "Lushan retreat",
+            "body": "Two nights at Donglin Temple. Dawn ceremonies. Multi-peak hiking. White Deer Cave Academy. Tea ceremony at the cloud line."
+          },
+          {
+            "day": "Day 9",
+            "title": "Sanqingshan",
+            "body": "Five Elements temple complex at first light. Afternoon with a stone-carver whose father carved the same mountain."
+          },
+          {
+            "day": "Day 10",
+            "title": "Wugong Mountain",
+            "body": "Pre-dawn ascent. The peaks rise from the cloud sea one by one. Afternoon in the bamboo, walking slowly and saying little."
+          },
+          {
+            "day": "Day 11",
+            "title": "Wangxian Valley",
+            "body": "A suite cut into the cliff face. Dinner served on a terrace that hangs over the gorge — the lights of the valley a thousand feet below."
+          },
+          {
+            "day": "Day 12",
+            "title": "Return Nanchang, departure",
+            "body": "Onward flight."
+          }
         ]
       }
     ]
@@ -281,11 +385,26 @@
       "eyebrow": "Principles",
       "heading": "Five quiet rules.",
       "items": [
-        { "title": "Fewer journeys, better journeys.", "body": "We cap the calendar. When the calendar is full, we say so." },
-        { "title": "We do not write itineraries we have not walked.", "body": "Every itinerary on this site has been travelled by a Cloud Pavilion designer in the past eighteen months." },
-        { "title": "We never auto-confirm.", "body": "Every inquiry is read by a human, replied to by a human, and quoted by a human." },
-        { "title": "We do not pad.", "body": "If a journey would be better in seven days than in eight, we will recommend seven. We do not bill by the night." },
-        { "title": "Discretion is a service.", "body": "We do not publish client names. We do not photograph guests. What you tell us stays with us." }
+        {
+          "title": "Fewer journeys, better journeys.",
+          "body": "We cap the calendar. When the calendar is full, we say so."
+        },
+        {
+          "title": "We do not write itineraries we have not walked.",
+          "body": "Every itinerary on this site has been travelled by a Cloud Pavilion designer in the past eighteen months."
+        },
+        {
+          "title": "We never auto-confirm.",
+          "body": "Every inquiry is read by a human, replied to by a human, and quoted by a human."
+        },
+        {
+          "title": "We do not pad.",
+          "body": "If a journey would be better in seven days than in eight, we will recommend seven. We do not bill by the night."
+        },
+        {
+          "title": "Discretion is a service.",
+          "body": "We do not publish client names. We do not photograph guests. What you tell us stays with us."
+        }
       ]
     },
     "cta": {
@@ -359,41 +478,92 @@
         "id": "draw",
         "label": "What draws you in?",
         "options": [
-          { "value": "mountains", "label": "Mountains & heritage" },
-          { "value": "craft", "label": "Craft & ceramics" },
-          { "value": "spirit", "label": "Spirituality & contemplation" },
-          { "value": "photography", "label": "Photography & landscape" }
+          {
+            "value": "mountains",
+            "label": "Mountains & heritage"
+          },
+          {
+            "value": "craft",
+            "label": "Craft & ceramics"
+          },
+          {
+            "value": "spirit",
+            "label": "Spirituality & contemplation"
+          },
+          {
+            "value": "photography",
+            "label": "Photography & landscape"
+          }
         ]
       },
       {
         "id": "when",
         "label": "When are you thinking?",
         "options": [
-          { "value": "rapeseed", "label": "Rapeseed season — March / April" },
-          { "value": "clear", "label": "Clear skies — September / November" },
-          { "value": "winter", "label": "Quiet winter — December / February" },
-          { "value": "flexible", "label": "I am flexible" }
+          {
+            "value": "rapeseed",
+            "label": "Rapeseed season — March / April"
+          },
+          {
+            "value": "clear",
+            "label": "Clear skies — September / November"
+          },
+          {
+            "value": "winter",
+            "label": "Quiet winter — December / February"
+          },
+          {
+            "value": "flexible",
+            "label": "I am flexible"
+          }
         ]
       },
       {
         "id": "who",
         "label": "Who is travelling?",
         "options": [
-          { "value": "solo", "label": "Solo" },
-          { "value": "couple", "label": "Couple" },
-          { "value": "family", "label": "Family" },
-          { "value": "group", "label": "Small group" }
+          {
+            "value": "solo",
+            "label": "Solo"
+          },
+          {
+            "value": "couple",
+            "label": "Couple"
+          },
+          {
+            "value": "family",
+            "label": "Family"
+          },
+          {
+            "value": "group",
+            "label": "Small group"
+          }
         ]
       },
       {
         "id": "budget",
         "label": "Investment band, per person.",
         "options": [
-          { "value": "2-3", "label": "€2,000 – 3,000" },
-          { "value": "3-5", "label": "€3,000 – 5,000" },
-          { "value": "5-8", "label": "€5,000 – 8,000" },
-          { "value": "8+", "label": "€8,000 +" },
-          { "value": "open", "label": "Open to suggestion" }
+          {
+            "value": "2-3",
+            "label": "€2,000 – 3,000"
+          },
+          {
+            "value": "3-5",
+            "label": "€3,000 – 5,000"
+          },
+          {
+            "value": "5-8",
+            "label": "€5,000 – 8,000"
+          },
+          {
+            "value": "8+",
+            "label": "€8,000 +"
+          },
+          {
+            "value": "open",
+            "label": "Open to suggestion"
+          }
         ]
       }
     ],
