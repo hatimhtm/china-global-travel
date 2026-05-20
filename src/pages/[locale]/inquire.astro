@@ -47,20 +47,23 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
         <fieldset class="step mt-5 md:mt-6" data-step={t.steps.length} style="display:none">
           <legend class="display-lg mb-6 md:mb-7">{t.contact.label}</legend>
           <div class="grid sm:grid-cols-2 gap-5">
-            <label class="block">
+            <label for="inq-name" class="block">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.name}</span>
               <input
+                id="inq-name"
                 type="text"
                 name="name"
                 required
                 autocomplete="name"
                 autocapitalize="words"
+                aria-label={t.contact.fields.name}
                 class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
               />
             </label>
-            <label class="block">
+            <label for="inq-email" class="block">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.email}</span>
               <input
+                id="inq-email"
                 type="email"
                 name="email"
                 required
@@ -68,23 +71,26 @@ const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.w
                 inputmode="email"
                 autocapitalize="off"
                 spellcheck="false"
+                aria-label={t.contact.fields.email}
                 class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
               />
             </label>
-            <label class="block sm:col-span-2">
+            <label for="inq-whatsapp" class="block sm:col-span-2">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.whatsapp}</span>
               <input
+                id="inq-whatsapp"
                 type="tel"
                 name="whatsapp"
                 autocomplete="tel"
                 inputmode="tel"
+                aria-label={t.contact.fields.whatsapp}
                 class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"
                 placeholder="+212 6 ..."
               />
             </label>
-            <label class="block sm:col-span-2">
+            <label for="inq-notes" class="block sm:col-span-2">
               <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.notes}</span>
-              <textarea name="notes" rows="3" class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"></textarea>
+              <textarea id="inq-notes" name="notes" rows="3" aria-label={t.contact.fields.notes} class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"></textarea>
             </label>
           </div>
           <p class="mt-6 text-xs opacity-60">{t.contact.consent}</p>

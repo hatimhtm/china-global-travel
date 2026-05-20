@@ -29,7 +29,7 @@ export function unsplashSquare(url: string, w = 900, h = 1100): string {
  */
 
 export const heroVideo = {
-  poster: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=75',
+  poster: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2400&q=75',
   // Mobile sources (≤768px) — small SD clips for cellular networks
   mobileSources: [
     { src: 'https://videos.pexels.com/video-files/1851190/1851190-sd_640_360_25fps.mp4', type: 'video/mp4' },
