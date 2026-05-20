@@ -56,7 +56,7 @@ export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: {
     ],
   },
   sanqingshan: {
-    poster: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=2400&q=75',
+    poster: 'https://images.unsplash.com/photo-1568454158153-6bf6cfda9070?auto=format&fit=crop&w=2400&q=75',
     mobileSources: [
       { src: 'https://videos.pexels.com/video-files/1448735/1448735-sd_640_360_24fps.mp4', type: 'video/mp4' },
     ],
