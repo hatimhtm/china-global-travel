@@ -47,7 +47,7 @@ export const heroVideo = {
  */
 export const heroVideoBySlug: Record<string, { poster: string; mobileSources?: { src: string; type?: string }[]; sources: { src: string; type?: string }[] }> = {
   lushan: {
-    poster: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=2400&q=75',
+    poster: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2400&q=75',
     mobileSources: [
       { src: 'https://videos.pexels.com/video-files/1093662/1093662-sd_640_360_30fps.mp4', type: 'video/mp4' },
     ],

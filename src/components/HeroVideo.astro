@@ -21,20 +21,24 @@ interface Props {
   ariaLabel?: string;
 }
 const { poster, sources, mobileSources, overlay = 0.45, ariaLabel } = Astro.props;
-// A lightweight mobile poster: Unsplash served at 900w jpg ≈ 80–120KB, which is
-// 10–15× lighter than the 2400w hero poster.
+// Mobile poster: portrait-cropped (9:17) Unsplash variant so the subject survives
+// object-cover on a tall phone viewport. ~80-120KB. The bare `poster` URL is used
+// for the desktop variant. Non-Unsplash posters are served as-is.
 const mobilePoster = poster.includes('unsplash.com')
-  ? poster.replace(/([?&])w=\d+/, '$1w=900').replace(/([?&])q=\d+/, '$1q=70')
+  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=center&w=900&h=1700&q=72`
+  : poster;
+const mobilePoster2x = poster.includes('unsplash.com')
+  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=center&w=1400&h=2600&q=72`
   : poster;
 ---
 
 <div class="hero-media absolute inset-0 -z-10" aria-hidden={ariaLabel ? undefined : 'true'} aria-label={ariaLabel}>
-  {/* Mobile gets the small poster as an <img> behind the video so a slow-to-load
-      video never flashes the desktop-weight image. Solid ink behind both ensures
+  {/* Mobile gets a portrait-cropped poster as an <img> behind the video so the
+      subject reads cleanly on tall phone viewports. Solid ink behind both ensures
       light header/hero text always has contrast even on outright load failure. */}
   <picture class="absolute inset-0 w-full h-full block">
-    <source media="(max-width: 768px)" srcset={mobilePoster} />
-    <img src={poster} alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+    <source media="(max-width: 768px)" srcset={`${mobilePoster} 1x, ${mobilePoster2x} 2x`} />
+    <img src={poster} alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center" />
   </picture>
   <video
     class="hero-video absolute inset-0 w-full h-full object-cover"
