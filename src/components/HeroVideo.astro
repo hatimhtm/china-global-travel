@@ -36,23 +36,25 @@ const mobilePoster2x = poster.includes('unsplash.com')
   {/* Mobile gets a portrait-cropped poster as an <img> behind the video so the
       subject reads cleanly on tall phone viewports. Solid ink behind both ensures
       light header/hero text always has contrast even on outright load failure. */}
-  <picture class="absolute inset-0 w-full h-full block">
+  <picture class="hero-image absolute inset-0 w-full h-full block">
     <source media="(max-width: 768px)" srcset={`${mobilePoster} 1x, ${mobilePoster2x} 2x`} />
     <img src={poster} alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center" />
   </picture>
-  <video
-    class="hero-video absolute inset-0 w-full h-full object-cover"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="none"
-    poster={mobilePoster}
-    data-hero-video
-  >
-    {(mobileSources ?? []).map((s) => <source media="(max-width: 768px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
-    {sources.map((s) => <source media="(min-width: 769px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
-  </video>
+  {sources.length > 0 && (
+    <video
+      class="hero-video absolute inset-0 w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster={mobilePoster}
+      data-hero-video
+    >
+      {(mobileSources ?? []).map((s) => <source media="(max-width: 768px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
+      {sources.map((s) => <source media="(min-width: 769px)" src={s.src} type={s.type ?? 'video/mp4'} />)}
+    </video>
+  )}
   <div class="hero-veil absolute inset-0" style={`--hero-overlay:${overlay}`}></div>
 </div>
 
@@ -93,12 +95,15 @@ const mobilePoster2x = poster.includes('unsplash.com')
 </script>
 
 <style>
-  .hero-video {
-    animation: cp-kenburns 26s linear infinite alternate;
+  .hero-video,
+  .hero-image > img {
+    animation: cp-kenburns 32s linear infinite alternate;
     transform-origin: 50% 55%;
+    will-change: transform;
   }
   @media (prefers-reduced-motion: reduce) {
-    .hero-video { animation: none; }
+    .hero-video,
+    .hero-image > img { animation: none; }
   }
   @keyframes cp-kenburns {
     0%   { transform: scale(1.04); }
