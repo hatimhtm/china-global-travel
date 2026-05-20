@@ -1,0 +1,214 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getDict, localeStaticPaths } from '~/i18n';
+import type { Locale } from '~/i18n';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { locale } = Astro.params as { locale: Locale };
+const dict = getDict(locale);
+const t = dict.inquire;
+
+const waPhone = t.alt.whatsappNumber.replace(/[^0-9]/g, '');
+const waLink = `https://wa.me/${waPhone}?text=${encodeURIComponent(dict.common.whatsappPrefill)}`;
+---
+
+<BaseLayout locale={locale} pathKey="inquire/" title={t.hero.heading}>
+  {/* HERO */}
+  <section class="pt-44 pb-12 md:pt-56 md:pb-16">
+    <div class="container-cp">
+      <p class="eyebrow reveal">{t.hero.eyebrow}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{t.hero.heading}</h1>
+      <p class="lede mt-7 max-w-2xl reveal reveal-3">{t.hero.sub}</p>
+    </div>
+  </section>
+
+  {/* STEPPED FORM */}
+  <section class="pb-24 md:pb-32">
+    <div class="container-cp-narrow">
+      <form data-inquire-form class="bg-[color:var(--color-bone-soft)] p-8 md:p-12 border border-[color:var(--color-ink)]/8">
+        <p class="text-xs uppercase tracking-widest opacity-60" data-progress data-total={t.steps.length + 1}>{t.progress.replace('{n}', '1')}</p>
+
+        {t.steps.map((step, idx) => (
+          <fieldset class="step mt-6" data-step={idx} style={idx === 0 ? '' : 'display:none'}>
+            <legend class="display-lg mb-7">{step.label}</legend>
+            <div class="grid sm:grid-cols-2 gap-3">
+              {step.options.map((opt) => (
+                <label class="option block cursor-pointer border border-[color:var(--color-ink)]/15 px-5 py-4 hover:border-[color:var(--color-jade-deep)] hover:bg-[color:var(--color-bone)] transition-colors has-[:checked]:bg-[color:var(--color-ink)] has-[:checked]:text-[color:var(--color-bone)] has-[:checked]:border-[color:var(--color-ink)]">
+                  <input type="radio" name={step.id} value={opt.value} class="sr-only" />
+                  <span class="text-sm md:text-base">{opt.label}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+
+        {/* Contact step (last) */}
+        <fieldset class="step mt-6" data-step={t.steps.length} style="display:none">
+          <legend class="display-lg mb-7">{t.contact.label}</legend>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.name}</span>
+              <input type="text" name="name" required class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" />
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.email}</span>
+              <input type="email" name="email" required class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.whatsapp}</span>
+              <input type="tel" name="whatsapp" class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base" placeholder="+212 6 ..." />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="text-xs uppercase tracking-widest opacity-70">{t.contact.fields.notes}</span>
+              <textarea name="notes" rows="3" class="mt-2 block w-full bg-transparent border-0 border-b border-[color:var(--color-ink)]/30 focus:border-[color:var(--color-ink)] focus:outline-none py-3 text-base"></textarea>
+            </label>
+          </div>
+          <p class="mt-6 text-xs opacity-60">{t.contact.consent}</p>
+        </fieldset>
+
+        {/* Confirmation pane */}
+        <div class="confirmation mt-6" data-confirmation style="display:none">
+          <p class="eyebrow !text-[color:var(--color-jade-deep)]">✓</p>
+          <h3 class="display-xl mt-4">{t.confirmation.heading}</h3>
+          <p class="lede mt-5">{t.confirmation.body}</p>
+        </div>
+
+        {/* Navigation */}
+        <div class="mt-10 flex items-center justify-between gap-4" data-nav>
+          <button type="button" class="text-sm uppercase tracking-widest underline underline-offset-8 opacity-70 hover:opacity-100" data-back style="visibility:hidden">{t.actions.back}</button>
+          <button type="button" class="btn magnetic" data-next>
+            {t.actions.next}
+            <span class="ms-rtl-flip">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  {/* ALT CONTACT */}
+  <section class="pb-32 md:pb-40">
+    <div class="container-cp-narrow text-center scroll-fade">
+      <p class="eyebrow">{t.alt.heading}</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-6 items-center justify-center text-lg">
+        <a href={waLink} target="_blank" rel="noopener" class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)]">
+          {t.alt.whatsapp} · {t.alt.whatsappNumber}
+        </a>
+        <span class="opacity-30 hidden sm:inline">·</span>
+        <a href={`mailto:${t.alt.emailAddress}`} class="underline underline-offset-8 hover:text-[color:var(--color-jade-deep)]">
+          {t.alt.email} · {t.alt.emailAddress}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  function initInquireForm() {
+    const form = document.querySelector<HTMLFormElement>('[data-inquire-form]');
+    if (!form) return;
+    if (form.dataset.inited === 'true') return;
+    form.dataset.inited = 'true';
+
+    const steps = Array.from(form.querySelectorAll<HTMLFieldSetElement>('.step'));
+    const nextBtn = form.querySelector<HTMLButtonElement>('[data-next]');
+    const backBtn = form.querySelector<HTMLButtonElement>('[data-back]');
+    const progress = form.querySelector<HTMLElement>('[data-progress]');
+    const confirmation = form.querySelector<HTMLDivElement>('[data-confirmation]');
+    const nav = form.querySelector<HTMLDivElement>('[data-nav]');
+    if (!steps.length || !nextBtn || !backBtn || !progress || !confirmation || !nav) return;
+
+    const total = parseInt(progress.dataset.total || '5', 10);
+    let current = 0;
+
+    const progressTpl = progress.textContent || '';
+    const updateProgress = () => {
+      progress.textContent = progressTpl.replace(/\d+/, String(Math.min(current + 1, total)));
+      backBtn.style.visibility = current > 0 ? 'visible' : 'hidden';
+      const isLast = current === steps.length - 1;
+      nextBtn.textContent = '';
+      const txt = document.createTextNode(isLast ? (form.dataset.submitLabel || 'Send') : (form.dataset.nextLabel || 'Next'));
+      nextBtn.appendChild(txt);
+      const arrow = document.createElement('span');
+      arrow.className = 'ms-rtl-flip';
+      arrow.textContent = '→';
+      nextBtn.appendChild(arrow);
+    };
+
+    // grab the labels from the rendered DOM
+    const initialNextLabel = nextBtn.textContent?.trim().replace('→','').trim() || 'Next';
+    form.dataset.nextLabel = initialNextLabel;
+    // last-step label is hardcoded above via the action's "submit" text — we read it from translation by attribute
+    const submitLabel = form.getAttribute('data-submit-label') || form.dataset.submitLabel || 'Send to the Atelier';
+    form.dataset.submitLabel = submitLabel;
+
+    const show = (i: number) => {
+      steps.forEach((s, idx) => { s.style.display = idx === i ? '' : 'none'; });
+      current = i;
+      updateProgress();
+    };
+
+    backBtn.addEventListener('click', () => { if (current > 0) show(current - 1); });
+
+    nextBtn.addEventListener('click', () => {
+      const step = steps[current];
+      // Validate radio selection on choice steps
+      const radios = step.querySelectorAll<HTMLInputElement>('input[type=radio]');
+      if (radios.length) {
+        const anyChecked = Array.from(radios).some((r) => r.checked);
+        if (!anyChecked) {
+          step.classList.add('shake');
+          setTimeout(() => step.classList.remove('shake'), 500);
+          return;
+        }
+      }
+      // Validate text inputs on the last step
+      const inputs = step.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input,textarea');
+      if (inputs.length) {
+        for (const inp of Array.from(inputs)) {
+          if ((inp as HTMLInputElement).required && !inp.value) {
+            inp.focus();
+            return;
+          }
+        }
+      }
+      if (current < steps.length - 1) {
+        show(current + 1);
+      } else {
+        submit();
+      }
+    });
+
+    function submit() {
+      // Build prefilled WhatsApp link as our $0-budget fallback submit channel.
+      const data = new FormData(form);
+      const lines: string[] = [];
+      for (const [k, v] of data.entries()) {
+        if (v) lines.push(`${k}: ${v}`);
+      }
+      const summary = lines.join('\n');
+      const url = `https://wa.me/${'212602450006'}?text=${encodeURIComponent('Hello Cloud Pavilion — new inquiry:\n\n' + summary)}`;
+      // Show confirmation pane
+      steps.forEach((s) => { s.style.display = 'none'; });
+      confirmation.style.display = 'block';
+      nav.style.display = 'none';
+      progress.style.display = 'none';
+      // Open the WhatsApp link in a new tab (the user can then send the prefilled message)
+      window.open(url, '_blank', 'noopener');
+    }
+
+    updateProgress();
+  }
+
+  initInquireForm();
+  document.addEventListener('astro:after-swap', initInquireForm);
+</script>
+
+<style>
+  .shake { animation: cp-shake 0.4s ease-in-out; }
+  @keyframes cp-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+</style>

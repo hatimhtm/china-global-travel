@@ -1,0 +1,79 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getDict, locales, localePath } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { journalImageBySlug, photos } from '~/lib/media';
+
+export async function getStaticPaths() {
+  const dict = getDict('en');
+  const slugs = dict.journal.items.map((j) => j.slug);
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ params: { locale, slug } }))
+  );
+}
+
+const { locale, slug } = Astro.params as { locale: Locale; slug: string };
+const dict = getDict(locale);
+const a = dict.journal.items.find((x) => x.slug === slug);
+if (!a) { throw new Error(`Unknown journal slug: ${slug}`); }
+const heroImage = journalImageBySlug[a.slug] ?? photos.journalClay;
+
+const idx = dict.journal.items.findIndex((x) => x.slug === slug);
+const prev = idx > 0 ? dict.journal.items[idx - 1] : null;
+const next = idx < dict.journal.items.length - 1 ? dict.journal.items[idx + 1] : null;
+---
+
+<BaseLayout locale={locale} pathKey={`journal/${slug}/`} title={a.title} heroDark={true}>
+  {/* HERO */}
+  <section class="relative h-[80svh] min-h-[520px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src={heroImage} alt={a.title} class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/65"></div>
+    </div>
+    <div class="container-cp relative pb-20 md:pb-28 text-[color:var(--color-bone)]">
+      <p class="eyebrow !text-[color:var(--color-amber)] reveal">{a.date} · {a.readTime}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{a.title}</h1>
+      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{a.subtitle}</p>
+    </div>
+  </section>
+
+  {/* LEDE */}
+  <section class="py-16 md:py-24">
+    <div class="container-cp-narrow">
+      <p class="lede scroll-fade text-[color:var(--color-ink)]" style="font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.5;">{a.lede}</p>
+    </div>
+  </section>
+
+  {/* BODY */}
+  <section class="pb-24 md:pb-32">
+    <div class="container-cp-narrow space-y-8">
+      {a.body.map((p: string) => (
+        <p class="prose-cp scroll-fade text-lg">{p}</p>
+      ))}
+    </div>
+  </section>
+
+  {/* PREV / NEXT */}
+  <section class="py-16 md:py-20 bg-[color:var(--color-bone-soft)]">
+    <div class="container-cp flex flex-col md:flex-row justify-between gap-8 text-sm uppercase tracking-widest">
+      {prev ? (
+        <a href={localePath(locale, `journal/${prev.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors">
+          <span class="ms-rtl-flip">←</span>
+          <span class="flex flex-col">
+            <span class="opacity-60 normal-case text-xs">{dict.common.previous}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{prev.title}</span>
+          </span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a href={localePath(locale, `journal/${next.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors text-end">
+          <span class="flex flex-col items-end">
+            <span class="opacity-60 normal-case text-xs">{dict.common.next}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{next.title}</span>
+          </span>
+          <span class="ms-rtl-flip">→</span>
+        </a>
+      ) : <span></span>}
+    </div>
+  </section>
+</BaseLayout>

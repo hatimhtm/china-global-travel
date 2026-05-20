@@ -1,0 +1,111 @@
+---
+import { locales, localePath, localeLabels } from '~/i18n';
+import type { Locale, Dict } from '~/i18n';
+
+interface Props {
+  locale: Locale;
+  dict: Dict;
+  variant?: 'header' | 'footer' | 'overlay';
+}
+const { locale, dict, variant = 'header' } = Astro.props;
+
+/**
+ * Strip the current locale prefix from the path so we can swap to a sibling locale.
+ * Astro.url.pathname is e.g. /china-global-travel/en/journeys/essential-jiangxi/
+ * Base url is /china-global-travel. After base: /en/journeys/essential-jiangxi/
+ * After locale prefix: /journeys/essential-jiangxi/
+ */
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+const pathname = Astro.url.pathname;
+let suffix = pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
+suffix = suffix.replace(/^\/+/, '');
+const parts = suffix.split('/');
+if (parts[0] && (locales as string[]).includes(parts[0])) parts.shift();
+const restPath = parts.filter(Boolean).join('/');
+---
+
+{variant === 'header' && (
+  <div class="relative inline-flex" data-lang-root>
+    <button class="text-sm uppercase tracking-widest font-medium px-1" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label={dict.common.languageSwitch}>
+      {locale.toUpperCase()}
+    </button>
+    <ul class="absolute end-0 top-full mt-3 bg-[color:var(--color-bone)] border border-[color:var(--color-ink)]/10 py-2 min-w-[10rem] hidden" data-lang-menu>
+      {locales.map((l) => (
+        <li>
+          <a
+            href={`${base}/${l}/${restPath}${restPath ? '/' : ''}`}
+            class={`block px-4 py-2 text-sm hover:bg-[color:var(--color-mist)] ${l === locale ? 'font-semibold text-[color:var(--color-jade-deep)]' : ''}`}
+            data-lang-link
+            data-lang={l}
+          >
+            {localeLabels[l].native}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{variant === 'footer' && (
+  <ul class="space-y-2.5 text-sm">
+    {locales.map((l) => (
+      <li>
+        <a
+          href={`${base}/${l}/${restPath}${restPath ? '/' : ''}`}
+          class={`opacity-80 hover:opacity-100 transition-opacity ${l === locale ? 'text-[color:var(--color-amber)] opacity-100' : ''}`}
+          data-lang-link
+          data-lang={l}
+        >
+          {localeLabels[l].native}
+        </a>
+      </li>
+    ))}
+  </ul>
+)}
+
+{variant === 'overlay' && (
+  <ul class="flex items-center gap-4">
+    {locales.map((l) => (
+      <li>
+        <a
+          href={`${base}/${l}/${restPath}${restPath ? '/' : ''}`}
+          class={`opacity-80 hover:opacity-100 ${l === locale ? 'text-[color:var(--color-amber)] opacity-100' : ''}`}
+          data-lang-link
+          data-lang={l}
+        >
+          {localeLabels[l].native}
+        </a>
+      </li>
+    ))}
+  </ul>
+)}
+
+<script>
+  function initLang() {
+    const root = document.querySelector<HTMLDivElement>('[data-lang-root]');
+    if (!root) return;
+    const toggle = root.querySelector<HTMLButtonElement>('[data-lang-toggle]');
+    const menu = root.querySelector<HTMLUListElement>('[data-lang-menu]');
+    if (!toggle || !menu) return;
+
+    const close = () => { menu.classList.add('hidden'); toggle.setAttribute('aria-expanded', 'false'); };
+    const open = () => { menu.classList.remove('hidden'); toggle.setAttribute('aria-expanded', 'true'); };
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.contains('hidden') ? open() : close();
+    });
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) close();
+    });
+
+    // Persist user choice on any language click
+    document.querySelectorAll<HTMLAnchorElement>('[data-lang-link]').forEach((a) => {
+      a.addEventListener('click', () => {
+        try { localStorage.setItem('cp-locale', a.dataset.lang || ''); } catch {}
+      });
+    });
+  }
+  initLang();
+  document.addEventListener('astro:after-swap', initLang);
+</script>

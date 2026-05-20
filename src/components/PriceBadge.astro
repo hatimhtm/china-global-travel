@@ -1,0 +1,10 @@
+---
+interface Props {
+  label: string;
+  emphasis?: boolean;
+}
+const { label, emphasis = false } = Astro.props;
+---
+<span class={`inline-flex items-center text-xs uppercase tracking-widest ${emphasis ? 'text-[color:var(--color-amber-deep)]' : 'text-[color:var(--color-ink-soft)] opacity-80'}`}>
+  {label}
+</span>

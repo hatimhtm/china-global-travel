@@ -1,0 +1,53 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import DestinationCard from '~/components/DestinationCard.astro';
+import { getDict, localePath, localeStaticPaths } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { destinationImageBySlug, photos } from '~/lib/media';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { locale } = Astro.params as { locale: Locale };
+const dict = getDict(locale);
+const t = dict.destinations;
+---
+
+<BaseLayout locale={locale} pathKey="destinations/" title={t.index.hero.heading}>
+  <section class="pt-44 pb-16 md:pt-56 md:pb-20">
+    <div class="container-cp">
+      <p class="eyebrow reveal">{t.index.hero.eyebrow}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
+      <p class="lede mt-7 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
+    </div>
+  </section>
+
+  <section class="pb-28 md:pb-36">
+    <div class="container-cp">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        {t.items.map((d, i) => {
+          const spans = ['md:col-span-7', 'md:col-span-5', 'md:col-span-4', 'md:col-span-4', 'md:col-span-4'];
+          return (
+            <div class={spans[i] || 'md:col-span-6'}>
+              <DestinationCard locale={locale} dict={dict} destination={d} image={destinationImageBySlug[d.slug]} index={i} size={i < 2 ? 'lg' : 'md'} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-28 md:py-36 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-[color:var(--color-ink)]/65"></div>
+    </div>
+    <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl scroll-fade">
+      <p class="eyebrow !text-[color:var(--color-amber)]">{dict.home.inquireCta.eyebrow}</p>
+      <h2 class="display-xl mt-6">{dict.home.inquireCta.heading}</h2>
+      <p class="lede mt-6 !text-[color:var(--color-bone)] opacity-90">{dict.home.inquireCta.sub}</p>
+      <div class="mt-10">
+        <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">{dict.home.inquireCta.cta}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

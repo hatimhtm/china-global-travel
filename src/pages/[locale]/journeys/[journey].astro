@@ -1,0 +1,142 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getDict, locales, localePath } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { journeyImageBySlug, photos } from '~/lib/media';
+
+export async function getStaticPaths() {
+  const dict = getDict('en');
+  const slugs = dict.journeys.items.map((j) => j.slug);
+  return locales.flatMap((locale) =>
+    slugs.map((journey) => ({ params: { locale, journey } }))
+  );
+}
+
+const { locale, journey: slug } = Astro.params as { locale: Locale; journey: string };
+const dict = getDict(locale);
+const j = dict.journeys.items.find((x) => x.slug === slug);
+if (!j) { throw new Error(`Unknown journey: ${slug}`); }
+
+const heroImage = journeyImageBySlug[j.slug] ?? photos.essential;
+
+// Previous / next in the sequence
+const idx = dict.journeys.items.findIndex((x) => x.slug === slug);
+const prev = idx > 0 ? dict.journeys.items[idx - 1] : null;
+const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1] : null;
+---
+
+<BaseLayout locale={locale} pathKey={`journeys/${slug}/`} title={j.title} heroDark={true}>
+  {/* HERO */}
+  <section class="relative h-[100svh] min-h-[600px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src={heroImage} alt={j.title} class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/65"></div>
+    </div>
+    <div class="container-cp relative pb-20 md:pb-28 text-[color:var(--color-bone)]">
+      <p class="eyebrow !text-[color:var(--color-amber)] reveal">{j.duration} · {j.priceFrom}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{j.title}</h1>
+      <p class="lede mt-6 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{j.tagline}</p>
+    </div>
+  </section>
+
+  {/* INTRO */}
+  <section class="py-20 md:py-28">
+    <div class="container-cp-narrow">
+      <p class="lede scroll-fade">{j.summary}</p>
+      <p class="prose-cp mt-8 scroll-fade" style="animation-delay:0.08s">{j.intro}</p>
+    </div>
+  </section>
+
+  {/* HIGHLIGHTS */}
+  <section class="py-16 md:py-24 bg-[color:var(--color-bone-soft)]">
+    <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-4 scroll-fade">
+        <p class="eyebrow">{dict.common.highlights}</p>
+        <h2 class="display-lg mt-5">{j.tagline}</h2>
+      </div>
+      <div class="lg:col-span-8 scroll-fade" style="animation-delay:0.08s">
+        <ul class="divide-y divide-[color:var(--color-ink)]/10">
+          {j.highlights.map((h: string) => (
+            <li class="py-5 flex gap-5 items-start">
+              <span class="font-display text-2xl text-[color:var(--color-amber-deep)] leading-none mt-1">·</span>
+              <p class="text-base md:text-lg leading-relaxed">{h}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* DAY BY DAY */}
+  <section class="py-24 md:py-32">
+    <div class="container-cp">
+      <div class="max-w-2xl scroll-fade">
+        <p class="eyebrow">{dict.common.duration}</p>
+        <h2 class="display-xl mt-5">{j.duration}</h2>
+      </div>
+      <div class="mt-14 grid lg:grid-cols-2 gap-x-16 gap-y-12">
+        {j.days.map((d: { day: string; title: string; body: string }, i: number) => (
+          <article class="scroll-fade flex gap-6" style={`animation-delay:${i * 0.04}s`}>
+            <div class="shrink-0 w-16 pt-1">
+              <span class="font-display text-2xl text-[color:var(--color-jade-deep)] leading-none">{(i + 1).toString().padStart(2, '0')}</span>
+              <p class="text-[10px] uppercase tracking-[0.3em] opacity-60 mt-1">{d.day}</p>
+            </div>
+            <div class="flex-1">
+              <h3 class="display-md">{d.title}</h3>
+              <p class="prose-cp mt-3">{d.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* INCLUDED + VISA */}
+  <section class="py-20 md:py-28 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
+    <div class="container-cp grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <div class="scroll-fade">
+        <p class="eyebrow !text-[color:var(--color-amber)]">{dict.common.included}</p>
+        <ul class="mt-6 space-y-3 text-base md:text-lg opacity-90">
+          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">{dict.common.priceFrom} {j.priceFrom.replace(/^from\s*/i, '').replace(/^from\s/i, '')}</li>
+          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">{dict.common.duration} · {j.duration}</li>
+          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">Private guide, transport, hand-picked accommodation, every entrance</li>
+          <li class="border-b border-[color:var(--color-bone)]/15 pb-3">Visa-pathway facilitation</li>
+        </ul>
+      </div>
+      <div class="scroll-fade flex flex-col justify-center" style="animation-delay:0.08s">
+        <h3 class="display-lg">{dict.home.inquireCta.heading}</h3>
+        <p class="lede mt-5 !text-[color:var(--color-bone)] opacity-80">{dict.home.inquireCta.sub}</p>
+        <div class="mt-8">
+          <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">
+            {dict.home.inquireCta.cta}
+            <span class="ms-rtl-flip">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* PREV / NEXT */}
+  <section class="py-16 md:py-20">
+    <div class="container-cp flex flex-col md:flex-row justify-between gap-8 text-sm uppercase tracking-widest">
+      {prev ? (
+        <a href={localePath(locale, `journeys/${prev.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors">
+          <span class="ms-rtl-flip">←</span>
+          <span class="flex flex-col">
+            <span class="opacity-60 normal-case text-xs">{dict.common.previous}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{prev.title}</span>
+          </span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a href={localePath(locale, `journeys/${next.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors text-end">
+          <span class="flex flex-col items-end">
+            <span class="opacity-60 normal-case text-xs">{dict.common.next}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{next.title}</span>
+          </span>
+          <span class="ms-rtl-flip">→</span>
+        </a>
+      ) : <span></span>}
+    </div>
+  </section>
+</BaseLayout>

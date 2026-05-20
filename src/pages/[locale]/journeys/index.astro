@@ -1,0 +1,72 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getDict, localePath, localeStaticPaths } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { journeyImageBySlug, photos } from '~/lib/media';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { locale } = Astro.params as { locale: Locale };
+const dict = getDict(locale);
+const t = dict.journeys;
+---
+
+<BaseLayout locale={locale} pathKey="journeys/" title={t.index.hero.heading}>
+  {/* HERO */}
+  <section class="relative pt-44 pb-20 md:pt-56 md:pb-28">
+    <div class="container-cp">
+      <p class="eyebrow reveal">{t.index.hero.eyebrow}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
+      <p class="lede mt-7 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
+    </div>
+  </section>
+
+  {/* INTRO PROSE */}
+  <section class="pb-16 md:pb-24">
+    <div class="container-cp-narrow">
+      <p class="prose-cp scroll-fade">{t.index.intro}</p>
+    </div>
+  </section>
+
+  {/* JOURNEY LIST — alternating editorial blocks */}
+  {t.items.map((j, i) => {
+    const reverse = i % 2 === 1;
+    return (
+      <section class="py-20 md:py-28">
+        <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class={`lg:col-span-7 scroll-fade ${reverse ? 'lg:order-2' : ''}`}>
+            <a href={localePath(locale, `journeys/${j.slug}`)} class="img-zoom block aspect-[5/4] overflow-hidden">
+              <img src={journeyImageBySlug[j.slug]} alt={j.title} loading="lazy" class="w-full h-full object-cover" />
+            </a>
+          </div>
+          <div class={`lg:col-span-5 scroll-fade ${reverse ? 'lg:order-1' : ''}`} style="animation-delay:0.1s">
+            <p class="eyebrow">{j.duration} · {j.priceFrom}</p>
+            <h2 class="display-xl mt-4">{j.title}</h2>
+            <p class="lede mt-5">{j.tagline}</p>
+            <p class="prose-cp mt-6">{j.summary}</p>
+            <a href={localePath(locale, `journeys/${j.slug}`)} class="mt-8 inline-flex items-center gap-3 text-sm uppercase tracking-widest underline underline-offset-8 hover:text-[color:var(--color-jade-deep)] transition-colors">
+              {dict.common.viewJourney}
+              <span class="ms-rtl-flip">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  {/* INQUIRE CTA */}
+  <section class="relative py-28 md:py-36 overflow-hidden mt-12">
+    <div class="absolute inset-0 -z-10">
+      <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-[color:var(--color-ink)]/65"></div>
+    </div>
+    <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl scroll-fade">
+      <p class="eyebrow !text-[color:var(--color-amber)]">{dict.home.inquireCta.eyebrow}</p>
+      <h2 class="display-xl mt-6">{dict.home.inquireCta.heading}</h2>
+      <p class="lede mt-6 !text-[color:var(--color-bone)] opacity-90">{dict.home.inquireCta.sub}</p>
+      <div class="mt-10">
+        <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">{dict.home.inquireCta.cta}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

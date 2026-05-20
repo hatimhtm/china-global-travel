@@ -1,0 +1,64 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { localePath } from '~/i18n';
+import type { Locale, Dict } from '~/i18n';
+
+interface Props {
+  locale: Locale;
+  dict: Dict;
+}
+const { locale, dict } = Astro.props;
+
+const exploreLinks = [
+  { href: localePath(locale, 'journeys'), label: dict.nav.journeys },
+  { href: localePath(locale, 'destinations'), label: dict.nav.destinations },
+  { href: localePath(locale, 'atelier'), label: dict.nav.atelier },
+  { href: localePath(locale, 'journal'), label: dict.nav.journal },
+];
+
+const waText = encodeURIComponent(dict.common.whatsappPrefill);
+const waLink = `https://wa.me/${dict.inquire.alt.whatsappNumber.replace(/[^0-9]/g, '')}?text=${waText}`;
+---
+
+<footer class="bg-[color:var(--color-ink)] text-[color:var(--color-bone)] mt-32 relative">
+  <div class="container-cp py-20 lg:py-24">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-8">
+      <div class="lg:col-span-5">
+        <div class="font-display text-3xl md:text-4xl tracking-tight">{dict.brand.name}</div>
+        <p class="mt-4 lede text-[color:var(--color-bone)] opacity-70 max-w-md">{dict.footer.tagline}</p>
+        <p class="mt-10 text-sm opacity-60">{dict.footer.newsletter}</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.exploreHeading}</h4>
+        <ul class="mt-5 space-y-2.5 text-sm">
+          {exploreLinks.map((l) => (
+            <li><a href={l.href} class="opacity-80 hover:opacity-100 transition-opacity">{l.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.contactHeading}</h4>
+        <ul class="mt-5 space-y-2.5 text-sm">
+          <li><a href={waLink} class="opacity-80 hover:opacity-100" target="_blank" rel="noopener">{dict.inquire.alt.whatsapp} · {dict.inquire.alt.whatsappNumber}</a></li>
+          <li><a href={`mailto:${dict.inquire.alt.emailAddress}`} class="opacity-80 hover:opacity-100">{dict.inquire.alt.emailAddress}</a></li>
+          <li class="opacity-60 mt-4">{dict.footer.addressLine1}</li>
+          <li class="opacity-60">{dict.footer.addressLine2}</li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.languageHeading}</h4>
+        <div class="mt-5">
+          <LanguageSwitcher locale={locale} dict={dict} variant="footer" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-[color:var(--color-bone)]/15 flex flex-col md:flex-row justify-between gap-4 text-xs opacity-60">
+      <span>{dict.footer.rights}</span>
+      <span>{dict.footer.credits}</span>
+    </div>
+  </div>
+</footer>

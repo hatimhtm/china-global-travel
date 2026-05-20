@@ -1,0 +1,124 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { localePath } from '~/i18n';
+import type { Locale, Dict } from '~/i18n';
+
+interface Props {
+  locale: Locale;
+  dict: Dict;
+  heroDark?: boolean;
+}
+const { locale, dict, heroDark = false } = Astro.props;
+
+const navLinks = [
+  { href: localePath(locale, 'journeys'), label: dict.nav.journeys },
+  { href: localePath(locale, 'destinations'), label: dict.nav.destinations },
+  { href: localePath(locale, 'atelier'), label: dict.nav.atelier },
+  { href: localePath(locale, 'journal'), label: dict.nav.journal },
+];
+---
+
+<header class="fixed top-0 inset-x-0 z-50 transition-colors duration-700" data-header data-hero-dark={heroDark ? 'true' : 'false'}>
+  <div class="container-cp flex items-center justify-between py-5 md:py-6">
+    <a href={localePath(locale, '')} class="font-display text-lg tracking-tight" data-brand>
+      {dict.brand.name}
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-sm">
+      {navLinks.map((l) => (
+        <a href={l.href} class="hover:text-[color:var(--color-jade-deep)] transition-colors duration-300" data-nav-link>{l.label}</a>
+      ))}
+      <LanguageSwitcher locale={locale} dict={dict} variant="header" />
+      <a href={localePath(locale, 'inquire')} class="btn magnetic">{dict.nav.inquire}</a>
+    </nav>
+
+    <button class="lg:hidden text-sm uppercase tracking-widest" data-menu-open aria-label={dict.common.menuLabel}>
+      <span class="font-medium">{dict.nav.menu}</span>
+    </button>
+  </div>
+</header>
+
+<!-- Full-screen overlay nav (mobile + when opened on desktop) -->
+<div class="fixed inset-0 z-[60] hidden flex-col" data-menu-panel role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="absolute inset-0 bg-[color:var(--color-ink)]" data-menu-bg></div>
+  <div class="relative flex-1 flex flex-col justify-between text-[color:var(--color-bone)]">
+    <div class="container-cp flex items-center justify-between py-5 md:py-6">
+      <span class="font-display text-lg tracking-tight">{dict.brand.name}</span>
+      <button class="text-sm uppercase tracking-widest" data-menu-close aria-label={dict.nav.close}>{dict.nav.close}</button>
+    </div>
+
+    <nav class="container-cp pb-16 pt-8">
+      <ul class="flex flex-col gap-5">
+        {navLinks.map((l, i) => (
+          <li>
+            <a href={l.href} class="display-lg font-display text-[color:var(--color-bone)] hover:text-[color:var(--color-amber)] transition-colors duration-500" style={`animation-delay:${i * 0.07}s`}>
+              {l.label}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href={localePath(locale, 'inquire')} class="display-lg font-display text-[color:var(--color-amber)]">{dict.nav.inquire}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-cp pb-10 flex items-center justify-between text-xs uppercase tracking-widest opacity-80">
+      <span>{dict.footer.addressLine2}</span>
+      <LanguageSwitcher locale={locale} dict={dict} variant="overlay" />
+    </div>
+  </div>
+</div>
+
+<script>
+  function initMenu() {
+    const openBtn = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+    const closeBtn = document.querySelector<HTMLButtonElement>('[data-menu-close]');
+    const panel = document.querySelector<HTMLDivElement>('[data-menu-panel]');
+    const header = document.querySelector<HTMLElement>('[data-header]');
+    if (!openBtn || !closeBtn || !panel) return;
+
+    const open = () => {
+      panel.style.display = 'flex';
+      panel.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      header?.style.setProperty('opacity', '0');
+    };
+    const close = () => {
+      panel.style.display = 'none';
+      panel.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      header?.style.removeProperty('opacity');
+    };
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  }
+
+  function initHeaderScroll() {
+    const header = document.querySelector<HTMLElement>('[data-header]');
+    if (!header) return;
+    const heroDark = header.dataset.heroDark === 'true';
+    const update = () => {
+      const scrolled = window.scrollY > 40;
+      if (scrolled) {
+        header.style.backgroundColor = 'rgba(245, 240, 232, 0.92)';
+        header.style.backdropFilter = 'blur(12px)';
+        (header.style as any).webkitBackdropFilter = 'blur(12px)';
+        header.style.borderBottom = '1px solid rgba(26, 31, 30, 0.06)';
+        header.style.color = '';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.backdropFilter = 'none';
+        (header.style as any).webkitBackdropFilter = 'none';
+        header.style.borderBottom = 'none';
+        if (heroDark) header.style.color = 'var(--color-bone)';
+      }
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  }
+
+  initMenu();
+  initHeaderScroll();
+  document.addEventListener('astro:after-swap', () => { initMenu(); initHeaderScroll(); });
+</script>

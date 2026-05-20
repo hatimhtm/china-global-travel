@@ -1,0 +1,8 @@
+dist/
+node_modules/
+.env
+.env.production
+.DS_Store
+.astro/
+.vscode/
+*.log

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getDict, locales, localePath } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { destinationImageBySlug, photos } from '~/lib/media';
+
+export async function getStaticPaths() {
+  const dict = getDict('en');
+  const slugs = dict.destinations.items.map((d) => d.slug);
+  return locales.flatMap((locale) =>
+    slugs.map((destination) => ({ params: { locale, destination } }))
+  );
+}
+
+const { locale, destination: slug } = Astro.params as { locale: Locale; destination: string };
+const dict = getDict(locale);
+const d = dict.destinations.items.find((x) => x.slug === slug);
+if (!d) { throw new Error(`Unknown destination: ${slug}`); }
+const heroImage = destinationImageBySlug[d.slug] ?? photos.wuyuan;
+
+const idx = dict.destinations.items.findIndex((x) => x.slug === slug);
+const prev = idx > 0 ? dict.destinations.items[idx - 1] : null;
+const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[idx + 1] : null;
+---
+
+<BaseLayout locale={locale} pathKey={`destinations/${slug}/`} title={d.title} heroDark={true}>
+  {/* HERO */}
+  <section class="relative h-[100svh] min-h-[600px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src={heroImage} alt={d.title} class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+    </div>
+    <div class="container-cp relative pb-24 md:pb-32 text-[color:var(--color-bone)]">
+      <p class="eyebrow !text-[color:var(--color-amber)] reveal">{dict.common.viewDestination}</p>
+      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{d.title}</h1>
+      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{d.subtitle}</p>
+    </div>
+  </section>
+
+  {/* HOOK */}
+  <section class="py-20 md:py-28">
+    <div class="container-cp-narrow">
+      <p class="lede scroll-fade">{d.hook}</p>
+      <p class="prose-cp mt-8 scroll-fade" style="animation-delay:0.08s">{d.intro}</p>
+    </div>
+  </section>
+
+  {/* BEST TIME + EXPERIENCES */}
+  <section class="py-20 md:py-28 bg-[color:var(--color-bone-soft)]">
+    <div class="container-cp grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-4 scroll-fade">
+        <p class="eyebrow">{dict.common.bestTime}</p>
+        <p class="display-md mt-5">{d.best}</p>
+      </div>
+      <div class="lg:col-span-8 scroll-fade" style="animation-delay:0.08s">
+        <p class="eyebrow">{dict.common.highlights}</p>
+        <ul class="mt-6 divide-y divide-[color:var(--color-ink)]/10">
+          {d.experiences.map((e: string) => (
+            <li class="py-5 flex gap-5 items-start">
+              <span class="font-display text-2xl text-[color:var(--color-amber-deep)] leading-none mt-1">·</span>
+              <p class="text-base md:text-lg leading-relaxed">{e}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* INQUIRE */}
+  <section class="py-24 md:py-32 bg-[color:var(--color-ink)] text-[color:var(--color-bone)]">
+    <div class="container-cp text-center max-w-3xl mx-auto scroll-fade">
+      <p class="eyebrow !text-[color:var(--color-amber)]">{dict.home.inquireCta.eyebrow}</p>
+      <h2 class="display-xl mt-6">Bring {d.title} into your journey.</h2>
+      <p class="lede mt-6 !text-[color:var(--color-bone)] opacity-90">{dict.home.inquireCta.sub}</p>
+      <div class="mt-10">
+        <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">{dict.home.inquireCta.cta}</a>
+      </div>
+    </div>
+  </section>
+
+  {/* PREV / NEXT */}
+  <section class="py-16 md:py-20">
+    <div class="container-cp flex flex-col md:flex-row justify-between gap-8 text-sm uppercase tracking-widest">
+      {prev ? (
+        <a href={localePath(locale, `destinations/${prev.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors">
+          <span class="ms-rtl-flip">←</span>
+          <span class="flex flex-col">
+            <span class="opacity-60 normal-case text-xs">{dict.common.previous}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{prev.title}</span>
+          </span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a href={localePath(locale, `destinations/${next.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors text-end">
+          <span class="flex flex-col items-end">
+            <span class="opacity-60 normal-case text-xs">{dict.common.next}</span>
+            <span class="font-display text-lg normal-case tracking-tight mt-1">{next.title}</span>
+          </span>
+          <span class="ms-rtl-flip">→</span>
+        </a>
+      ) : <span></span>}
+    </div>
+  </section>
+</BaseLayout>

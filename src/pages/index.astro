@@ -1,0 +1,59 @@
+---
+/**
+ * Root entry — auto-detect browser language, persist choice, redirect once.
+ * Runs as inline JS in <head> before any paint.
+ */
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Pavilion</title>
+  <meta http-equiv="refresh" content={`1; url=${base}/en/`} />
+  <style>
+    html, body { margin: 0; padding: 0; background: #F5F0E8; color: #1A1F1E; font-family: system-ui, sans-serif; height: 100%; }
+    .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .card { max-width: 36rem; text-align: center; }
+    .brand { font-size: 1.5rem; letter-spacing: -0.01em; }
+    .sub { margin-top: 1rem; opacity: 0.7; font-size: 0.95rem; }
+    .links { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+    .links a { color: #1A1F1E; text-decoration: none; border-bottom: 1px solid #1A1F1E; padding-bottom: 2px; }
+  </style>
+  <script is:inline define:vars={{ base }}>
+    (function() {
+      try {
+        var supported = ['en','fr','ar','zh'];
+        var stored = null;
+        try { stored = localStorage.getItem('cp-locale'); } catch(e) {}
+        var target = 'en';
+        if (stored && supported.indexOf(stored) >= 0) {
+          target = stored;
+        } else {
+          var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase().slice(0,2);
+          target = supported.indexOf(lang) >= 0 ? lang : 'en';
+          try { localStorage.setItem('cp-locale', target); } catch(e) {}
+        }
+        window.location.replace(base + '/' + target + '/');
+      } catch (e) {
+        window.location.replace(base + '/en/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">Cloud Pavilion</div>
+      <p class="sub">Choose your language · Choisissez votre langue · اختر لغتك · 选择语言</p>
+      <div class="links">
+        <a href={`${base}/en/`}>English</a>
+        <a href={`${base}/fr/`}>Français</a>
+        <a href={`${base}/ar/`}>العربية</a>
+        <a href={`${base}/zh/`}>中文</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

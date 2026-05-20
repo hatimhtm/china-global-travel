@@ -1,0 +1,33 @@
+---
+/**
+ * Full-bleed hero video with a graceful poster fallback.
+ * Sources: pass remote video URL(s) and a poster image URL.
+ * Video is muted, looped, autoplayed, playsinline. If autoplay fails (Safari mobile),
+ * the poster stays visible — no broken UX.
+ */
+interface Props {
+  poster: string;
+  sources: { src: string; type?: string }[];
+  overlay?: number; // 0 to 1, the dark gradient strength
+  ariaLabel?: string;
+}
+const { poster, sources, overlay = 0.42, ariaLabel } = Astro.props;
+---
+
+<div class="absolute inset-0 -z-10" aria-hidden={ariaLabel ? undefined : 'true'} aria-label={ariaLabel}>
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster={poster}
+  >
+    {sources.map((s) => <source src={s.src} type={s.type ?? 'video/mp4'} />)}
+  </video>
+  <div
+    class="absolute inset-0"
+    style={`background: linear-gradient(180deg, rgba(26,31,30,${overlay * 0.65}) 0%, rgba(26,31,30,${overlay * 0.25}) 35%, rgba(26,31,30,${overlay}) 100%);`}
+  ></div>
+</div>

@@ -1,0 +1,41 @@
+---
+import { localePath } from '~/i18n';
+import type { Locale, Dict } from '~/i18n';
+
+interface Props {
+  locale: Locale;
+  dict: Dict;
+  journey: Dict['journeys']['items'][number];
+  image: string;
+  index?: number;
+}
+const { locale, dict, journey, image, index = 0 } = Astro.props;
+const href = localePath(locale, `journeys/${journey.slug}`);
+---
+
+<a href={href} class="group block scroll-fade" style={`animation-delay:${index * 0.08}s`}>
+  <div class="img-zoom aspect-[4/5] overflow-hidden bg-[color:var(--color-mist)]">
+    <img
+      src={image}
+      alt={journey.title}
+      loading="lazy"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="mt-5">
+    <div class="flex items-baseline justify-between gap-4">
+      <h3 class="display-md group-hover:text-[color:var(--color-jade-deep)] transition-colors duration-500">
+        {journey.title}
+      </h3>
+      <span class="text-xs uppercase tracking-widest opacity-60">{journey.duration}</span>
+    </div>
+    <p class="mt-3 text-sm opacity-80 leading-relaxed max-w-md">{journey.tagline}</p>
+    <div class="mt-5 flex items-center justify-between text-xs uppercase tracking-widest">
+      <span class="text-[color:var(--color-jade-deep)]">{journey.priceFrom}</span>
+      <span class="inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-500">
+        {dict.common.viewJourney}
+        <span class="ms-rtl-flip">→</span>
+      </span>
+    </div>
+  </div>
+</a>

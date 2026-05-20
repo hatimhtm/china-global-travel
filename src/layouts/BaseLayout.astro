@@ -1,0 +1,148 @@
+---
+import '~/styles/global.css';
+import Header from '~/components/Header.astro';
+import Footer from '~/components/Footer.astro';
+import WhatsAppFAB from '~/components/WhatsAppFAB.astro';
+import { getDict, dirFor, htmlLangFor, localeLabels, locales, BASE, localePath } from '~/i18n';
+import type { Locale } from '~/i18n';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  /** path under the current locale, e.g. "journeys/essential-jiangxi/" — used for hreflang alternates */
+  pathKey?: string;
+  /** page-class for body-level styling hooks */
+  pageClass?: string;
+  /** hero is dark? affects nav contrast over hero */
+  heroDark?: boolean;
+}
+
+const {
+  locale,
+  title,
+  description,
+  pathKey = '',
+  pageClass = '',
+  heroDark = false,
+} = Astro.props;
+
+const dict = getDict(locale);
+const dir = dirFor(locale);
+const htmlLang = htmlLangFor(locale);
+
+const fullTitle = title ? `${title} · ${dict.brand.name}` : dict.meta.title;
+const pageDescription = description ?? dict.meta.description;
+
+const baseUrl = 'https://hatimhtm.github.io/china-global-travel';
+const canonical = `${baseUrl}/${locale}/${pathKey}`;
+
+const fontsByLocale: Record<Locale, string> = {
+  en: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600&display=swap',
+  fr: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600&display=swap',
+  ar: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600|reem-kufi:400,500,600|tajawal:400,500&display=swap',
+  zh: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600|noto-serif-sc:400,500,600|noto-sans-sc:400,500&display=swap',
+};
+---
+<!DOCTYPE html>
+<html lang={htmlLang} dir={dir} class="bg-[color:var(--color-bone)]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1A1F1E" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonical} />
+
+    {/* hreflang alternates */}
+    {locales.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l === 'zh' ? 'zh-Hans' : l}
+        href={`${baseUrl}/${l}/${pathKey}`}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${baseUrl}/en/${pathKey}`} />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale === 'zh' ? 'zh_CN' : locale === 'ar' ? 'ar_MA' : locale === 'fr' ? 'fr_FR' : 'en_US'} />
+    {locales.filter((l) => l !== locale).map((l) => (
+      <meta property="og:locale:alternate" content={l === 'zh' ? 'zh_CN' : l === 'ar' ? 'ar_MA' : l === 'fr' ? 'fr_FR' : 'en_US'} />
+    ))}
+
+    {/* Fonts — Bunny Fonts, locale-aware */}
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link rel="stylesheet" href={fontsByLocale[locale]} />
+
+    {/* Favicons */}
+    <link rel="icon" type="image/svg+xml" href={`${BASE}/favicon.svg`} />
+
+    <ClientRouter fallback="swap" />
+  </head>
+
+  <body class={`grain ${pageClass}`} data-locale={locale}>
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-[color:var(--color-ink)] focus:text-[color:var(--color-bone)] focus:px-4 focus:py-2">{dict.common.skipToContent}</a>
+
+    <Header locale={locale} dict={dict} heroDark={heroDark} />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer locale={locale} dict={dict} />
+
+    <WhatsAppFAB locale={locale} dict={dict} />
+
+    {/* Lenis smooth scroll */}
+    <script>
+      import Lenis from 'lenis';
+
+      let lenis: Lenis | null = null;
+      function startLenis() {
+        if (lenis) { lenis.destroy(); lenis = null; }
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
+        lenis = new Lenis({
+          duration: 1.2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+        });
+        function raf(time: number) {
+          lenis?.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      }
+      startLenis();
+      document.addEventListener('astro:after-swap', startLenis);
+    </script>
+
+    {/* Magnetic primary CTA — subtle, only on .magnetic elements */}
+    <script>
+      function initMagnetic() {
+        const els = document.querySelectorAll<HTMLElement>('.magnetic');
+        els.forEach((el) => {
+          if (el.dataset.magneticBound === 'true') return;
+          el.dataset.magneticBound = 'true';
+          const strength = 0.25;
+          el.addEventListener('mousemove', (e) => {
+            const r = el.getBoundingClientRect();
+            const x = e.clientX - r.left - r.width / 2;
+            const y = e.clientY - r.top - r.height / 2;
+            el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+          });
+          el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+          });
+        });
+      }
+      initMagnetic();
+      document.addEventListener('astro:after-swap', initMagnetic);
+    </script>
+  </body>
+</html>
