@@ -13,7 +13,7 @@ const t = dict.atelier;
 
 <BaseLayout locale={locale} pathKey="atelier/" title={t.hero.heading} heroDark={true}>
   {/* HERO */}
-  <section class="relative hero-dark min-h-[90svh] flex items-end overflow-hidden">
+  <section class="relative hero-dark min-h-[72svh] sm:min-h-[82svh] md:min-h-[90svh] flex items-end overflow-hidden">
     <div class="hero-media absolute inset-0 -z-10">
       <picture class="absolute inset-0 w-full h-full block">
         <source media="(max-width: 768px)" srcset={`${unsplashPortrait(photos.atelierHero, 900, 1700)} 1x, ${unsplashPortrait(photos.atelierHero, 1400, 2600)} 2x`} />
