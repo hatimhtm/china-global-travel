@@ -1,4 +1,24 @@
 /**
+ * Build a portrait-cropped Unsplash URL from any of our hero base URLs.
+ * Mobile phones are tall portrait surfaces; serving a landscape source forces
+ * object-cover to throw away ~70% of the photo. Portrait variants (around 9:16
+ * to 9:19 ratio) preserve the subject on a phone screen.
+ */
+export function unsplashPortrait(url: string, w = 900, h = 1600): string {
+  const base = url.split('?')[0];
+  return `${base}?auto=format&fit=crop&crop=center&w=${w}&h=${h}&q=72`;
+}
+
+/**
+ * Build a square-ish Unsplash URL — for card grids on phones where 4:5 or 1:1
+ * reads better than landscape.
+ */
+export function unsplashSquare(url: string, w = 900, h = 1100): string {
+  const base = url.split('?')[0];
+  return `${base}?auto=format&fit=crop&crop=center&w=${w}&h=${h}&q=72`;
+}
+
+/**
  * Curated media manifest for Cloud Pavilion.
  * Mixes Pexels videos (drone + ground) and Unsplash photos.
  * All URLs are direct-download / hotlinkable per their license terms (Pexels CC0, Unsplash free).

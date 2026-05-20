@@ -3,7 +3,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import HeroVideo from '~/components/HeroVideo.astro';
 import { getDict, locales, localePath } from '~/i18n';
 import type { Locale } from '~/i18n';
-import { destinationImageBySlug, heroVideoBySlug, photos } from '~/lib/media';
+import { destinationImageBySlug, heroVideoBySlug, photos, unsplashPortrait } from '~/lib/media';
 
 export async function getStaticPaths() {
   const dict = getDict('en');
@@ -32,16 +32,19 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
       <HeroVideo poster={heroVid.poster} sources={heroVid.sources} mobileSources={heroVid.mobileSources} overlay={0.5} ariaLabel={d.title} />
     ) : (
       <div class="hero-media absolute inset-0 -z-10">
-        <img
-          src={heroImage}
-          srcset={`${heroImage.replace(/&w=\d+/, '&w=720')} 720w, ${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage} 2400w`}
-          sizes="100vw"
-          alt={d.title}
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="w-full h-full object-cover"
-        />
+        <picture class="absolute inset-0 w-full h-full block">
+          <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1700)} 1x, ${unsplashPortrait(heroImage, 1400, 2600)} 2x`} />
+          <img
+            src={heroImage}
+            srcset={`${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage.replace(/&w=\d+/, '&w=1800')} 1800w, ${heroImage} 2400w`}
+            sizes="100vw"
+            alt={d.title}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="w-full h-full object-cover object-center"
+          />
+        </picture>
         <div class="hero-veil absolute inset-0" style="--hero-overlay:0.5"></div>
       </div>
     )}

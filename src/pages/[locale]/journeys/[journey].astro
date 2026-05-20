@@ -2,7 +2,7 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import { getDict, locales, localePath } from '~/i18n';
 import type { Locale } from '~/i18n';
-import { journeyImageBySlug, photos } from '~/lib/media';
+import { journeyImageBySlug, photos, unsplashPortrait } from '~/lib/media';
 
 export async function getStaticPaths() {
   const dict = getDict('en');
@@ -29,16 +29,19 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
   {/* HERO */}
   <section class="relative hero-dark min-h-[100svh] flex items-end overflow-hidden">
     <div class="hero-media absolute inset-0 -z-10">
-      <img
-        src={heroImage}
-        srcset={`${heroImage.replace(/&w=\d+/, '&w=720')} 720w, ${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage} 2400w`}
-        sizes="100vw"
-        alt={j.title}
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        class="w-full h-full object-cover"
-      />
+      <picture class="absolute inset-0 w-full h-full block">
+        <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1700)} 1x, ${unsplashPortrait(heroImage, 1400, 2600)} 2x`} />
+        <img
+          src={heroImage}
+          srcset={`${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage.replace(/&w=\d+/, '&w=1800')} 1800w, ${heroImage} 2400w`}
+          sizes="100vw"
+          alt={j.title}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full h-full object-cover object-center"
+        />
+      </picture>
       <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
     <div class="container-cp relative pb-20 md:pb-32 pt-28 text-[color:var(--color-bone)]">
