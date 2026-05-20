@@ -191,10 +191,13 @@ const t = dict.home;
   </section>
 
   {/* INQUIRE CTA */}
-  <section class="relative py-24 md:py-40 lg:py-56 overflow-hidden">
-    <div class="absolute inset-0 -z-10">
-      <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover scale-105" loading="lazy" decoding="async" />
-      <div class="hero-veil absolute inset-0" style="--hero-overlay:0.7"></div>
+  <section class="relative hero-dark py-20 md:py-28 lg:py-36 overflow-hidden">
+    <div class="hero-media absolute inset-0 -z-10">
+      <picture class="absolute inset-0 w-full h-full block">
+        <source media="(max-width: 768px)" srcset={`${photos.inquire.split('?')[0]}?auto=format&fit=crop&crop=entropy&w=900&h=1200&q=72 1x, ${photos.inquire.split('?')[0]}?auto=format&fit=crop&crop=entropy&w=1400&h=1800&q=72 2x`} />
+        <img src={photos.inquire} srcset={`${photos.inquire.replace(/&w=\d+/, '&w=1200')} 1200w, ${photos.inquire} 2400w`} sizes="100vw" alt="" aria-hidden="true" class="w-full h-full object-cover object-center scale-105" loading="lazy" decoding="async" />
+      </picture>
+      <div class="hero-veil absolute inset-0" style="--hero-overlay:0.75"></div>
     </div>
     <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl mx-auto scroll-fade">
       <p class="eyebrow !text-[color:var(--color-amber)]">{t.inquireCta.eyebrow}</p>

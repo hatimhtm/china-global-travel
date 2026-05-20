@@ -109,7 +109,30 @@ const fontsByLocale: Record<Locale, string> = {
     {/* Fonts — Bunny Fonts, locale-aware */}
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link rel="stylesheet" href={fontsByLocale[locale]} />
+
+    {/* Preload the home hero image so it lands in the first paint — LCP win.
+        On other pages each hero <img> uses fetchpriority="high" + eager loading already. */}
+    {pathKey === '' && (
+      <>
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1719098532832-ba5d853d9cce?auto=format&fit=crop&crop=entropy&w=900&h=1400&q=72"
+          imagesrcset="https://images.unsplash.com/photo-1719098532832-ba5d853d9cce?auto=format&fit=crop&crop=entropy&w=900&h=1400&q=72 1x, https://images.unsplash.com/photo-1719098532832-ba5d853d9cce?auto=format&fit=crop&crop=entropy&w=1400&h=2200&q=72 2x"
+          media="(max-width: 768px)"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1719098532832-ba5d853d9cce?auto=format&fit=crop&w=1800&q=75"
+          media="(min-width: 769px)"
+          fetchpriority="high"
+        />
+      </>
+    )}
 
     {/* Favicons — BASE already ends with /, so don't add another */}
     <link rel="icon" type="image/svg+xml" href={`${BASE.replace(/\/$/, '')}/favicon.svg`} />

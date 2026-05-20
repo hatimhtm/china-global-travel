@@ -25,10 +25,10 @@ const { poster, sources, mobileSources, overlay = 0.45, ariaLabel } = Astro.prop
 // object-cover on a tall phone viewport. ~80-120KB. The bare `poster` URL is used
 // for the desktop variant. Non-Unsplash posters are served as-is.
 const mobilePoster = poster.includes('unsplash.com')
-  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=center&w=900&h=1700&q=72`
+  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=entropy&w=900&h=1400&q=72`
   : poster;
 const mobilePoster2x = poster.includes('unsplash.com')
-  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=center&w=1400&h=2600&q=72`
+  ? `${poster.split('?')[0]}?auto=format&fit=crop&crop=entropy&w=1400&h=2200&q=72`
   : poster;
 ---
 

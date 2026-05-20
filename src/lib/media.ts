@@ -4,9 +4,11 @@
  * object-cover to throw away ~70% of the photo. Portrait variants (around 9:16
  * to 9:19 ratio) preserve the subject on a phone screen.
  */
-export function unsplashPortrait(url: string, w = 900, h = 1600): string {
+export function unsplashPortrait(url: string, w = 900, h = 1400): string {
   const base = url.split('?')[0];
-  return `${base}?auto=format&fit=crop&crop=center&w=${w}&h=${h}&q=72`;
+  // crop=entropy uses Unsplash's smart-crop (highest-entropy region) instead of
+  // center-cropping — keeps the subject visible when the original is landscape.
+  return `${base}?auto=format&fit=crop&crop=entropy&w=${w}&h=${h}&q=72`;
 }
 
 /**

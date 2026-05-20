@@ -33,7 +33,7 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
     ) : (
       <div class="hero-media absolute inset-0 -z-10">
         <picture class="absolute inset-0 w-full h-full block">
-          <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1700)} 1x, ${unsplashPortrait(heroImage, 1400, 2600)} 2x`} />
+          <source media="(max-width: 768px)" srcset={`${unsplashPortrait(heroImage, 900, 1400)} 1x, ${unsplashPortrait(heroImage, 1400, 2200)} 2x`} />
           <img
             src={heroImage}
             srcset={`${heroImage.replace(/&w=\d+/, '&w=1200')} 1200w, ${heroImage.replace(/&w=\d+/, '&w=1800')} 1800w, ${heroImage} 2400w`}
@@ -97,26 +97,26 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
   </section>
 
   {/* PREV / NEXT */}
-  <section class="py-16 md:py-20">
-    <div class="container-cp flex flex-col md:flex-row justify-between gap-8 text-sm uppercase tracking-widest">
+  <section class="py-12 md:py-20">
+    <div class="container-cp grid grid-cols-2 gap-0 divide-x divide-[color:var(--color-ink)]/10 border-y border-[color:var(--color-ink)]/10">
       {prev ? (
-        <a href={localePath(locale, `destinations/${prev.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors">
-          <span class="ms-rtl-flip">←</span>
-          <span class="flex flex-col">
-            <span class="opacity-60 normal-case text-xs">{dict.common.previous}</span>
-            <span class="font-display text-lg normal-case tracking-tight mt-1">{prev.title}</span>
+        <a href={localePath(locale, `destinations/${prev.slug}`)} class="group flex items-center gap-3 sm:gap-5 p-4 sm:p-6 md:p-8 hover:bg-[color:var(--color-bone-soft)] transition-colors">
+          <span class="ms-rtl-flip text-xl shrink-0 opacity-60 group-hover:opacity-100 group-hover:-translate-x-1 transition-all duration-500">←</span>
+          <span class="flex flex-col min-w-0">
+            <span class="opacity-60 text-[10px] sm:text-xs uppercase tracking-[0.18em]">{dict.common.previous}</span>
+            <span class="font-display text-base sm:text-lg md:text-xl tracking-tight mt-1 truncate">{prev.title}</span>
           </span>
         </a>
-      ) : <span></span>}
+      ) : <span class="p-4 sm:p-6 md:p-8"></span>}
       {next ? (
-        <a href={localePath(locale, `destinations/${next.slug}`)} class="group flex items-center gap-4 hover:text-[color:var(--color-jade-deep)] transition-colors text-end">
-          <span class="flex flex-col items-end">
-            <span class="opacity-60 normal-case text-xs">{dict.common.next}</span>
-            <span class="font-display text-lg normal-case tracking-tight mt-1">{next.title}</span>
+        <a href={localePath(locale, `destinations/${next.slug}`)} class="group flex items-center justify-end gap-3 sm:gap-5 p-4 sm:p-6 md:p-8 text-end hover:bg-[color:var(--color-bone-soft)] transition-colors">
+          <span class="flex flex-col items-end min-w-0">
+            <span class="opacity-60 text-[10px] sm:text-xs uppercase tracking-[0.18em]">{dict.common.next}</span>
+            <span class="font-display text-base sm:text-lg md:text-xl tracking-tight mt-1 truncate">{next.title}</span>
           </span>
-          <span class="ms-rtl-flip">→</span>
+          <span class="ms-rtl-flip text-xl shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-500">→</span>
         </a>
-      ) : <span></span>}
+      ) : <span class="p-4 sm:p-6 md:p-8"></span>}
     </div>
   </section>
 </BaseLayout>
