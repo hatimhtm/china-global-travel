@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import HeroVideo from '~/components/HeroVideo.astro';
 import { getDict, locales, localePath } from '~/i18n';
 import type { Locale } from '~/i18n';
-import { destinationImageBySlug, photos } from '~/lib/media';
+import { destinationImageBySlug, heroVideoBySlug, photos } from '~/lib/media';
 
 export async function getStaticPaths() {
   const dict = getDict('en');
@@ -17,6 +18,7 @@ const dict = getDict(locale);
 const d = dict.destinations.items.find((x) => x.slug === slug);
 if (!d) { throw new Error(`Unknown destination: ${slug}`); }
 const heroImage = destinationImageBySlug[d.slug] ?? photos.wuyuan;
+const heroVid = heroVideoBySlug[d.slug];
 
 const idx = dict.destinations.items.findIndex((x) => x.slug === slug);
 const prev = idx > 0 ? dict.destinations.items[idx - 1] : null;
@@ -25,15 +27,19 @@ const next = idx < dict.destinations.items.length - 1 ? dict.destinations.items[
 
 <BaseLayout locale={locale} pathKey={`destinations/${slug}/`} title={d.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative h-[100svh] min-h-[600px] flex items-end overflow-hidden">
-    <div class="absolute inset-0 -z-10">
-      <img src={heroImage} alt={d.title} class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-    </div>
+  <section class="relative h-[100svh] min-h-[620px] flex items-end overflow-hidden">
+    {heroVid ? (
+      <HeroVideo poster={heroVid.poster} sources={heroVid.sources} overlay={0.5} ariaLabel={d.title} />
+    ) : (
+      <div class="absolute inset-0 -z-10">
+        <img src={heroImage} alt={d.title} class="w-full h-full object-cover" />
+        <div class="hero-veil absolute inset-0" style="--hero-overlay:0.5"></div>
+      </div>
+    )}
     <div class="container-cp relative pb-24 md:pb-32 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{dict.common.viewDestination}</p>
       <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{d.title}</h1>
-      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{d.subtitle}</p>
+      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3 max-w-2xl">{d.subtitle}</p>
     </div>
   </section>
 

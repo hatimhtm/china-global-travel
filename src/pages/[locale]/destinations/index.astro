@@ -13,11 +13,11 @@ const t = dict.destinations;
 ---
 
 <BaseLayout locale={locale} pathKey="destinations/" title={t.index.hero.heading}>
-  <section class="pt-44 pb-16 md:pt-56 md:pb-20">
+  <section class="pt-44 pb-16 md:pt-60 md:pb-24">
     <div class="container-cp">
       <p class="eyebrow reveal">{t.index.hero.eyebrow}</p>
-      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
-      <p class="lede mt-7 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
+      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{t.index.hero.heading}</h1>
+      <p class="lede mt-8 max-w-2xl reveal reveal-3">{t.index.hero.sub}</p>
     </div>
   </section>
 
@@ -36,16 +36,16 @@ const t = dict.destinations;
     </div>
   </section>
 
-  <section class="relative py-28 md:py-36 overflow-hidden">
+  <section class="relative py-32 md:py-48 overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <img src={photos.inquire} alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
-      <div class="absolute inset-0 bg-[color:var(--color-ink)]/65"></div>
+      <div class="hero-veil absolute inset-0" style="--hero-overlay:0.7"></div>
     </div>
-    <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl scroll-fade">
+    <div class="container-cp relative text-[color:var(--color-bone)] text-center max-w-3xl mx-auto scroll-fade">
       <p class="eyebrow !text-[color:var(--color-amber)]">{dict.home.inquireCta.eyebrow}</p>
-      <h2 class="display-xl mt-6">{dict.home.inquireCta.heading}</h2>
-      <p class="lede mt-6 !text-[color:var(--color-bone)] opacity-90">{dict.home.inquireCta.sub}</p>
-      <div class="mt-10">
+      <h2 class="display-xl mt-7">{dict.home.inquireCta.heading}</h2>
+      <p class="lede mt-7 !text-[color:var(--color-bone)] opacity-90">{dict.home.inquireCta.sub}</p>
+      <div class="mt-12">
         <a href={localePath(locale, 'inquire')} class="btn btn-light magnetic">{dict.home.inquireCta.cta}</a>
       </div>
     </div>

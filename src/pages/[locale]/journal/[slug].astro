@@ -25,15 +25,15 @@ const next = idx < dict.journal.items.length - 1 ? dict.journal.items[idx + 1] :
 
 <BaseLayout locale={locale} pathKey={`journal/${slug}/`} title={a.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative h-[80svh] min-h-[520px] flex items-end overflow-hidden">
+  <section class="relative h-[85svh] min-h-[560px] flex items-end overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <img src={heroImage} alt={a.title} class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/65"></div>
+      <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
     <div class="container-cp relative pb-20 md:pb-28 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{a.date} · {a.readTime}</p>
-      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{a.title}</h1>
-      <p class="display-md mt-5 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{a.subtitle}</p>
+      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{a.title}</h1>
+      <p class="display-md mt-6 !text-[color:var(--color-bone)] opacity-90 reveal reveal-3 max-w-2xl">{a.subtitle}</p>
     </div>
   </section>
 

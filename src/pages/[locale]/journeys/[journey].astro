@@ -27,15 +27,15 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
 
 <BaseLayout locale={locale} pathKey={`journeys/${slug}/`} title={j.title} heroDark={true}>
   {/* HERO */}
-  <section class="relative h-[100svh] min-h-[600px] flex items-end overflow-hidden">
+  <section class="relative h-[100svh] min-h-[620px] flex items-end overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <img src={heroImage} alt={j.title} class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/65"></div>
+      <div class="hero-veil absolute inset-0" style="--hero-overlay:0.55"></div>
     </div>
-    <div class="container-cp relative pb-20 md:pb-28 text-[color:var(--color-bone)]">
+    <div class="container-cp relative pb-24 md:pb-32 text-[color:var(--color-bone)]">
       <p class="eyebrow !text-[color:var(--color-amber)] reveal">{j.duration} · {j.priceFrom}</p>
-      <h1 class="display-xxl mt-5 max-w-4xl reveal reveal-2">{j.title}</h1>
-      <p class="lede mt-6 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{j.tagline}</p>
+      <h1 class="display-xxl mt-6 max-w-4xl reveal reveal-2">{j.title}</h1>
+      <p class="lede mt-7 max-w-2xl !text-[color:var(--color-bone)] opacity-90 reveal reveal-3">{j.tagline}</p>
     </div>
   </section>
 
@@ -74,16 +74,16 @@ const next = idx < dict.journeys.items.length - 1 ? dict.journeys.items[idx + 1]
         <p class="eyebrow">{dict.common.duration}</p>
         <h2 class="display-xl mt-5">{j.duration}</h2>
       </div>
-      <div class="mt-14 grid lg:grid-cols-2 gap-x-16 gap-y-12">
+      <div class="mt-16 grid lg:grid-cols-2 gap-x-16 gap-y-14">
         {j.days.map((d: { day: string; title: string; body: string }, i: number) => (
-          <article class="scroll-fade flex gap-6" style={`animation-delay:${i * 0.04}s`}>
-            <div class="shrink-0 w-16 pt-1">
-              <span class="font-display text-2xl text-[color:var(--color-jade-deep)] leading-none">{(i + 1).toString().padStart(2, '0')}</span>
-              <p class="text-[10px] uppercase tracking-[0.3em] opacity-60 mt-1">{d.day}</p>
+          <article class="scroll-fade flex gap-7 border-t border-[color:var(--color-ink)]/10 pt-8" style={`animation-delay:${i * 0.04}s`}>
+            <div class="shrink-0 w-20 pt-1">
+              <span class="num-accent text-[color:var(--color-jade-deep)] text-3xl leading-none">{(i + 1).toString().padStart(2, '0')}</span>
+              <p class="text-[10px] uppercase tracking-[0.3em] opacity-55 mt-2">{d.day}</p>
             </div>
             <div class="flex-1">
               <h3 class="display-md">{d.title}</h3>
-              <p class="prose-cp mt-3">{d.body}</p>
+              <p class="prose-cp mt-4">{d.body}</p>
             </div>
           </article>
         ))}

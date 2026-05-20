@@ -38,6 +38,9 @@ const pageDescription = description ?? dict.meta.description;
 const baseUrl = 'https://hatimhtm.github.io/china-global-travel';
 const canonical = `${baseUrl}/${locale}/${pathKey}`;
 
+// Bunny Fonts serves a static-weight subset of Fraunces. We request 400/500/600
+// across plausible weights — opsz/SOFT axes degrade gracefully when not present
+// (the browser ignores unknown font-variation-settings).
 const fontsByLocale: Record<Locale, string> = {
   en: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600&display=swap',
   fr: 'https://fonts.bunny.net/css?family=fraunces:400,500,600|dm-sans:400,500,600&display=swap',
@@ -76,7 +79,8 @@ const fontsByLocale: Record<Locale, string> = {
     ))}
 
     {/* Fonts — Bunny Fonts, locale-aware */}
-    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="stylesheet" href={fontsByLocale[locale]} />
 
     {/* Favicons */}
@@ -120,6 +124,47 @@ const fontsByLocale: Record<Locale, string> = {
       }
       startLenis();
       document.addEventListener('astro:after-swap', startLenis);
+    </script>
+
+    {/* Scroll-driven reveal — IntersectionObserver fallback.
+        Base state of .scroll-fade is VISIBLE. We only arm (= add the hiding class) when JS
+        AND IntersectionObserver are available. If anything throws, content stays visible. */}
+    <script>
+      function armScrollReveals() {
+        try {
+          if (!('IntersectionObserver' in window)) return;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const els = document.querySelectorAll<HTMLElement>('.scroll-fade, .scroll-up-slow');
+          if (!els.length) return;
+          // Arm: now we may hide. Anything off-viewport stays armed-hidden; the observer reveals it.
+          els.forEach((el) => el.classList.add('scroll-fade-armed'));
+          const io = new IntersectionObserver((entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                (e.target as HTMLElement).classList.add('in-view');
+                io.unobserve(e.target);
+              }
+            }
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+          els.forEach((el) => {
+            // If element is already in view at arm-time (e.g. above-the-fold), reveal immediately.
+            const r = el.getBoundingClientRect();
+            if (r.top < (window.innerHeight || document.documentElement.clientHeight) * 0.92) {
+              el.classList.add('in-view');
+            } else {
+              io.observe(el);
+            }
+          });
+        } catch (err) {
+          // Safety net — never leave content hidden
+          document.querySelectorAll('.scroll-fade, .scroll-up-slow').forEach((el) => {
+            el.classList.remove('scroll-fade-armed');
+            el.classList.add('in-view');
+          });
+        }
+      }
+      armScrollReveals();
+      document.addEventListener('astro:after-swap', armScrollReveals);
     </script>
 
     {/* Magnetic primary CTA — subtle, only on .magnetic elements */}

@@ -18,25 +18,49 @@ const navLinks = [
 ];
 ---
 
-<header class="fixed top-0 inset-x-0 z-50 transition-colors duration-700" data-header data-hero-dark={heroDark ? 'true' : 'false'}>
+<header
+  class="fixed top-0 inset-x-0 z-50 transition-[background-color,color,backdrop-filter,border-color] duration-500"
+  data-header
+  data-hero-dark={heroDark ? 'true' : 'false'}
+  transition:persist
+>
   <div class="container-cp flex items-center justify-between py-5 md:py-6">
-    <a href={localePath(locale, '')} class="font-display text-lg tracking-tight" data-brand>
-      {dict.brand.name}
+    <a href={localePath(locale, '')} class="font-display text-lg md:text-xl tracking-tight inline-flex items-center gap-3" data-brand>
+      <span aria-hidden="true" class="block h-px w-7 bg-current opacity-50"></span>
+      <span>{dict.brand.name}</span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-8 text-sm">
+    <nav class="hidden lg:flex items-center gap-9 text-[13px] tracking-[0.08em]">
       {navLinks.map((l) => (
-        <a href={l.href} class="hover:text-[color:var(--color-jade-deep)] transition-colors duration-300" data-nav-link>{l.label}</a>
+        <a href={l.href} class="relative hover:text-[color:var(--color-amber-deep)] transition-colors duration-300 nav-link" data-nav-link>{l.label}</a>
       ))}
       <LanguageSwitcher locale={locale} dict={dict} variant="header" />
       <a href={localePath(locale, 'inquire')} class="btn magnetic">{dict.nav.inquire}</a>
     </nav>
 
-    <button class="lg:hidden text-sm uppercase tracking-widest" data-menu-open aria-label={dict.common.menuLabel}>
+    <button class="lg:hidden text-sm uppercase tracking-[0.18em]" data-menu-open aria-label={dict.common.menuLabel}>
       <span class="font-medium">{dict.nav.menu}</span>
     </button>
   </div>
 </header>
+
+<style>
+  .nav-link {
+    position: relative;
+    padding-block: 0.15rem;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 0;
+    background: currentColor;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-link:hover::after { width: 100%; }
+</style>
 
 <!-- Full-screen overlay nav (mobile + when opened on desktop) -->
 <div class="fixed inset-0 z-[60] hidden flex-col" data-menu-panel role="dialog" aria-modal="true" aria-hidden="true">

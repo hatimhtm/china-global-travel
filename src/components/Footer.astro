@@ -21,42 +21,45 @@ const waLink = `https://wa.me/${dict.inquire.alt.whatsappNumber.replace(/[^0-9]/
 ---
 
 <footer class="bg-[color:var(--color-ink)] text-[color:var(--color-bone)] mt-32 relative">
-  <div class="container-cp py-20 lg:py-24">
-    <div class="grid lg:grid-cols-12 gap-12 lg:gap-8">
+  {/* Top amber hairline — a deliberate seam between the page and the closing voice */}
+  <div aria-hidden="true" class="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--color-amber)]/40 to-transparent"></div>
+
+  <div class="container-cp pt-24 lg:pt-32 pb-12">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-10">
       <div class="lg:col-span-5">
-        <div class="font-display text-3xl md:text-4xl tracking-tight">{dict.brand.name}</div>
-        <p class="mt-4 lede text-[color:var(--color-bone)] opacity-70 max-w-md">{dict.footer.tagline}</p>
-        <p class="mt-10 text-sm opacity-60">{dict.footer.newsletter}</p>
+        <div class="font-display text-4xl md:text-5xl tracking-tight leading-[0.95]" style="font-variation-settings: 'opsz' 96, 'SOFT' 40;">{dict.brand.name}</div>
+        <p class="mt-6 lede text-[color:var(--color-bone)] opacity-75 max-w-md">{dict.footer.tagline}</p>
+        <p class="mt-10 text-sm opacity-55 max-w-xs">{dict.footer.newsletter}</p>
       </div>
 
       <div class="lg:col-span-2">
-        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.exploreHeading}</h4>
-        <ul class="mt-5 space-y-2.5 text-sm">
+        <h4 class="eyebrow !text-[color:var(--color-amber)]">{dict.footer.exploreHeading}</h4>
+        <ul class="mt-6 space-y-3 text-sm">
           {exploreLinks.map((l) => (
-            <li><a href={l.href} class="opacity-80 hover:opacity-100 transition-opacity">{l.label}</a></li>
+            <li><a href={l.href} class="opacity-80 hover:opacity-100 hover:text-[color:var(--color-amber)] transition-colors duration-300">{l.label}</a></li>
           ))}
         </ul>
       </div>
 
       <div class="lg:col-span-3">
-        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.contactHeading}</h4>
-        <ul class="mt-5 space-y-2.5 text-sm">
-          <li><a href={waLink} class="opacity-80 hover:opacity-100" target="_blank" rel="noopener">{dict.inquire.alt.whatsapp} · {dict.inquire.alt.whatsappNumber}</a></li>
-          <li><a href={`mailto:${dict.inquire.alt.emailAddress}`} class="opacity-80 hover:opacity-100">{dict.inquire.alt.emailAddress}</a></li>
-          <li class="opacity-60 mt-4">{dict.footer.addressLine1}</li>
-          <li class="opacity-60">{dict.footer.addressLine2}</li>
+        <h4 class="eyebrow !text-[color:var(--color-amber)]">{dict.footer.contactHeading}</h4>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li><a href={waLink} class="opacity-80 hover:opacity-100 hover:text-[color:var(--color-amber)] transition-colors duration-300" target="_blank" rel="noopener">{dict.inquire.alt.whatsapp} · {dict.inquire.alt.whatsappNumber}</a></li>
+          <li><a href={`mailto:${dict.inquire.alt.emailAddress}`} class="opacity-80 hover:opacity-100 hover:text-[color:var(--color-amber)] transition-colors duration-300">{dict.inquire.alt.emailAddress}</a></li>
+          <li class="opacity-55 mt-6">{dict.footer.addressLine1}</li>
+          <li class="opacity-55">{dict.footer.addressLine2}</li>
         </ul>
       </div>
 
       <div class="lg:col-span-2">
-        <h4 class="eyebrow text-[color:var(--color-amber)]">{dict.footer.languageHeading}</h4>
-        <div class="mt-5">
+        <h4 class="eyebrow !text-[color:var(--color-amber)]">{dict.footer.languageHeading}</h4>
+        <div class="mt-6">
           <LanguageSwitcher locale={locale} dict={dict} variant="footer" />
         </div>
       </div>
     </div>
 
-    <div class="mt-16 pt-8 border-t border-[color:var(--color-bone)]/15 flex flex-col md:flex-row justify-between gap-4 text-xs opacity-60">
+    <div class="mt-20 pt-8 border-t border-[color:var(--color-bone)]/12 flex flex-col md:flex-row justify-between gap-4 text-xs opacity-55">
       <span>{dict.footer.rights}</span>
       <span>{dict.footer.credits}</span>
     </div>

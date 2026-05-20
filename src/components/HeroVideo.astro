@@ -1,22 +1,25 @@
 ---
 /**
  * Full-bleed hero video with a graceful poster fallback.
- * Sources: pass remote video URL(s) and a poster image URL.
- * Video is muted, looped, autoplayed, playsinline. If autoplay fails (Safari mobile),
- * the poster stays visible — no broken UX.
+ *  - Video is muted, looped, autoplayed, playsinline.
+ *  - If autoplay fails (Safari iOS low-power, data-saver), the poster stays visible.
+ *  - Overlay uses the .hero-veil gradient (radial + linear) for cinematic foot-darkening
+ *    without flattening the image at the top.
+ *  - A slow 26s Ken-Burns drift on the video adds life without distraction.
  */
 interface Props {
   poster: string;
   sources: { src: string; type?: string }[];
-  overlay?: number; // 0 to 1, the dark gradient strength
+  /** 0..1 — strength of the bottom darken (default 0.45). Applied to .hero-veil custom prop. */
+  overlay?: number;
   ariaLabel?: string;
 }
-const { poster, sources, overlay = 0.42, ariaLabel } = Astro.props;
+const { poster, sources, overlay = 0.45, ariaLabel } = Astro.props;
 ---
 
-<div class="absolute inset-0 -z-10" aria-hidden={ariaLabel ? undefined : 'true'} aria-label={ariaLabel}>
+<div class="hero-media absolute inset-0 -z-10" aria-hidden={ariaLabel ? undefined : 'true'} aria-label={ariaLabel}>
   <video
-    class="absolute inset-0 w-full h-full object-cover"
+    class="hero-video absolute inset-0 w-full h-full object-cover"
     autoplay
     muted
     loop
@@ -26,8 +29,19 @@ const { poster, sources, overlay = 0.42, ariaLabel } = Astro.props;
   >
     {sources.map((s) => <source src={s.src} type={s.type ?? 'video/mp4'} />)}
   </video>
-  <div
-    class="absolute inset-0"
-    style={`background: linear-gradient(180deg, rgba(26,31,30,${overlay * 0.65}) 0%, rgba(26,31,30,${overlay * 0.25}) 35%, rgba(26,31,30,${overlay}) 100%);`}
-  ></div>
+  <div class="hero-veil absolute inset-0" style={`--hero-overlay:${overlay}`}></div>
 </div>
+
+<style>
+  .hero-video {
+    animation: cp-kenburns 26s linear infinite alternate;
+    transform-origin: 50% 55%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-video { animation: none; }
+  }
+  @keyframes cp-kenburns {
+    0%   { transform: scale(1.04); }
+    100% { transform: scale(1.10); }
+  }
+</style>
