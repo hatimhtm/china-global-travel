@@ -29,16 +29,12 @@ export function unsplashSquare(url: string, w = 900, h = 1100): string {
  */
 
 export const heroVideo = {
-  poster: 'https://images.unsplash.com/photo-1768141793124-6d53679bce28?auto=format&fit=crop&w=2400&q=75',
-  // Mobile sources (≤768px) — small SD clips for cellular networks
-  mobileSources: [
-    { src: 'https://videos.pexels.com/video-files/1851190/1851190-sd_640_360_25fps.mp4', type: 'video/mp4' },
-  ],
-  // Desktop sources (>768px) — 1080p first, 1440p upgrade
-  sources: [
-    { src: 'https://videos.pexels.com/video-files/1851190/1851190-hd_1920_1080_25fps.mp4', type: 'video/mp4' },
-    { src: 'https://videos.pexels.com/video-files/2491284/2491284-uhd_2732_1440_24fps.mp4', type: 'video/mp4' },
-  ],
+  // Huangshan-style outcrop, signature Chinese pines, layered blue mountains
+  // receding into mist. Unmistakably Chinese landscape. Animated via Ken-Burns
+  // drift on the <img> (see HeroVideo.astro style block).
+  poster: 'https://images.unsplash.com/photo-1719098532832-ba5d853d9cce?auto=format&fit=crop&w=2400&q=75',
+  mobileSources: [] as { src: string; type?: string }[],
+  sources: [] as { src: string; type?: string }[],
 };
 
 /**
