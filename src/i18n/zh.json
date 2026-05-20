@@ -1,175 +1,279 @@
 {
-  "locale": "en",
+  "locale": "zh",
   "dir": "ltr",
-  "label": "English",
-  "labelNative": "English",
+  "label": "Chinese",
+  "labelNative": "中文",
   "meta": {
-    "title": "Cloud Pavilion — Considered journeys through Jiangxi",
-    "description": "Bespoke journeys through China's most considered landscape. Mist mountains, ancient kilns, and a thousand years of slow.",
+    "title": "云阁——江西静境定制之旅",
+    "description": "穿行于中国最静谧的省份。云雾山峦、千年窑火,与一千年的从容。",
     "ogImage": "/og-image.jpg"
   },
   "brand": {
-    "name": "Cloud Pavilion",
-    "tagline": "Bespoke journeys through Jiangxi."
+    "name": "云阁",
+    "tagline": "穿行江西的定制之旅。"
   },
   "nav": {
-    "journeys": "Journeys",
-    "destinations": "Destinations",
-    "atelier": "The Atelier",
-    "journal": "Journal",
-    "inquire": "Inquire",
-    "menu": "Menu",
-    "close": "Close"
+    "journeys": "行旅",
+    "destinations": "地境",
+    "atelier": "工作室",
+    "journal": "札记",
+    "inquire": "联络",
+    "menu": "目录",
+    "close": "关闭"
   },
   "footer": {
-    "tagline": "Bespoke journeys, designed in private.",
-    "addressLine1": "Cloud Pavilion",
-    "addressLine2": "Casablanca · Nanchang",
-    "rights": "© 2026 Cloud Pavilion. All rights reserved.",
-    "credits": "A quiet practice.",
-    "contactHeading": "Contact",
-    "exploreHeading": "Explore",
-    "languageHeading": "Language",
-    "newsletter": "We don't run a newsletter. Speak to a designer instead."
+    "tagline": "定制之旅,于私密中精心擘画。",
+    "addressLine1": "云阁",
+    "addressLine2": "卡萨布兰卡 · 南昌",
+    "rights": "© 2026 云阁。版权所有。",
+    "credits": "一份安静的执业。",
+    "contactHeading": "联系",
+    "exploreHeading": "探索",
+    "languageHeading": "语言",
+    "newsletter": "我们不设邮件订阅。请直接与一位设计师对谈。"
   },
   "home": {
     "hero": {
-      "eyebrow": "Bespoke journeys · Jiangxi, China",
-      "heading": "China's quietest province. Considered.",
-      "sub": "Mist mountains, ancient kilns, and a thousand years of slow. Each journey designed in private.",
-      "cta": "Begin a journey",
-      "scroll": "Scroll"
+      "eyebrow": "定制之旅 · 中国 江西",
+      "heading": "中国最静谧的省份。从容设思。",
+      "sub": "云雾山峦、千年窑火,与一千年的从容。每一程,皆于私密中擘画。",
+      "cta": "开启一段旅程",
+      "scroll": "继续浏览"
     },
     "bridge": {
-      "eyebrow": "A different China",
-      "heading": "From Fez to Jingdezhen — a thousand years of considered craft.",
-      "body": "Travel here is not a list. It is the rhythm of porcelain turned by hand, the climb to a temple older than language, tea served on a balcony above the clouds. We trace lineages that quietly resemble your own — the inheritance of craft, the geography of contemplation, the long arc of trade."
+      "eyebrow": "另一个中国",
+      "heading": "自非斯至景德镇——千年匠心,一脉相承。",
+      "body": "此地的旅行,不是清单。是手转瓷胎的节奏,是登临一座比语言更古老的庙宇,是云端阁上的一盏清茶。我们追溯那些与您悄然相通的脉络——手艺的传承、沉思的地理,以及商贸悠长的弧线。"
     },
     "journeys": {
-      "eyebrow": "Three movements",
-      "heading": "Three ways to journey.",
-      "sub": "Each itinerary is a starting point. Every detail is yours to shape.",
-      "cta": "See all journeys"
+      "eyebrow": "三种行旅",
+      "heading": "三种行旅之法。",
+      "sub": "每一条线路皆为起点。每一处细节,任由您勾勒。",
+      "cta": "浏览全部行旅"
     },
     "destinations": {
-      "eyebrow": "Where you will go",
-      "heading": "Five regions. One inheritance.",
-      "sub": "Each region is a story. We weave them in the order that best fits your hours.",
-      "cta": "See all destinations"
+      "eyebrow": "您将抵达之处",
+      "heading": "五方山水,一脉传承。",
+      "sub": "每一方山水皆为一段叙事。我们以最合您时序的次第,将其相连。",
+      "cta": "浏览全部地境"
     },
     "experiences": {
-      "eyebrow": "What you will find",
-      "heading": "An inheritance, made tangible.",
+      "eyebrow": "您将寻见的",
+      "heading": "传承,化为可触之物。",
       "items": [
-        { "title": "Craft & Ceramics", "body": "A thousand-year unbroken lineage at the porcelain capital. Studios open their doors only to us." },
-        { "title": "Mountain Pilgrimage", "body": "Five sacred peaks. Monks, mist, and the cold quiet of stone older than dynasty." },
-        { "title": "Tea & Tradition", "body": "Lushan Yunwu, harvested at the cloud line. Ceremonies in pavilions that have served emperors and farmers alike." },
-        { "title": "Landscape & Photography", "body": "Rapeseed gold in March, the cloud sea in October. We know the hour the light arrives." }
+        {
+          "title": "匠艺与瓷",
+          "body": "瓷都之上千年不绝的传承。窑房,只为我们开启。"
+        },
+        {
+          "title": "山岳之朝",
+          "body": "五座圣山。僧侣、云雾,与比朝代更古老的石头之冷寂。"
+        },
+        {
+          "title": "茶与古礼",
+          "body": "云端采撷的庐山云雾。曾礼接帝王与农人的亭阁中,行一场茶事。"
+        },
+        {
+          "title": "山水与摄影",
+          "body": "三月的油菜金,十月的云海。我们深知光线降临的时辰。"
+        }
       ]
     },
     "atelierTeaser": {
-      "eyebrow": "The Atelier",
-      "heading": "Designed in private. Travelled in confidence.",
-      "body": "Cloud Pavilion is a small practice. Our designers spend more time listening than briefing — your journey arrives with the considered weight of months of preparation, and the lightness of a thing made well.",
-      "cta": "Inside the Atelier"
+      "eyebrow": "工作室",
+      "heading": "于私密中擘画。怀信任而行。",
+      "body": "云阁是一间小工作室。我们的设计师,倾听的时间远多于陈述——您的旅程,带着数月精思的沉静,与一件良工之物的轻盈,如期而至。",
+      "cta": "走进工作室"
     },
     "journalTeaser": {
-      "eyebrow": "Journal",
-      "heading": "Field notes from a quiet province.",
-      "cta": "Read the Journal"
+      "eyebrow": "札记",
+      "heading": "来自一方静境的田野手记。",
+      "cta": "阅读札记"
     },
     "inquireCta": {
-      "eyebrow": "Speak with a designer",
-      "heading": "Every journey begins with a conversation.",
-      "sub": "We respond within one working day. WhatsApp, email, or our quiet inquiry form — your choice.",
-      "cta": "Begin the conversation"
+      "eyebrow": "与设计师对谈",
+      "heading": "每一段旅程,皆始于一场对谈。",
+      "sub": "我们将在一个工作日内回复。WhatsApp、邮件,或我们安静的咨询表——任您选择。",
+      "cta": "开启对谈"
     }
   },
   "journeys": {
     "index": {
       "hero": {
-        "eyebrow": "The journeys",
-        "heading": "Three movements through Jiangxi.",
-        "sub": "Five days, eight days, twelve days. Each a starting point — every detail yours to shape."
+        "eyebrow": "行旅",
+        "heading": "穿越江西的三种行旅。",
+        "sub": "五日、八日、十二日。每一程皆为起点——每一处细节,任由您勾勒。"
       },
-      "intro": "Below are our three flagship itineraries. Each can be lengthened, layered, or reshaped. They are templates of thinking, not products. Your final journey will be drawn around your own questions."
+      "intro": "以下三条,为我们的旗舰路线。任何一条皆可延长、加叠或重新擘画。它们是思考的范本,而非货品。您最终的旅程,将围绕您自己的提问而成形。"
     },
     "items": [
       {
         "slug": "essential-jiangxi",
-        "title": "Essential Jiangxi",
-        "duration": "5 days",
-        "priceFrom": "from €2,200 per person",
-        "tagline": "The essence — mist mountains and ancient villages.",
-        "summary": "A first introduction to the province. Nanchang's literary pavilion, Wuyuan's rapeseed valleys, Jingdezhen's porcelain workshops, Lushan's tea-mist mornings. Paced for those who want the heart of Jiangxi without sacrificing its quiet.",
-        "intro": "Five days is a careful number. Long enough to step into the rhythm of Jiangxi, short enough to leave wanting another week. We have built Essential as a measured arc — pavilion at the centre of dynasty, then west to the village valleys, north to the porcelain city, and finally up into the cloud-quiet of Lushan.",
+        "title": "江西精萃",
+        "duration": "五日",
+        "priceFrom": "每人 €2,200 起",
+        "tagline": "精萃——云雾山峦与古老村落。",
+        "summary": "对江西的初次相识。南昌的文人之阁、婺源的油菜花谷、景德镇的瓷艺工房、庐山茶雾中的清晨。节奏从容,献给希望抵达江西之心,而不愿失其静的旅人。",
+        "intro": "五日是一个斟酌过的数字。足以踏入江西的节奏,又短得让人离去时,仍盼着再来一周。我们将「精萃」铺陈为一道有度的弧线——先是位于王朝心脏的阁,再向西入村野河谷,北上瓷都,最终升入庐山云端的清寂。",
         "highlights": [
-          "Sunset at Tengwang Pavilion — where a Tang poet rewrote Chinese literature",
-          "Two nights in a 600-year-old Hui village courtyard",
-          "Private ceramic workshop with a Jingdezhen master",
-          "Lushan Yunwu tea ceremony, served on the mountain"
+          "滕王阁的落日——一位唐代诗人于此重写中国文学",
+          "在六百年徽派古宅院落中夜宿两晚",
+          "与景德镇大师同行的私享瓷艺工房",
+          "山上呈奉的庐山云雾茶事"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Met at Changbei airport. Settle into a quiet hotel above the Gan river. Late afternoon at Tengwang Pavilion, the literary tower rebuilt twenty-eight times across thirteen centuries. Dinner of Jiangxi specialties, hosted by your designer." },
-          { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Slow drive north-east through tea hills. Arrival in Likeng village by lunch. The afternoon is unscheduled — wander between stone bridges, white-walled lanes, ancestral halls. Dinner at a village table." },
-          { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Morning in Huangling, the hanging-field village. Lunch at the foot of the kilns. Afternoon in a working studio with a sixth-generation porcelain master — wheel, glaze, mark. You will leave with a piece you shaped yourself." },
-          { "day": "Day 4", "title": "Jingdezhen to Lushan", "body": "A long lunch at Taoxichuan Art Avenue, then the climb to Lushan. Donglin Temple at dusk. The mountain air is colder than the valley. Tea before bed." },
-          { "day": "Day 5", "title": "Lushan to Nanchang, departure", "body": "Dawn tea ceremony on the mountain. Slow descent through cloud. Lunch in Nanchang. Onward flight." }
+          {
+            "day": "第一日",
+            "title": "抵达南昌",
+            "body": "于昌北机场接机。下榻赣江畔一处安静酒店。傍晚登临滕王阁——这座文人之塔在十三个世纪间二十八次重建。由您的设计师作陪,享用江西风味之夜宴。"
+          },
+          {
+            "day": "第二日",
+            "title": "南昌至婺源",
+            "body": "沿茶丘缓缓东北而行。午时抵达李坑古村。下午不作安排——任您于石桥、白墙巷道、宗祠之间漫游。村中一席为晚膳。"
+          },
+          {
+            "day": "第三日",
+            "title": "婺源至景德镇",
+            "body": "晨访篁岭——田园悬于山脊的古村。窑下午餐。下午进入一间运转的工房,与一位第六代瓷艺大师同坐——转轮、施釉、落款。您将带走一件亲手塑就的作品。"
+          },
+          {
+            "day": "第四日",
+            "title": "景德镇至庐山",
+            "body": "陶溪川艺术大道上的一顿长午餐,而后启程登庐山。暮色中的东林寺。山中的空气比山谷更冷。寝前一盏清茶。"
+          },
+          {
+            "day": "第五日",
+            "title": "庐山返南昌,离境",
+            "body": "山间晨茶。穿云缓降。南昌午餐。续航离去。"
+          }
         ]
       },
       {
         "slug": "in-depth",
-        "title": "Jiangxi in Depth",
-        "duration": "8 days",
-        "priceFrom": "from €3,500 per person",
-        "tagline": "The signature — temples, mist, and Taoist sacred peaks.",
-        "summary": "Eight days through four UNESCO landscapes. Adds the Taoist heart of China — Longhu's red cliffs and bamboo rafts, Sanqingshan's granite gods — to the literary, ceramic, and Buddhist threads of the Essential.",
-        "intro": "Eight days lets us trace four threads — literary, ceramic, Buddhist, Taoist — without rushing any one of them. The Taoist heart of Jiangxi reveals itself slowly: bamboo on a red-cliff river, a priest's morning chant, the stone goddess watching from her peak.",
+        "title": "江西深境",
+        "duration": "八日",
+        "priceFrom": "每人 €3,500 起",
+        "tagline": "标志之程——庙宇、云雾,与道家圣山。",
+        "summary": "八日,贯穿四处联合国教科文组织遗产景观。在「精萃」之文学、瓷艺与禅意三脉之上,加入中国的道家心脏——龙虎山的丹崖竹筏,三清山的花岗岩诸神。",
+        "intro": "八日的篇幅,容我们循着四条线索——文学、瓷艺、佛禅、道脉——从容铺展,不必催赶任一。江西的道家之心,缓缓显形:丹崖之下的竹筏,道士晨课的吟诵,从峰顶俯视的石身女神。",
         "highlights": [
-          "Four UNESCO sites in a single journey",
-          "Bamboo-raft float beneath Longhu Mountain's hanging coffins",
-          "Overnight in a working ceramic studio-hotel",
-          "Guided meditation at Donglin Temple, founded in 386 CE",
-          "The Oriental Goddess Peak at sunrise"
+          "一程之内,四处联合国教科文组织遗产",
+          "于龙虎山悬棺之下漂流竹筏",
+          "夜宿一间运转中的瓷艺工坊酒店",
+          "于始建于公元386年的东林寺,作引领之下的禅修",
+          "破晓时分的东方女神峰"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion at golden hour. Dinner above the river." },
-          { "day": "Day 2", "title": "Nanchang to Wuyuan", "body": "Likeng by lunch. Afternoon walks through Hui-village lanes." },
-          { "day": "Day 3", "title": "Wuyuan to Jingdezhen", "body": "Huangling at dawn. Private studio session by afternoon. Studio-hotel overnight." },
-          { "day": "Day 4", "title": "Jingdezhen to Longhu", "body": "Bamboo raft past the cliff burials. Tianshi Mansion. A Taoist priest's quiet hour." },
-          { "day": "Day 5", "title": "Longhu to Lushan", "body": "Donglin Temple by dusk. Tea on the mountain." },
-          { "day": "Day 6", "title": "Lushan to Sanqingshan", "body": "Cable-car to the Five Elements complex. Cliff-face boardwalk. Mountain lodge by night." },
-          { "day": "Day 7", "title": "Sanqingshan dawn, return Nanchang", "body": "Oriental Goddess Peak at sunrise. Slow descent. Afternoon at Poyang Lake or a Nanchang silk-weaver's studio." },
-          { "day": "Day 8", "title": "Departure", "body": "Onward flight." }
+          {
+            "day": "第一日",
+            "title": "抵达南昌",
+            "body": "金色时分的滕王阁。江上夜宴。"
+          },
+          {
+            "day": "第二日",
+            "title": "南昌至婺源",
+            "body": "午时抵李坑。下午穿行徽派村落的巷弄。"
+          },
+          {
+            "day": "第三日",
+            "title": "婺源至景德镇",
+            "body": "拂晓之篁岭。下午私享工房之约。夜宿工坊酒店。"
+          },
+          {
+            "day": "第四日",
+            "title": "景德镇至龙虎山",
+            "body": "竹筏漂流,远望崖葬。天师府。一段道士的静默时辰。"
+          },
+          {
+            "day": "第五日",
+            "title": "龙虎山至庐山",
+            "body": "暮色中抵东林寺。山中清茶。"
+          },
+          {
+            "day": "第六日",
+            "title": "庐山至三清山",
+            "body": "缆车直上五行宫殿群。崖壁栈道。山间客栈过夜。"
+          },
+          {
+            "day": "第七日",
+            "title": "三清山破晓,返南昌",
+            "body": "东方女神峰之日出。徐徐而下。下午赴鄱阳湖,或访南昌一间丝织作坊。"
+          },
+          {
+            "day": "第八日",
+            "title": "离境",
+            "body": "续航离去。"
+          }
         ]
       },
       {
         "slug": "heritage-and-mist",
-        "title": "Heritage & Mist",
-        "duration": "12 days",
-        "priceFrom": "from €5,200 per person",
-        "tagline": "The pilgrimage — 1,500 years of sacred Jiangxi.",
-        "summary": "Twelve days. Five UNESCO sites. Buddhist monks, Taoist priests, porcelain masters, tea farmers — and the unhurried hours in between. A journey for those who travel to listen.",
-        "intro": "Twelve days is the journey we would design for ourselves. Five UNESCO sites, two multi-night retreats, a Wugong dawn above the cloud sea, and a capstone evening at a cliff-edge hotel suspended in a sacred gorge. Every hour considered. None of them rushed.",
+        "title": "传承与云雾",
+        "duration": "十二日",
+        "priceFrom": "每人 €5,200 起",
+        "tagline": "朝圣——一千五百年的江西圣境。",
+        "summary": "十二日。五处联合国教科文组织遗产。佛家僧侣、道家羽士、瓷艺宗师、茶山农人——以及其间从容不迫的时辰。这是一程献给以聆听为旅的人。",
+        "intro": "十二日,是我们愿为自己擘画的旅程。五处联合国教科文组织遗产,两场多夜静修,武功山云海之上的破晓,以及收束于神圣峡谷崖畔悬空酒店的一夜。每一个时辰都经斟酌。没有一个被催促。",
         "highlights": [
-          "Five UNESCO sites — Lushan, Longhu, Sanqingshan, Jingdezhen, Wuyuan",
-          "Private mentorship at a Jingdezhen artist's studio",
-          "Two-night Buddhist meditation retreat at Donglin Temple",
-          "Wugong Mountain dawn — when the peaks rise above the cloud sea",
-          "Capstone night at Wangxian Valley's cliff-edge suites",
-          "Optional private lessons in calligraphy, tea, or Buddhist philosophy"
+          "五处联合国教科文组织遗产——庐山、龙虎山、三清山、景德镇、婺源",
+          "于景德镇一位艺术家工坊中的私享师承",
+          "于东林寺两晚的佛门禅修",
+          "武功山的破晓——群峰自云海中升起之时",
+          "以望仙谷崖边套房的一夜为收束",
+          "可选私享书法、茶道或佛学课程"
         ],
         "days": [
-          { "day": "Day 1", "title": "Arrive Nanchang", "body": "Tengwang Pavilion, the City of Porcelain exhibition, the night market by the river." },
-          { "day": "Day 2", "title": "Nanchang", "body": "Quiet morning. Afternoon with a calligraphy master. Dinner with a Jiangxi historian." },
-          { "day": "Day 3–4", "title": "Wuyuan", "body": "Two nights in Likeng. Rapeseed fields, drying rooftops, Hui carving workshop." },
-          { "day": "Day 5", "title": "Jingdezhen", "body": "Full-day private studio mentorship. Studio-hotel overnight." },
-          { "day": "Day 6", "title": "Longhu Mountain", "body": "Bamboo raft, Tianshi Mansion, a Taoist priest's teaching with translator." },
-          { "day": "Day 7–8", "title": "Lushan retreat", "body": "Two nights at Donglin Temple. Dawn ceremonies. Multi-peak hiking. White Deer Cave Academy. Tea ceremony at the cloud line." },
-          { "day": "Day 9", "title": "Sanqingshan", "body": "Five Elements temple complex. Stone-carving artisan workshop." },
-          { "day": "Day 10", "title": "Wugong Mountain", "body": "Pre-dawn ascent for the cloud sea. Forest-bathing afternoon." },
-          { "day": "Day 11", "title": "Wangxian Valley", "body": "Cliff-suite evening. Dinner suspended above the gorge." },
-          { "day": "Day 12", "title": "Return Nanchang, departure", "body": "Onward flight." }
+          {
+            "day": "第一日",
+            "title": "抵达南昌",
+            "body": "滕王阁、瓷都展览,与江畔夜市。"
+          },
+          {
+            "day": "第二日",
+            "title": "南昌",
+            "body": "上午宁静。下午与一位书法大师同坐。与一位江西史学者共进晚膳。"
+          },
+          {
+            "day": "第三 – 四日",
+            "title": "婺源",
+            "body": "李坑两晚。油菜花田、晒秋屋顶、徽派雕刻工坊。"
+          },
+          {
+            "day": "第五日",
+            "title": "景德镇",
+            "body": "整日的私享工房师承。夜宿工坊酒店。"
+          },
+          {
+            "day": "第六日",
+            "title": "龙虎山",
+            "body": "竹筏、天师府,经译者引领的道士开示。"
+          },
+          {
+            "day": "第七 – 八日",
+            "title": "庐山静修",
+            "body": "东林寺两晚。晨课。多峰徒步。白鹿洞书院。云端茶事。"
+          },
+          {
+            "day": "第九日",
+            "title": "三清山",
+            "body": "五行庙宇群落。一位石雕匠人的工坊。"
+          },
+          {
+            "day": "第十日",
+            "title": "武功山",
+            "body": "破晓前登顶,迎接云海。下午森林沐浴。"
+          },
+          {
+            "day": "第十一日",
+            "title": "望仙谷",
+            "body": "崖畔套房的一夜。悬于峡谷之上的晚餐。"
+          },
+          {
+            "day": "第十二日",
+            "title": "返南昌,离境",
+            "body": "续航离去。"
+          }
         ]
       }
     ]
@@ -177,281 +281,347 @@
   "destinations": {
     "index": {
       "hero": {
-        "eyebrow": "Where you will go",
-        "heading": "Five regions. One inheritance.",
-        "sub": "Each region is a story. We weave them in the order that best fits your hours."
+        "eyebrow": "您将抵达之处",
+        "heading": "五方山水,一脉传承。",
+        "sub": "每一方山水皆为一段叙事。我们以最合您时序的次第,将其相连。"
       }
     },
     "items": [
       {
         "slug": "wuyuan",
-        "title": "Wuyuan",
-        "subtitle": "Rapeseed valleys, framed by 500-year villages.",
-        "hook": "Every March and April, six thousand hectares of gold unfurl beneath whitewashed Hui rooftops. The valley has not changed in five centuries.",
-        "intro": "Wuyuan is a county of villages, not a town. To arrive here is to leave the highway grid and enter a slower geometry — rivers cross paths, stone bridges arc, white walls reflect the colour of the season. In spring it is gold; in autumn, the rooftops turn red with drying chillies and corn. The Hui-style architecture, lifted from sixteenth-century Anhui merchant fortunes, has been preserved here more completely than anywhere else in China.",
-        "best": "Late March to early April for rapeseed; October to November for autumn rooftop colour",
+        "title": "婺源",
+        "subtitle": "油菜河谷,环以五百年的古村。",
+        "hook": "每年三月与四月,六千公顷金黄于徽派白屋之下铺展。山谷五百年来如旧。",
+        "intro": "婺源是一片由村落构成的县,而非一座城。抵达此处,即离开高速公路的方格,步入一种更迟缓的几何——河流交错,石桥起拱,白墙映照着时令的颜色。春日是金,秋日则屋顶因晾晒的辣椒与玉米而变红。这里的徽派建筑承自十六世纪皖南徽商的财富,其保存之完整,中国他处无可比拟。",
+        "best": "三月末至四月初看油菜花;十月至十一月观秋屋顶之色",
         "experiences": [
-          "Walk Likeng's stone bridges; let the village find you",
-          "Private dinner inside an ancestral hall, hosted by a village elder",
-          "Hui carving workshop with a sixth-generation master",
-          "Dawn calligraphy by the river"
+          "走过李坑的石桥;让村落寻见您",
+          "由村中长者主持,在宗祠中享一席私宴",
+          "与第六代大师习徽派雕刻",
+          "拂晓时分,于河畔习书"
         ]
       },
       {
         "slug": "lushan",
-        "title": "Lushan",
-        "subtitle": "Two hundred temples on a single mountain.",
-        "hook": "UNESCO World Heritage since 1996. Buddhist pilgrims have climbed this mountain for 1,300 years; emperors and poets followed. The mist arrives like clockwork.",
-        "intro": "Lushan is not a mountain so much as a library. Every peak holds a temple, every temple a manuscript, every manuscript a thousand years of consideration. The Song-dynasty landscape painters lived here. The neo-Confucian school of White Deer Cave Academy was founded here. The first Pure Land Buddhist monastery in China was built here in 386. Even today, the morning chant of Donglin Temple begins at five, and the bell carries down the valley.",
-        "best": "May for tea harvest; September to November for clear mornings and cloud seas",
+        "title": "庐山",
+        "subtitle": "一山之上,两百庙宇。",
+        "hook": "自1996年起列为联合国教科文组织世界遗产。佛家香客登此山已一千三百年;帝王与诗人随后而来。云雾如时刻般准时。",
+        "intro": "庐山与其说是一座山,不如说是一座图书馆。每一峰怀抱一寺,每一寺藏有一卷手稿,每一卷手稿皆载着一千年的沉思。宋代山水画家曾居此地。新儒家的白鹿洞书院在此奠基。中国净土宗的第一座道场于公元386年在此建立。直至今日,东林寺的晨课仍始于五时,钟声沿山谷而下。",
+        "best": "五月采茶;九月至十一月观清晨与云海",
         "experiences": [
-          "Tea ceremony in a Tang-era hermit's pavilion",
-          "Donglin Temple meditation at dawn",
-          "White Deer Cave Academy — the cradle of neo-Confucian thought",
-          "Hike between the Three Peaks at sunset"
+          "于唐代隐士之亭中行茶事",
+          "东林寺破晓时分之禅修",
+          "白鹿洞书院——新儒学思想的摇篮",
+          "落日时分,徒步三峰之间"
         ]
       },
       {
         "slug": "jingdezhen",
-        "title": "Jingdezhen",
-        "subtitle": "One thousand years of porcelain.",
-        "hook": "Since 1004 CE, every piece fired in this city bore the reign mark of its emperor. The kilns still burn. The masters still teach.",
-        "intro": "Jingdezhen is the porcelain capital of the world by a margin so wide that no rival even competes for the title. For a thousand unbroken years, the city has fired clay. Its blue-and-white travelled the Maritime Silk Road; its imperial wares set the standard for global porcelain. Today the masters live in Sanbao, work in Taoxichuan, teach in private studios that open only by introduction. Cloud Pavilion is one of those introductions.",
-        "best": "October to April for cooler studio days; spring for international ceramic fairs",
+        "title": "景德镇",
+        "subtitle": "一千年的瓷。",
+        "hook": "自公元1004年起,此城烧出的每一件器皿皆载有其皇帝的年号款。窑火至今未熄。宗师至今授业。",
+        "intro": "景德镇是世界瓷都,其领先之距远到无人再争其衔。一千年不曾间断,这座城都在烧土。其青花瓷沿海上丝绸之路远行;其御用之器,为世界瓷艺立下尺度。今日,宗师们居于三宝、作于陶溪川、授于唯凭引荐方能登门的私享工坊。云阁,便是其中一封引荐。",
+        "best": "十月至四月,工房日子更为清凉;春日有国际瓷艺博览会",
         "experiences": [
-          "Private studio session with a contemporary master",
-          "The Ancient Kiln Folk Customs Museum — a working museum",
-          "Taoxichuan Art Avenue at twilight",
-          "Bring home a piece you shaped yourself"
+          "与一位当代宗师的私享工房之约",
+          "古窑民俗博览区——一座仍在运转的博物馆",
+          "暮色中的陶溪川艺术大道",
+          "带回一件亲手塑就的作品"
         ]
       },
       {
         "slug": "longhu-mountain",
-        "title": "Longhu Mountain",
-        "subtitle": "The birthplace of Taoism, on red cliffs.",
-        "hook": "1,900 years ago, Zhang Daoling founded the Celestial Masters school on this red-rock landscape. The hanging coffins of an older people still cling to the cliffs above the river.",
-        "intro": "Longhu — Dragon-Tiger Mountain — is one of Taoism's four sacred peaks and, by most accounts, its first. The Tianshi Mansion at its foot has housed the Celestial Masters since the second century. The Luxi river that winds between its red Danxia cliffs carries bamboo rafts past a stranger geography still: the hanging coffins of the ancient Guyue people, placed in cliff caves two thousand years ago by means no scholar has yet fully explained.",
-        "best": "April to June and September to November for mild weather and the clearest river days",
+        "title": "龙虎山",
+        "subtitle": "丹崖之上的道家发源地。",
+        "hook": "一千九百年前,张道陵于这片丹岩之境创立天师道。一支更古远民族的悬棺,至今仍嵌于河上的峭壁之中。",
+        "intro": "龙虎山——龙与虎之山——是道家四大圣山之一,据多数典籍所记,亦为其首。山脚下的天师府自公元二世纪起便驻有天师。蜿蜒于其丹霞红崖之间的泸溪河,载着竹筏穿过更为奇异的地理:古越人之悬棺,两千年前置于崖壁洞窟之中,其法至今未有学者尽释。",
+        "best": "四月至六月、九月至十一月,气候温和,河上日子最为澄澈",
         "experiences": [
-          "Bamboo-raft float past the cliff burials",
-          "Tianshi Mansion — the headquarters of Zhengyi Taoism",
-          "Quiet conversation with a resident Taoist priest, with translator",
-          "Sunrise from the Sky Walk"
+          "乘竹筏漂流于崖葬之下",
+          "天师府——正一道之总部",
+          "经译者引领,与驻寺道士的静谧对谈",
+          "于龙虎天空栈道上观日出"
         ]
       },
       {
         "slug": "sanqingshan",
-        "title": "Sanqingshan",
-        "subtitle": "Forty-eight granite peaks. A Taoist cathedral.",
-        "hook": "UNESCO World Heritage. One billion years of erosion, sculpted into pillars and dragons. The Oriental Goddess has watched the valley for longer than recorded history.",
-        "intro": "Sanqingshan is named for the Three Pure Ones of Taoist cosmology, and the mountain itself appears to have been carved with the theology in mind. Forty-eight granite peaks rise above a sea of cloud. The Oriental Goddess, a 128-metre stone pillar, sits in the lotus position at the summit. The Taoist temple complex — 238 documented cultural sites — was laid out 1,600 years ago. Walking the cliff-face boardwalks at dawn, before the cable cars open, is one of the quieter experiences in modern China.",
-        "best": "April to June for wildflowers; September to November for cloud seas",
+        "title": "三清山",
+        "subtitle": "四十八座花岗岩奇峰。一座道家殿堂。",
+        "hook": "联合国教科文组织世界遗产。十亿年的风化,雕成峰柱与游龙。东方女神俯视此谷,远早于有文字可纪之时。",
+        "intro": "三清山因道家三清之号而得名,山形似为顺应此教而琢。四十八座花岗岩奇峰立于云海之上。东方女神,一根128米的石柱,以莲花坐姿端坐于巅。其道教庙宇群落——已记录的文化遗迹达238处——一千六百年前便已布局。在缆车启用之前,于破晓时分行走于崖壁栈道,是当代中国最静谧的体验之一。",
+        "best": "四月至六月观野花;九月至十一月观云海",
         "experiences": [
-          "Sunrise at the Oriental Goddess Peak",
-          "Cable-car ascent to the Five Elements Taoist temple complex",
-          "Cliff-face boardwalk hike with private guide",
-          "Stargazing from the mountain lodge"
+          "东方女神峰之日出",
+          "缆车登临五行道教庙宇群",
+          "由私享向导陪同的崖壁栈道徒步",
+          "山间客栈中的观星之夜"
         ]
       }
     ]
   },
   "atelier": {
     "hero": {
-      "eyebrow": "The Atelier",
-      "heading": "Designed in private. Travelled in confidence.",
-      "sub": "Cloud Pavilion is a small practice. We design fewer journeys, and we design them better."
+      "eyebrow": "工作室",
+      "heading": "于私密中擘画。怀信任而行。",
+      "sub": "云阁是一间小工作室。我们设计更少的旅程,也设计得更好。"
     },
     "philosophy": {
-      "eyebrow": "What we believe",
-      "heading": "Travel is a sequence of decisions about attention.",
-      "body1": "It is not a product. It is what to see, what to skip, where to stay long, where to leave early. We are paid to make those decisions well, on your behalf.",
-      "body2": "We do not run tours. We do not maintain a list of departures. Every journey is drawn from a single conversation, and shaped over weeks of preparation. By the time you land in Nanchang, every door is open, every host expecting you, every hour considered."
+      "eyebrow": "我们所信",
+      "heading": "旅行,是一连串关于注意力的取舍。",
+      "body1": "它并非一件货品。它是看什么、舍什么,在何处久留,从何处早去。我们受托代您,把这些取舍做好。",
+      "body2": "我们不办团。我们不设固定出发表。每一段旅程,皆生于一场对谈,并在数周的筹备中渐渐成形。当您降落南昌时,每一扇门已为您开启,每一位主人已在等候,每一个时辰皆经斟酌。"
     },
     "partnership": {
-      "eyebrow": "Partnership",
-      "heading": "Our standing in Jiangxi.",
-      "body": "Cloud Pavilion travels through Jiangxi by way of an institutional partnership with one of the province's leading universities — a relationship that gives our guests facilitated visa processing, access to private cultural venues, and the trust of local communities not granted to ordinary tour operators."
+      "eyebrow": "合作",
+      "heading": "我们在江西的根基。",
+      "body": "云阁穿行江西,得益于与该省一所知名大学的机构性合作——这份关系,为我们的客人带来便捷的签证办理、对私享文化场所的进入许可,以及一般旅行机构未能获致的本地社群的信任。"
     },
     "team": {
-      "eyebrow": "The studio",
-      "heading": "A small group of people who answer the phone.",
-      "body": "We are designers, fixers, drivers, monks, ceramicists, and tea farmers — distributed between Casablanca and Nanchang. We do not have a customer service department. The person who designs your journey is the same person who picks up when you call from the road."
+      "eyebrow": "工作室成员",
+      "heading": "一小群亲自接电话的人。",
+      "body": "我们是设计师、安排者、司机、僧侣、瓷艺人与茶农——分布于卡萨布兰卡与南昌两地。我们没有客服部门。为您擘画旅程的人,正是您从路上来电时接听的那位。"
     },
     "principles": {
-      "eyebrow": "Principles",
-      "heading": "Five quiet rules.",
+      "eyebrow": "原则",
+      "heading": "五条静默的法则。",
       "items": [
-        { "title": "Fewer journeys, better journeys.", "body": "We cap the calendar. When the calendar is full, we say so." },
-        { "title": "We do not write itineraries we have not walked.", "body": "Every itinerary on this site has been travelled by a Cloud Pavilion designer in the past eighteen months." },
-        { "title": "We never auto-confirm.", "body": "Every inquiry is read by a human, replied to by a human, and quoted by a human." },
-        { "title": "We do not pad.", "body": "If a journey would be better in seven days than in eight, we will recommend seven. We do not bill by the night." },
-        { "title": "Discretion is a service.", "body": "We do not publish client names. We do not photograph guests. What you tell us stays with us." }
+        {
+          "title": "更少的旅程,更好的旅程。",
+          "body": "我们为日历设上限。日历排满时,我们如实相告。"
+        },
+        {
+          "title": "未曾亲行的线路,我们不写。",
+          "body": "本站上每一条线路,皆于过去十八个月内,由一位云阁的设计师亲身走过。"
+        },
+        {
+          "title": "我们从不自动确认。",
+          "body": "每一封咨询,皆由人来读、由人来回、由人来报价。"
+        },
+        {
+          "title": "我们不凑日数。",
+          "body": "若七日比八日更佳,我们便建议七日。我们不按夜计费。"
+        },
+        {
+          "title": "克制,是一种服务。",
+          "body": "我们不公开客人的姓名。我们不为客人拍照。您所相告,留在我们这里。"
+        }
       ]
     },
     "cta": {
-      "heading": "Begin a conversation.",
-      "body": "Tell us what draws you. We will write back within a working day.",
-      "button": "Inquire"
+      "heading": "开启一场对谈。",
+      "body": "告诉我们,是什么吸引了您。我们将在一个工作日内回信。",
+      "button": "联络"
     }
   },
   "journal": {
     "index": {
       "hero": {
-        "eyebrow": "The journal",
-        "heading": "Field notes from a quiet province.",
-        "sub": "Essays on craft, mountain, and trade, written from the road."
+        "eyebrow": "札记",
+        "heading": "来自一方静境的田野手记。",
+        "sub": "关于手艺、山岳与商贸的散记,自路上写就。"
       }
     },
     "items": [
       {
         "slug": "the-weight-of-clay",
-        "title": "The Weight of a Thousand Years of Clay",
-        "subtitle": "Notes from a Jingdezhen studio.",
-        "date": "April 2026",
-        "readTime": "5 min read",
-        "lede": "There is no romance in clay until you have spent an hour failing to centre it. The master watches without speaking. You begin again.",
+        "title": "千年瓷土之重",
+        "subtitle": "景德镇工坊札记。",
+        "date": "2026年4月",
+        "readTime": "约 5 分钟",
+        "lede": "在你花了一个时辰仍未能将之定中之前,瓷土里没有任何浪漫可言。宗师无言看着。你重新开始。",
         "body": [
-          "The studio sits at the end of a stone alley in Sanbao. Its courtyard is a kiln older than the United States. The master — a sixth-generation potter whose family mark has appeared on imperial commissions since the Ming — pours tea in silence while I wrestle the wheel.",
-          "What strikes me, eventually, is the patience of the place. Jingdezhen has been making porcelain for one thousand years. A thousand years is enough time for an entire civilisation to forget how impatient our own century is.",
-          "When the piece finally rises, it is mine — flawed, lopsided, undeniably mine. The master nods. He does not need to say anything. The clay has already taught what it teaches.",
-          "We travel here because the lesson is not in the tea house or the kiln gallery. It is in the hour at the wheel."
+          "工坊在三宝一条石巷的尽头。其院中,有一座比美国更古老的窑。宗师——第六代陶人,自明代起其家款便见于御用器皿——在我与转轮搏斗之际,静默斟茶。",
+          "终究击中我心的,是此地的耐心。景德镇做瓷已有一千年。一千年之久,足以让一个文明遗忘:我们自己的世纪有多焦躁。",
+          "器形终于立起时,它是我的——有瑕、不正、无可置疑地属于我。宗师颔首。他无须言语。瓷土已教过它所教的。",
+          "我们之所以远行至此,是因为这一课不在茶室,亦不在窑展。它在轮上的那个时辰。"
         ]
       },
       {
         "slug": "what-the-mountain-knows",
-        "title": "What the Mountain Knows",
-        "subtitle": "A dawn at Donglin Temple.",
-        "date": "March 2026",
-        "readTime": "4 min read",
-        "lede": "Donglin Temple was founded in 386. It has watched twenty-eight dynasties rise and fall. At five in the morning, it watches you arrive.",
+        "title": "山之所知",
+        "subtitle": "东林寺的一个破晓。",
+        "date": "2026年3月",
+        "readTime": "约 4 分钟",
+        "lede": "东林寺立于公元386年。它见过二十八个王朝的兴衰。清晨五时,它看见您的到来。",
         "body": [
-          "We climbed Lushan the night before, in the dark. The taxi could only take us so far. From there, the cobbled path. From there, the stone steps. From there, the mist.",
-          "Donglin's morning chant begins at five. The hall is colder than the night air. The monks — there are eleven of them — assemble without speaking. The bell sounds three times. The chant begins.",
-          "For an hour we sit at the back. The chant is in classical Chinese. We understand nothing. We understand everything.",
-          "Outside, the mist lifts off the valley. The first pilgrim of the day arrives. Lushan has been receiving visitors like this for one thousand three hundred years."
+          "我们前一晚摸黑登庐山。出租车只能送至某处。从那里,是石板小径。再往上,是石阶。再往上,是云雾。",
+          "东林寺的晨课于五时开始。殿内比夜风更冷。僧侣——共十一位——无言列班。钟响三声。诵经开始。",
+          "我们在殿后坐了一个时辰。诵经是文言。我们一字未懂。我们字字皆懂。",
+          "殿外,云雾自山谷升起。当日第一位香客抵达。庐山以此方式迎客,已一千三百年。"
         ]
       },
       {
         "slug": "the-first-week-of-gold",
-        "title": "The First Week of Gold",
-        "subtitle": "Wuyuan, late March.",
-        "date": "March 2026",
-        "readTime": "4 min read",
-        "lede": "For one week each year, the valleys of Wuyuan turn gold. The villagers know to within three days when it will begin.",
+        "title": "金色的第一周",
+        "subtitle": "婺源,三月末。",
+        "date": "2026年3月",
+        "readTime": "约 4 分钟",
+        "lede": "每年仅有一周,婺源的山谷化作金色。村人能在三日之内,准确预知它何时开始。",
         "body": [
-          "Mr Wang has been a farmer in Likeng for forty-seven years. His father was a farmer here. His grandfather was a farmer here. He knows the valley the way an old reader knows a poem.",
-          "We arrive on a Tuesday. By Wednesday morning, the first valley is half gold. By Friday, every south-facing slope is a sheet of luminous yellow. The white walls of the village reflect the colour like a paper lantern reflects a flame.",
-          "Photography is everywhere. Bus tours come, take pictures, leave. Mr Wang serves us tea and watches the visitors with mild interest. 'They take a picture,' he says, 'and they leave. They never see the second week.'",
-          "The second week of gold is when the petals begin to fall, and the bees arrive in earnest, and the whole valley smells like honey for ten days. That is the week we tell our guests to come."
+          "王老先生在李坑务农已四十七年。他的父亲也曾在此务农。他的祖父亦在此务农。他识得这山谷,如一位老读者识得一首诗。",
+          "我们于一个星期二抵达。星期三晨,第一处山谷已半成金黄。到了星期五,每一面朝南的坡都是一幅明亮的黄。村中白墙映照着这色,如同纸灯笼映着一团火焰。",
+          "摄影无处不在。旅游大巴前来,拍下照片,离去。王老先生为我们斟茶,以一种淡淡的兴致看着访客。「他们拍一张照,」他说,「然后就走了。他们永远看不到第二周。」",
+          "金色的第二周,是花瓣开始飘落、蜜蜂大量赶来、整个山谷连续十天弥漫蜜香的时节。那正是我们建议客人到来的一周。"
         ]
       }
     ]
   },
   "inquire": {
     "hero": {
-      "eyebrow": "Inquire",
-      "heading": "Begin the conversation.",
-      "sub": "Five short questions. A working-day reply. No newsletter."
+      "eyebrow": "联络",
+      "heading": "开启对谈。",
+      "sub": "五个简短问题。一个工作日的回复。无邮件订阅。"
     },
-    "progress": "Step {n} of 5",
+    "progress": "第 {n} 步,共 5 步",
     "steps": [
       {
         "id": "draw",
-        "label": "What draws you in?",
+        "label": "是什么吸引了您?",
         "options": [
-          { "value": "mountains", "label": "Mountains & heritage" },
-          { "value": "craft", "label": "Craft & ceramics" },
-          { "value": "spirit", "label": "Spirituality & contemplation" },
-          { "value": "photography", "label": "Photography & landscape" }
+          {
+            "value": "mountains",
+            "label": "山岳与人文"
+          },
+          {
+            "value": "craft",
+            "label": "匠艺与瓷"
+          },
+          {
+            "value": "spirit",
+            "label": "灵修与沉思"
+          },
+          {
+            "value": "photography",
+            "label": "摄影与山水"
+          }
         ]
       },
       {
         "id": "when",
-        "label": "When are you thinking?",
+        "label": "您考虑哪个时节?",
         "options": [
-          { "value": "rapeseed", "label": "Rapeseed season — March / April" },
-          { "value": "clear", "label": "Clear skies — September / November" },
-          { "value": "winter", "label": "Quiet winter — December / February" },
-          { "value": "flexible", "label": "I am flexible" }
+          {
+            "value": "rapeseed",
+            "label": "油菜花季——3月 / 4月"
+          },
+          {
+            "value": "clear",
+            "label": "晴朗之季——9月 / 11月"
+          },
+          {
+            "value": "winter",
+            "label": "静谧冬日——12月 / 2月"
+          },
+          {
+            "value": "flexible",
+            "label": "时间灵活"
+          }
         ]
       },
       {
         "id": "who",
-        "label": "Who is travelling?",
+        "label": "几位同行?",
         "options": [
-          { "value": "solo", "label": "Solo" },
-          { "value": "couple", "label": "Couple" },
-          { "value": "family", "label": "Family" },
-          { "value": "group", "label": "Small group" }
+          {
+            "value": "solo",
+            "label": "独自"
+          },
+          {
+            "value": "couple",
+            "label": "两人同行"
+          },
+          {
+            "value": "family",
+            "label": "家庭同行"
+          },
+          {
+            "value": "group",
+            "label": "小型团组"
+          }
         ]
       },
       {
         "id": "budget",
-        "label": "Investment band, per person.",
+        "label": "每人投入区间。",
         "options": [
-          { "value": "2-3", "label": "€2,000 – 3,000" },
-          { "value": "3-5", "label": "€3,000 – 5,000" },
-          { "value": "5-8", "label": "€5,000 – 8,000" },
-          { "value": "8+", "label": "€8,000 +" },
-          { "value": "open", "label": "Open to suggestion" }
+          {
+            "value": "2-3",
+            "label": "€2,000 – 3,000"
+          },
+          {
+            "value": "3-5",
+            "label": "€3,000 – 5,000"
+          },
+          {
+            "value": "5-8",
+            "label": "€5,000 – 8,000"
+          },
+          {
+            "value": "8+",
+            "label": "€8,000 以上"
+          },
+          {
+            "value": "open",
+            "label": "愿听建议"
+          }
         ]
       }
     ],
     "contact": {
-      "label": "How shall we reach you?",
+      "label": "如何与您联系?",
       "fields": {
-        "name": "Your name",
-        "email": "Email",
-        "whatsapp": "WhatsApp (with country code)",
-        "notes": "Anything we should know before we write back?"
+        "name": "您的姓名",
+        "email": "邮箱",
+        "whatsapp": "WhatsApp(请附国码)",
+        "notes": "在我们回信之前,还有什么我们应当知道的吗?"
       },
-      "consent": "We will only use your details to reply to this inquiry."
+      "consent": "我们仅将您的联系方式用于回复此次咨询。"
     },
     "actions": {
-      "next": "Next",
-      "back": "Back",
-      "submit": "Send to the Atelier",
-      "sending": "Sending…"
+      "next": "下一步",
+      "back": "返回",
+      "submit": "发送至工作室",
+      "sending": "正在发送…"
     },
     "confirmation": {
-      "heading": "We have it.",
-      "body": "Your inquiry is now on a designer's desk. We will write back within one working day — in your language. Visa support is included with every journey.",
-      "next": "Return to the journal"
+      "heading": "我们已收悉。",
+      "body": "您的咨询已置于一位设计师的案头。我们将在一个工作日内,以您的语言回复。每一程旅程,皆包含签证支持。",
+      "next": "返回札记"
     },
     "alt": {
-      "heading": "Or write directly.",
+      "heading": "或径直来信。",
       "whatsapp": "WhatsApp",
-      "email": "Email",
+      "email": "邮箱",
       "whatsappNumber": "+212 6 02 45 00 06",
       "emailAddress": "studio@cloudpavilion.travel"
     }
   },
   "common": {
-    "viewJourney": "View journey",
-    "viewDestination": "View destination",
-    "learnMore": "Learn more",
-    "readEssay": "Read essay",
-    "inquireNow": "Inquire",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "highlights": "Highlights",
-    "bestTime": "Best time",
-    "duration": "Duration",
-    "priceFrom": "From",
-    "perPerson": "per person",
-    "included": "What's included",
-    "languageLabel": "Language",
-    "languageSwitch": "Choose your language",
-    "menuLabel": "Open menu",
-    "whatsappPrefill": "Hello Cloud Pavilion — I would like to ask about a journey to Jiangxi.",
-    "scroll": "Scroll",
-    "skipToContent": "Skip to content",
-    "openInquiry": "Open inquiry"
+    "viewJourney": "查看此程",
+    "viewDestination": "查看此地",
+    "learnMore": "了解更多",
+    "readEssay": "阅读全文",
+    "inquireNow": "联络",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "highlights": "亮点",
+    "bestTime": "最佳时节",
+    "duration": "时长",
+    "priceFrom": "起价",
+    "perPerson": "每人",
+    "included": "已含项目",
+    "languageLabel": "语言",
+    "languageSwitch": "请选择语言",
+    "menuLabel": "打开菜单",
+    "whatsappPrefill": "您好,云阁——我想咨询一程江西之旅。",
+    "scroll": "继续浏览",
+    "skipToContent": "跳至主要内容",
+    "openInquiry": "开启咨询"
   },
   "notFound": {
-    "heading": "This pavilion is empty.",
-    "body": "The page you were looking for has wandered into the mist. Begin again from the home page, or write to us.",
-    "cta": "Return home"
+    "heading": "此阁空寂。",
+    "body": "您所寻的页面已隐入云雾之中。请从首页重新开始,或来信联络。",
+    "cta": "返回首页"
   }
 }
